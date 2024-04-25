@@ -111,6 +111,7 @@ Covel is also known for his podcast called "Trend Following Radio", where he hos
 Through his work and publications, Michael Covel has become an influential figure in the field of trend trading and his approach has inspired many traders and investors around the world.
 
 ## Podcasts - Trend following blue print
+[![Spotify](https://spotify-github-readme.vercel.app/api/spotify)](https://open.spotify.com/episode/0zPLuDKFafJDC4rcPvigbM?si=ce1fdac999cd435d)
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0zPLuDKFafJDC4rcPvigbM?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
