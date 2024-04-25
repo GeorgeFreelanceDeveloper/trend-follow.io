@@ -110,30 +110,20 @@ Covel is also known for his podcast called "Trend Following Radio", where he hos
 
 Through his work and publications, Michael Covel has become an influential figure in the field of trend trading and his approach has inspired many traders and investors around the world.
 
-## Podcasts - Trend following blue print
-[![Spotify](https://spotify-github-readme.vercel.app/api/spotify)](https://open.spotify.com/episode/0zPLuDKFafJDC4rcPvigbM?si=ce1fdac999cd435d)
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0zPLuDKFafJDC4rcPvigbM?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/1gMgeQIY2X17uD9zkDNGXl?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/38VBtSW9O3LlQsq7u7934L?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/50P19y3hKtEycYP87qHSqJ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/3XihZiuRDBNIKLRBEJc30f?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+## Podcasts - Trend following blueprint
+* [Nick Radge - The Blueprint: Create a Simple Trend Following System](https://open.spotify.com/episode/0zPLuDKFafJDC4rcPvigbM?si=c0023e05ee22495b)
+* [064: Nick Radge – The Casino Edge, Mean Reversion Strategies, and How to Develop Robust Trading Systems](https://open.spotify.com/episode/1gMgeQIY2X17uD9zkDNGXl?go=1&sp_cid=908e4404091f9d794d6844fc89bae1bf&utm_source=embed_player_p&utm_medium=desktop)
+* [166: Consistent Equity Growth using Diversification – Nick Radge](https://open.spotify.com/embed/episode/38VBtSW9O3LlQsq7u7934L)
+* [004: Nick Radge – How to Power Through Trading Losses and Continue Executing](https://open.spotify.com/embed/episode/50P19y3hKtEycYP87qHSqJ)
+* [004: Nick Radge discusses system design, the best type of trading systems, handling a bear market, measuring performance and the difference between successful traders and everyone else.](https://open.spotify.com/embed/episode/3XihZiuRDBNIKLRBEJc30f)
 
 ## Books - About trend following
+* [The Complete TurtleTrader](https://www.amazon.com/dp/B000W94CZ8?ref_=cm_sw_r_kb_dp_JESRFYYZAPP9YX59MA84&tag=kpembed-20&linkCode=kpe)
+* [Unholy Grails - A New Road to Wealth](https://www.amazon.com/dp/B007T97DJQ?ref_=cm_sw_r_kb_dp_8H0QD7JVB38VWZG1XMGA&tag=kpembed-20&linkCode=kpe)
+* [Weekend Trend Trader](https://www.amazon.com/dp/B00F4P0OWA?ref_=cm_sw_r_kb_dp_GA3J5SGW35XW8RWX21HQ&tag=kpembed-20&linkCode=kpe)
+* [Trend Following: How to Make a Fortune in Bull, Bear, and Black Swan Markets (Wiley Trading)](https://www.amazon.com/dp/B06Y63RDS2?ref_=cm_sw_r_kb_dp_8SJ3XXZX75AQPNFZV0PN&tag=kpembed-20&linkCode=kpe)
+* [Trend Following Mindset: The Genius of Legendary Trader Tom Basso](https://www.amazon.com/dp/B08TRN5LRT?ref_=cm_sw_r_kb_dp_A29QMGVX07EC2P47T8KW&tag=kpembed-20&linkCode=kpe)
 
-<iframe type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B007T97DJQ&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_8H0QD7JVB38VWZG1XMGA" ></iframe>
-
-<iframe type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B00F4P0OWA&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_GA3J5SGW35XW8RWX21HQ" ></iframe>
-
-<iframe type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B06Y63RDS2&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_8SJ3XXZX75AQPNFZV0PN" ></iframe>
-
-<iframe type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B000W94CZ8&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_JESRFYYZAPP9YX59MA84" ></iframe>
-
-<iframe type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B08TRN5LRT&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_A29QMGVX07EC2P47T8KW" ></iframe>
 
 ## Contributors
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
