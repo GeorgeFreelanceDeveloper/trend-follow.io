@@ -65,7 +65,7 @@ private double ComputeTradeAmount(){
 **Advance accurately determine the percentage risk**
 ```c#
 //entryPrice: your entry to market
-//stopPrice:  value of loweband
+//stopPrice:  value of lowerband
 private double ComputeTradeAmount(double entryPrice, double stopPrice)
 {
 	double riskPerTrade = (RiskPercentage / 100) * Account.Balance;
