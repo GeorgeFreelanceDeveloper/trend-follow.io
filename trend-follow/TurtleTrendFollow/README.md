@@ -72,7 +72,7 @@ private double ComputeTradeAmount(double entryPrice, double stopPrice)
 * Cryptocurrencies (Bitcoin, Ethereum)
 * Stock indexies (S&P 500, Nasdaq, DJI, NIFTY50)
 * Stocks in long-term uptrend (AAPL, MSFT, NVDA, TSLA, AMZN, NFLX, SHOP, MA, ASML, PANW)
-* Forex pairs in long-term uptrend (USDTRY, EURTRY, GBPTRY, USDINR, USDCNH) - pozor ale v reálu nemožné obchodovat kvůli vysokému swapu
+* Forex pairs in long-term uptrend (USDTRY, EURTRY, GBPTRY, USDINR, USDCNH) - warning: in reality impossible to trade due to high swap
 
 ## Notes
 
