@@ -30,8 +30,8 @@ positioning oneself accordingly." Nick Radge
 A trend refers to the general direction in which the price of an asset is moving over a period of time. Trends can be classified as upward (bullish), downward (bearish), or sideways (neutral). Traders often try to identify and follow trends to make informed decisions about buying or selling assets.
 
 
-![Example uptrend on index Nasdaq 100](src/uptrend_example.png)
-<center>Example long-term uptrend on index Nasdaq 100</center>
+![Example uptrend on index Nasdaq 100](resources/uptrend_example.png)
+<div align="center">Example long-term uptrend on index Nasdaq 100</div>
 
 ## Trend follow strategies
 
