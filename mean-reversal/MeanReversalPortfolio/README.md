@@ -1,7 +1,7 @@
 # Mean reversal portfolio
 
 ## About strategy
-In this project, we unveil 5 powerful and proven swing trading strategies for the stock market that you can start using yourself to turn a profit. All 5  systems have been backtested over a period of 30 years on the S&P 500, and we will show you the exact trading rules we applied. You'll also learn how to combine all five strats into one portfolio of swing trading strategies.
+In this project, we unveil 5 powerful and proven swing trading strategies for the stock market that you can start using yourself to turn a profit. All 5 systems have been backtested over a period of 30 years on the S&P 500, and we will show you the exact trading rules we applied. You'll also learn how to combine all five strats into one portfolio of swing trading strategies.
 
 The first swing trading strategy involves entering when the price has dropped from a recent high and selling on strength. The second strategy is known as Turnaround Tuesday and involves buying at the close on Monday if the close is lower for the second day in a row. The third swing trading strategy is a simple mean reversion strategy that involves buying when the close is lower than the low of the previous 5 trading days. The fourth trading strategy is based on volatility and involves buying when today's range is lower than the daily range of the previous 6 trading days and the close is above the 200-day moving average. The fifth and final swing trading strategy involves buying on a weak day when the price has set a new ten-day high earlier in the trading session.
 
