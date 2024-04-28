@@ -42,6 +42,9 @@ filter = enableFilter ? benchmarkSymbolClose[1] >= ta.sma(source = benchmarkSymb
 
 [superTrendValue, direction] = ta.supertrend(factor, atrPeriod)
 
+longCondition = ta.change(direction) < 0 and filter and tradeDateIsAllowed() // ta.change(direction) < 0 pokud ta.change(direction) vraci -1 jdeme do longu
+exitCondition = ta.change(direction) > 0 and tradeDateIsAllowed() // ta.change(direction) > 0 pokud ta.change(direction) vraci 1 jdeme do shortu
+
 // ********************************
 // Draw outputs
 // ********************************
@@ -51,8 +54,8 @@ filter = enableFilter ? benchmarkSymbolClose[1] >= ta.sma(source = benchmarkSymb
 // ********************************
 // Manage trade
 // ********************************
-if ta.change(direction) < 0 and filter and tradeDateIsAllowed() // ta.change(direction) < 0 pokud ta.change(direction) vraci -1 jdeme do longu
+if (longCondition)
     strategy.entry("My Long Entry Id", strategy.long,qty = calculateQuantity(close,superTrendValue,riskPercentage))
 
-if ta.change(direction) > 0 and tradeDateIsAllowed() // ta.change(direction) > 0 pokud ta.change(direction) vraci 1 jdeme do shortu
+if (exitCondition)
     strategy.close("My Long Entry Id")
