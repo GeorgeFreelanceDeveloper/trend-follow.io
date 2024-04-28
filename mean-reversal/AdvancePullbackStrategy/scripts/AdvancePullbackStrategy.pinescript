@@ -1,0 +1,95 @@
+// This Pine Script™ code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © Medvidek
+
+//@version=5
+strategy(title="Advance Pullback Strategy", overlay=true)
+
+// ********************************
+// Import ZenLibrary as zen 
+// ********************************
+import ZenAndTheArtOfTrading/ZenLibrary/7 as zen
+
+// ********************************
+// User defined inputs
+// ********************************
+EMA_LENGTH          = input.int(title="EMA Length", defval=50, minval=1, tooltip="Exponential moving average period")
+STOP_SIZE_INPUT     = input.float(title="Stop Distance (xATR)", defval=1.0, minval=0.0, tooltip="Stop loss distance from highs/lows as an ATR multiplier")
+RISK_REWARD         = input.float(title="Risk:Reward", defval=1.0, minval=0.1, tooltip="Risk:Reward profile")
+SIGNAL_TYPE         = input.string(title="Enable Signals", defval="Both", options=["Both", "Long", "Short"], tooltip="Enable/disable long/short signals")
+
+// ********************************
+// Check what signals are enabled 
+// ********************************
+var bool TAKE_LONGS      = SIGNAL_TYPE == "Both" or SIGNAL_TYPE == "Long"
+var bool TAKE_SHORTS     = SIGNAL_TYPE == "Both" or SIGNAL_TYPE == "Short"
+
+// ********************************
+// Get EMA & ATR & Stop Size
+// ********************************
+ema                 = ta.ema(close, EMA_LENGTH)
+currentATR          = ta.atr(14)
+stopSize            = currentATR * STOP_SIZE_INPUT
+
+// ********************************
+// Get SL and Target prices
+// ********************************
+tradeStopPrice      = 0.0
+tradeTargetPrice    = 0.0
+longStopDistance    = close - ta.lowest(low, 5) + stopSize
+shortStopDistance   = ta.highest(high, 5) - close + stopSize
+
+// ********************************
+// SIGNAL RULES: 
+// rule1 = Engulfing candle above/below EMA
+// rule2 = Current swing high/low 
+// rule3 = Ensure engulfing candle is not massive
+// ********************************
+
+// ********************************
+// Validate long signals
+// ********************************
+rule1L = close > ema and zen.barsBelowMA(3, ema) <= 1 and zen.isBullishEC()
+rule2L = low == ta.lowest(low, 7) or low[1] == ta.lowest(low, 7)
+rule3L = close < ta.highest(open, 5) and ta.tr < (currentATR * 2)
+validLong = TAKE_LONGS and rule1L and rule2L and rule3L
+
+// ********************************
+// Validate short signals
+// ********************************
+rule1S = close < ema and zen.barsAboveMA(3, ema) <= 1 and zen.isBearishEC()
+rule2S = high == ta.highest(high, 7) or high[1] == ta.highest(high, 7)
+rule3S = close > ta.lowest(open, 5) and ta.tr < (currentATR * 2)
+validShort = TAKE_SHORTS and rule1S and rule2S and rule3S
+
+// ********************************
+// Store long signal stop loss & target for drawing
+// ********************************
+if validLong
+    tradeStopPrice      := close - longStopDistance
+    tradeTargetPrice    := close + longStopDistance * RISK_REWARD
+
+// ********************************
+// Store short signal stop loss & target for drawing
+// ********************************
+if validShort
+    tradeStopPrice      := close + shortStopDistance
+    tradeTargetPrice    := close - shortStopDistance * RISK_REWARD
+
+// ********************************
+// Draw EMA
+// ********************************
+plot(ema, title="EMA", color=color.red, linewidth=1)
+
+// ********************************
+// Draw signals
+// ********************************
+plotshape(validLong, title="Bullish Engulfing", location=location.belowbar, color=color.green, style=shape.triangleup)
+plotshape(validShort, title="Bearish Engulfing", color=color.red, style=shape.triangledown)
+
+// ********************************
+// Draw stops & targets over 2 bars so the lines are more visible
+// ********************************
+plot(validLong or validLong[1] ? validLong ? tradeStopPrice : tradeStopPrice[1] : na, title="Long Stop Price", color=color.red, style=plot.style_linebr)
+plot(validShort or validShort[1] ? validShort ? tradeStopPrice : tradeStopPrice[1] : na, title="Short Stop Price", color=color.red, style=plot.style_linebr)
+plot(validLong or validLong[1] ? validLong ? tradeTargetPrice : tradeTargetPrice[1] : na, title="Long Target Price", color=color.green, style=plot.style_linebr)
+plot(validShort or validShort[1] ? validShort ? tradeTargetPrice : tradeTargetPrice[1] : na, title="Short Target Price", color=color.green, style=plot.style_linebr)

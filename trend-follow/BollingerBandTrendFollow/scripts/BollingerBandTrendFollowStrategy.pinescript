@@ -1,0 +1,62 @@
+//@version=5
+//@Author: @GeorgeFreelanceDeveloper, @LucyFreelanceDeveloper
+strategy("Boillinger Band Trend Follow strategy", overlay=true, margin_long = 10, default_qty_type=strategy.percent_of_equity, default_qty_value=100)
+
+// ********************************
+// User defined inputs
+// ********************************
+var G_BASIC_SETTINGS = "Basic settings"
+var G_ADVANCE_SETTINGS = "Advance settings"
+var G_TIME = "Time settings"
+
+length = input.int(defval = 20, title = "Length", group = G_BASIC_SETTINGS)
+multiplierUpper = input.int(defval = 1, title = "Upper", step = 1, group = G_BASIC_SETTINGS)
+multiplierLower = input.float(defval = 0.5, title = "Lower", step = 1, group = G_BASIC_SETTINGS)
+
+useRegimeFilter = input.bool(defval = false, title = "Use regime filter", group=G_ADVANCE_SETTINGS)
+benchmarkSymbol = input.symbol(defval = "SPX", title = "Benchmark symbol", group=G_ADVANCE_SETTINGS)
+
+fromDateTime = input.time(defval = timestamp("1900-01-01T01:01+0000"), title = "From Date and time", group = G_TIME) 
+toDateTime = input.time(defval = timestamp("9999-01-01T01:01+0000"), title = "To Date and time", group = G_TIME)
+
+
+// ********************************
+// Functions
+// ********************************
+tradeDateIsAllowed() => time >= fromDateTime and time <= toDateTime
+
+// **********************************
+// Perform calculations and analysis
+// **********************************
+
+// Boillinger Bands
+centralMA = ta.sma(close, length)
+upperBand = ta.sma(close, length) + multiplierUpper * ta.stdev(close, length)
+lowerBand = ta.sma(close, length) - multiplierLower * ta.stdev(close, length)
+
+// Filters
+benchmarkClose = request.security(benchmarkSymbol, "D", close)
+benchmarkMA200 = request.security(benchmarkSymbol, "D", ta.sma(benchmarkClose, 200))
+regimeFilter = benchmarkClose > benchmarkMA200
+filter = useRegimeFilter ? regimeFilter : true
+
+// ********************************
+// Draw outputs
+// ********************************
+plot(centralMA, color = color.blue, linewidth = 2, title = "Central Moving Average")
+plot(upperBand, color = color.red, linewidth = 2, title = "Upper Bollinger Band")
+plot(lowerBand, color = color.green, linewidth = 2, title = "Lower Bollinger Band")
+
+// ********************************
+// Manage trade
+// ********************************
+
+// Entry
+longCondition = ta.crossover(close, upperBand)
+if longCondition and tradeDateIsAllowed() and filter
+    strategy.entry("Long", strategy.long)
+
+// Exit
+exitCondition = ta.crossunder(close, lowerBand)
+if exitCondition and tradeDateIsAllowed()
+    strategy.close("Long")

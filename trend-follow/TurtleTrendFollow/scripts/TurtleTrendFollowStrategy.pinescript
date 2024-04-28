@@ -1,0 +1,72 @@
+//@version=5
+//@Author: @GeorgeFreelanceDeveloper, @LucyFreelanceDeveloper
+strategy("Turtle Trend Follow Strategy", initial_capital=1000000, overlay=true, pyramiding = 0)
+
+// ********************************
+// User defined inputs
+// ********************************
+
+var G_BASIC_SETTINGS = "Basic settings"
+var G_ADVANCED_SETTINGS  = "Advanced settings"
+var G_TIME = "Time settings"
+
+entryLength = input.int(defval = 20, title = "Entry length", group = G_BASIC_SETTINGS)
+exitLength = input.int(defval = 10, title = "Exit length", group = G_BASIC_SETTINGS)
+riskPercentage = input.float(defval = 1, title = "Risk per trade", group = G_BASIC_SETTINGS, tooltip = "Values from 0.00 to 100")
+atrMultiplier = input.int(defval = 2, title = "ATR multiplier", group = G_BASIC_SETTINGS)
+atrLength = input.int(defval = 20, title = "ATR length", group = G_BASIC_SETTINGS)
+longOnly = input.bool(defval = true, title = "Long only", group = G_ADVANCED_SETTINGS)
+enableContext = input.bool(defval = true, title = "Enable context", group = G_ADVANCED_SETTINGS)
+
+fromDateTime = input.time(defval = timestamp("2012-01-01T01:01+0000"), title = "From Date and time", group = G_TIME) 
+toDateTime = input.time(defval = timestamp("9999-01-01T01:01+0000"), title = "To Date and time", group = G_TIME)
+
+
+// ********************************
+// Functions
+// ********************************
+tradeDateIsAllowed() => time >= fromDateTime and time <= toDateTime
+
+// **********************************
+// Perform calculations and analysis
+// **********************************
+
+// Basic 
+upperChannel = ta.highest(high[1], entryLength)
+lowerChannel = ta.lowest(low[1], entryLength)
+exitLong = ta.lowest(low[1], exitLength)
+exitShort = ta.highest(high[1], exitLength)
+
+// Trade amount
+qty = ((riskPercentage/100)*strategy.equity) / (atrMultiplier * ta.atr(atrLength))
+
+// Filters - Context - Super trend indicator on W chart from Daily chart
+[supertrend, direction] = ta.supertrend(3,10)
+supertrendWeekly = request.security(syminfo.tickerid, "W", supertrend)
+isBullish = enableContext == true ? close > supertrendWeekly[0] : true
+isBearish = enableContext == true ? close < supertrendWeekly[0] : true
+
+// ********************************
+// Draw outputs
+// ********************************
+plot(upperChannel, color=color.green, title="Upper Channel")
+plot(lowerChannel, color=color.red, title="Lower Channel")
+plot(exitLong, color=color.gray, title="Exit Long", style=plot.style_cross)
+plot(exitShort, color=color.gray, title="Exit Short", style=plot.style_cross)
+
+// ********************************
+// Manage trade
+// ********************************
+
+// Entry
+if (isBullish and ta.crossover(close, upperChannel) and tradeDateIsAllowed())
+    strategy.entry("Long", strategy.long, qty = qty)
+if (isBearish and ta.crossunder(close, lowerChannel) and not longOnly and tradeDateIsAllowed())
+    strategy.entry("Short", strategy.short, qty = qty)
+
+// Exit
+if (ta.crossunder(close, exitLong) and tradeDateIsAllowed())
+    strategy.close("Long")
+if (ta.crossover(close, exitShort)  and not longOnly and tradeDateIsAllowed())
+    strategy.close("Short")
+
