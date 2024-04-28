@@ -38,7 +38,7 @@ lowerBand = ta.sma(close, length) - multiplierLower * ta.stdev(close, length)
 benchmarkSymbolClose = request.security(benchmarkSymbol,"1D", close)
 filter = enableFilter ? benchmarkSymbolClose[1] >= ta.sma(source = benchmarkSymbolClose, length = 200) : true
 
-longCondition = ta.crossover(close, upperBand) and tradeDateIsAllowed() and filter
+buyCondition = ta.crossover(close, upperBand) and tradeDateIsAllowed() and filter
 exitCondition = ta.crossunder(close, lowerBand) and tradeDateIsAllowed()
 
 // ********************************
@@ -53,9 +53,9 @@ plot(lowerBand, color = color.green, linewidth = 2, title = "Lower Bollinger Ban
 // ********************************
 
 // Entry
-if (longCondition) 
+if (buyCondition) 
     strategy.entry("Long", strategy.long)
 
 // Exit
-if (exitCondition)
+if (sellCondition)
     strategy.close("Long")
