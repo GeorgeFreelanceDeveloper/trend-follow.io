@@ -6,15 +6,15 @@ strategy("Boillinger Band Trend Follow strategy", overlay=true, margin_long = 10
 // User defined inputs
 // ********************************
 var G_BASIC_SETTINGS = "Basic settings"
-var G_ADVANCE_SETTINGS = "Advance settings"
+var G_FILTER_SETTINGS = "Filter settings"
 var G_TIME = "Time settings"
 
 length = input.int(defval = 20, title = "Length", group = G_BASIC_SETTINGS)
 multiplierUpper = input.int(defval = 1, title = "Upper", step = 1, group = G_BASIC_SETTINGS)
 multiplierLower = input.float(defval = 0.5, title = "Lower", step = 1, group = G_BASIC_SETTINGS)
 
-useRegimeFilter = input.bool(defval = false, title = "Use regime filter", group=G_ADVANCE_SETTINGS)
-benchmarkSymbol = input.symbol(defval = "SPX", title = "Benchmark symbol", group=G_ADVANCE_SETTINGS)
+enableFilter = input.bool(defval = false, title = "Use regime filter", tooltip = "Filter is close price is above 200 day simple moving average of benchmark and regime filter", group=G_FILTER_SETTINGS)
+benchmarkSymbol = input.symbol(defval = "SPX", title = "Benchmark symbol", group=G_FILTER_SETTINGS)
 
 fromDateTime = input.time(defval = timestamp("1900-01-01T01:01+0000"), title = "From Date and time", group = G_TIME) 
 toDateTime = input.time(defval = timestamp("9999-01-01T01:01+0000"), title = "To Date and time", group = G_TIME)
@@ -38,7 +38,7 @@ lowerBand = ta.sma(close, length) - multiplierLower * ta.stdev(close, length)
 benchmarkClose = request.security(benchmarkSymbol, "D", close)
 benchmarkMA200 = request.security(benchmarkSymbol, "D", ta.sma(benchmarkClose, 200))
 regimeFilter = benchmarkClose > benchmarkMA200
-filter = useRegimeFilter ? regimeFilter : true
+filter = enableFilter ? regimeFilter : true
 
 // ********************************
 // Draw outputs

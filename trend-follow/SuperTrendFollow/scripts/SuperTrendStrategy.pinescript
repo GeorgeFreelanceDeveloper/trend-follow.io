@@ -8,13 +8,15 @@ import TradingView/Strategy/3
 // ********************************
 
 var G_BASIC_SETTINGS = "Basic settings"
-var G_ADVANCED_SETTINGS  = "Advanced settings"
+var G_FILTER_SETTINGS  = "Filter settings"
 var G_TIME = "Time settings"
 
 atrPeriod = input.int(defval = 10, title = "ATR Length", group = G_BASIC_SETTINGS)
 factor = input.float(defval = 3.0, title = "Factor", step = 0.01, group = G_BASIC_SETTINGS)
 riskPercentage = input.float(defval = 1.00, title = "Risk per trade", step = 0.01, group = G_BASIC_SETTINGS)
-longOnly = input.bool(defval = true, title = "Long only", group = G_ADVANCED_SETTINGS)
+
+enableFilter = input.bool(defval = true, title = "Enable filter", tooltip = "Filter is close price is above 200 day simple moving average of benchmark",  group = G_FILTER_SETTINGS)
+benchmarkSymbol = input.string(defval = "SPX", title = "Benchmark", group = G_FILTER_SETTINGS)
 
 fromDateTime = input.time(defval = timestamp("2012-01-01T01:01+0000"), title = "From Date and time", group = G_TIME) 
 toDateTime = input.time(defval = timestamp("9999-01-01T01:01+0000"), title = "To Date and time", group = G_TIME)
@@ -33,6 +35,11 @@ calculateQuantity(entryPrice, stopLossPrice, riskPercentage) =>
 // **********************************
 // Perform calculations and analysis
 // **********************************
+
+// Filter
+benchmarkSymbolClose = request.security(benchmarkSymbol,"1D", close)
+filter = enableFilter ? benchmarkSymbolClose[1] >= ta.sma(source = benchmarkSymbolClose, length = 200) : true
+
 [superTrendValue, direction] = ta.supertrend(factor, atrPeriod)
 
 // ********************************
@@ -44,13 +51,8 @@ calculateQuantity(entryPrice, stopLossPrice, riskPercentage) =>
 // ********************************
 // Manage trade
 // ********************************
-if ta.change(direction) < 0 and tradeDateIsAllowed() //navrh komentare ta.change(direction) < 0 pokud ta.change(direction) vraci -1 jdeme do longu
-    strategy.close("My Short Entry Id")
+if ta.change(direction) < 0 and filter and tradeDateIsAllowed() // ta.change(direction) < 0 pokud ta.change(direction) vraci -1 jdeme do longu
     strategy.entry("My Long Entry Id", strategy.long,qty = calculateQuantity(close,superTrendValue,riskPercentage))
 
-if ta.change(direction) > 0 and tradeDateIsAllowed() //navrh komentare ta.change(direction) > 0 pokud ta.change(direction) vraci 1 jdeme do shortu
+if ta.change(direction) > 0 and tradeDateIsAllowed() // ta.change(direction) > 0 pokud ta.change(direction) vraci 1 jdeme do shortu
     strategy.close("My Long Entry Id")
-    if not longOnly
-        strategy.entry("My Short Entry Id", strategy.short, qty = calculateQuantity(close,superTrendValue,riskPercentage))
-
-
