@@ -44,7 +44,7 @@
 - Percentage profitability: 45.86%
 - Profit factor: 1.75
 - Ratio Avg Win / Avg Loss: 2.07
-- Max drawdown: 23.25
+- Max drawdown: 23.25%
 
 **Equity**
 ![SPX equity](resources/SPX-equity.png)
