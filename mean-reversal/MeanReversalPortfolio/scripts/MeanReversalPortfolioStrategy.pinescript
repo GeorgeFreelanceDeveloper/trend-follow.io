@@ -1,0 +1,100 @@
+//@version=5
+//@Author: @GeorgeFreelanceDeveloper, @LucyFreelanceDeveloper
+strategy("MeanReversalPortfolio", overlay=true, margin_long=100, margin_short=100, default_qty_type=strategy.percent_of_equity, default_qty_value=100)
+
+// ********************************
+// User defined inputs
+// ********************************
+
+var G_BASIC_SETTINGS = "Basic settings"
+var G_FILTER_SETTINGS = "Filter settings"
+var G_TIME = "Time settings"
+
+
+enableStrategy1 = input.bool(defval = true, title = "Enable strategy 1", tooltip = "The first swing trading strategy involves entering when the price has dropped from a recent high and selling on strength.",  group = G_BASIC_SETTINGS)
+enableStrategy2 = input.bool(defval = true, title = "Enable strategy 2", tooltip = "The second strategy is known as Turnaround Tuesday and involves buying at the close on Monday if the close is lower for the second day in a row.",  group = G_BASIC_SETTINGS)
+enableStrategy3 = input.bool(defval = true, title = "Enable strategy 3", tooltip = "The third swing trading strategy is a simple mean reversion strategy that involves buying when the close is lower than the low of the previous 5 trading days.",  group = G_BASIC_SETTINGS)
+enableStrategy4 = input.bool(defval = true, title = "Enable strategy 4", tooltip = "The fourth trading strategy is based on volatility and involves buying when today's range is lower than the daily range of the previous 6 trading days and the close is above the 200-day moving average.",  group = G_BASIC_SETTINGS)
+enableStrategy5 = input.bool(defval = true, title = "Enable strategy 5", tooltip = "The fifth and final swing trading strategy involves buying on a weak day when the price has set a new ten-day high earlier in the trading session.",  group = G_BASIC_SETTINGS)
+
+
+enableFilter = input.bool(defval = true, title = "Enable filter", tooltip = "Filter is close price is above 200 day simple moving average of benchmark",  group = G_FILTER_SETTINGS)
+benchmarkSymbol = input.string(defval = "SPX", title = "Benchmark", group = G_FILTER_SETTINGS)
+
+fromDateTime = input.time(defval = timestamp("2012-01-01T01:01+0000"), title = "From Date and time", group = G_TIME) 
+toDateTime = input.time(defval = timestamp("9999-01-01T01:01+0000"), title = "To Date and time", group = G_TIME)
+
+
+// ********************************
+// Functions
+// ********************************
+tradeDateIsAllowed() => time >= fromDateTime and time <= toDateTime
+
+strategy1() =>
+    // Calculate the Average of High minus Low over the Last 25 Days
+    len = 25
+    avgHighLow = ta.sma(high-low, len)
+
+    // Calculate the IBS (Internal Bar Strength) Indicator:
+    ibs = (close - low) / (high - low)
+
+    // Calculate a band 2.5 times lower than tthe high over the last 10 days by using average from point number 1
+    lowerBand = ta.highest(10) - avgHighLow * 2.5
+    enableStrategy1 ? close < lowerBand and ibs < 0.3 : false
+
+strategy2() =>
+    monday = dayofweek == dayofweek.monday
+    today_close_lower_than_friday_close = close < close[1]
+    friday_close_lower_than_thursday_close = close[1] < close[2]
+    enableStrategy2 ? monday and today_close_lower_than_friday_close and friday_close_lower_than_thursday_close : false   
+
+strategy3() =>
+    lowerChannel = ta.lowest(low[1], 5)
+    enableStrategy3 ?  close <= lowerChannel : false
+
+strategy4() =>
+    // Calculate the lowest range of the previous 6 trading days
+    lowestRange = ta.lowest(high - low, 6)
+
+    // Calculate the 200-day moving average
+    ma200 = ta.sma(close, 200)
+
+    // Entry condition: Today's range is the lowest of the last 6 days AND close is above the 200-day MA
+    enableStrategy4 ? (lowestRange == high - low) and (close > ma200) : false
+
+strategy5() =>
+    // Calculate the highest high of the last ten days
+    highestHigh = ta.highest(high[1], 10)
+
+
+    // Calculate the IBS indicator
+    ibs = (close - low) / (high - low)
+
+    // Entry condition: Today's high is higher than the previous high of the last ten days AND IBS is below 0.15
+    enableStrategy5 ? high >= highestHigh and ibs < 0.15 : false
+
+
+// **********************************
+// Perform calculations and analysis
+// **********************************
+
+// Filter
+benchmarkSymbolClose = request.security(benchmarkSymbol,"1D", close)
+filter = enableFilter ? benchmarkSymbolClose[1] >= ta.sma(source = benchmarkSymbolClose, length = 200) : true
+
+buyCondition = (strategy1() or strategy2() or strategy3() or strategy4() or strategy5()) and filter and tradeDateIsAllowed()
+sellCondition = close > high[1]
+
+// ********************************
+// Draw outputs
+// ********************************
+//plot(strategy.equity, title="equity", color=color.red, linewidth=2, style=plot.style_areabr)
+
+// ********************************
+// Manage trade
+// ********************************
+if (buyCondition)
+    strategy.entry("My Long Entry Id", strategy.long)
+
+if (sellCondition)
+    strategy.close("My Long Entry Id")
