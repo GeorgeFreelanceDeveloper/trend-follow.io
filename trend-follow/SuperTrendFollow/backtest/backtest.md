@@ -20,7 +20,7 @@
 **Inputs**
 - Basic settings
     - ATR Length 10
-    - FActor: 3
+    - Factor: 3
     - Risk per trade: 2%
 
 - Filter settings
@@ -53,7 +53,7 @@
 **Inputs**
 - Basic settings
     - ATR Length 10
-    - FActor: 3
+    - Factor: 3
     - Risk per trade: 2%
 
 - Filter settings
@@ -86,7 +86,7 @@
 **Inputs**
 - Basic settings
     - ATR Length 10
-    - FActor: 3
+    - Factor: 3
     - Risk per trade: 2%
 
 - Filter settings
@@ -119,7 +119,7 @@
 **Inputs**
 - Basic settings
     - ATR Length 10
-    - FActor: 3
+    - Factor: 3
     - Risk per trade: 2%
 
 - Filter settings
@@ -152,7 +152,7 @@
 **Inputs**
 - Basic settings
     - ATR Length 10
-    - FActor: 3
+    - Factor: 3
     - Risk per trade: 2%
 
 - Filter settings
