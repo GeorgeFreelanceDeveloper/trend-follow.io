@@ -124,6 +124,7 @@
 ![DJI drawdown](resources/DJI-drawdown.png)
 
 ## BTCUSD
+**Inputs**
 - Basic settings
     - Entry length: 20
     - Exit length: 10
@@ -158,6 +159,7 @@
 ![BTCUSD drawdown](resources/BTCUSD-drawdown.png)
 
 ## ETHUSD
+**Inputs**
 - Basic settings
     - Entry length: 20
     - Exit length: 10
