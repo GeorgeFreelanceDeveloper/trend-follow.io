@@ -42,8 +42,8 @@ filter = enableFilter ? benchmarkSymbolClose[1] >= ta.sma(source = benchmarkSymb
 
 [superTrendValue, direction] = ta.supertrend(factor, atrPeriod)
 
-buyCondition = ta.change(direction) < 0 and filter and tradeDateIsAllowed() // ta.change(direction) < 0 pokud ta.change(direction) vraci -1 jdeme do longu
-sellCondition = ta.change(direction) > 0 and tradeDateIsAllowed() // ta.change(direction) > 0 pokud ta.change(direction) vraci 1 jdeme do shortu
+buyCondition = ta.change(direction) < 0 and filter and tradeDateIsAllowed() // ta.change(direction) < 0 if ta.change(direction) return -1 then we go long
+sellCondition = ta.change(direction) > 0 and tradeDateIsAllowed() // ta.change(direction) > 0 if ta.change(direction) return 1 then we go short
 
 // ********************************
 // Draw outputs
