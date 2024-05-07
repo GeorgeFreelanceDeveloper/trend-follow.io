@@ -53,9 +53,9 @@ focus on markets in a long-term up-trend and trade only on the long side.
 
 Author: Richard Denis
 
-- [Documentation](trend-follow/TurtleTrendFollow/README.md)
-- [Backtest](trend-follow/TurtleTrendFollow/backtest/backtest.md)
-- **SourceCode**: [TradingView](trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.pinescript), [cTrader](trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.cs) [MetaTrader](trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.mq5), [Multicharts](trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.easylanguage), [TradeStation](trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.easylanguage)
+- [Documentation](strategies/trend-follow/TurtleTrendFollow/README.md)
+- [Backtest](strategies/trend-follow/TurtleTrendFollow/backtest/backtest.md)
+- **SourceCode**: [TradingView](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.pinescript), [cTrader](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.cs) [MetaTrader](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.mq5), [Multicharts](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.easylanguage), [TradeStation](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.easylanguage)
 
 ### Super trend follow
 The Supertrend Strategy is a trend trading strategy that uses the Supertrend indicator to identify and trade trends in the financial markets. This strategy focuses on entering the market in line with the main trend and exiting the market when the trend begins to reverse.
@@ -64,9 +64,9 @@ The basis of the Supertrend strategy is the Supertrend indicator, which determin
 
 Author: Olivier Seban
 
-- [Documentation](trend-follow/SuperTrendFollow/README.md)
-- [Backtest](trend-follow/SuperTrendFollow/backtest/backtest.md)
-- **SourceCode**: [TradingView](trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.pinescript), [cTrader](trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.cs) [MetaTrader](trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.mq5), [Multicharts](trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.easylanguage), [TradeStation](trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.easylanguage)
+- [Documentation](strategies/trend-follow/SuperTrendFollow/README.md)
+- [Backtest](strategies/trend-follow/SuperTrendFollow/backtest/backtest.md)
+- **SourceCode**: [TradingView](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.pinescript), [cTrader](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.cs) [MetaTrader](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.mq5), [Multicharts](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.easylanguage), [TradeStation](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.easylanguage)
 
 ### Bollinger band trend follow
 The purpose of this strategy is to use the Bollinger Bands to generate trading signals designed to capture powerful breakout price moves and to capitalize on the resulting trends from these breakouts.
@@ -74,9 +74,9 @@ The purpose of this strategy is to use the Bollinger Bands to generate trading s
 The Bollinger Bands are often used for the purpose of generating signals to determine when price is entering over-sold or over-bought areas on the chart, relative to recent price. This strategy utilizes the Bollinger Bands in a completely different way – to identify breakout trade opportunities which often lead to price trending in a defined direction for an extended period of time.
 
 Author: Nick Radge
-- [Documentation](trend-follow/BollingerBandTrendFollow/README.md)
-- [Backtest](trend-follow/BollingerBandTrendFollow/backtest/backtest.md)
-- **SourceCode**: [TradingView](trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.pinescript), [cTrader](trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.cs) [MetaTrader](trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.mq5), [Multicharts](trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.easylanguage), [TradeStation](trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.easylanguage)
+- [Documentation](strategies/trend-follow/BollingerBandTrendFollow/README.md)
+- [Backtest](strategies/trend-follow/BollingerBandTrendFollow/backtest/backtest.md)
+- **SourceCode**: [TradingView](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.pinescript), [cTrader](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.cs) [MetaTrader](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.mq5), [Multicharts](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.easylanguage), [TradeStation](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.easylanguage)
 
 ## Top trend follow traders
 ### Richard Dennis
