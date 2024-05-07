@@ -17,7 +17,7 @@ atrMultiplier = input.int(defval = 2, title = "ATR multiplier", group = G_BASIC_
 atrLength = input.int(defval = 20, title = "ATR length", group = G_BASIC_SETTINGS)
 
 enableFilter = input.bool(defval = true, title = "Enable filter", tooltip = "Filter is close price is above 200 day simple moving average of benchmark",  group = G_FILTER_SETTINGS)
-benchmarkSymbol = input.string(defval = "SPX", title = "Benchmark", group = G_FILTER_SETTINGS)
+benchmarkSymbol = input.symbol(defval = "SPX", title = "Benchmark", group = G_FILTER_SETTINGS)
 
 fromDateTime = input.time(defval = timestamp("2012-01-01T01:01+0000"), title = "From Date and time", group = G_TIME) 
 toDateTime = input.time(defval = timestamp("9999-01-01T01:01+0000"), title = "To Date and time", group = G_TIME)
