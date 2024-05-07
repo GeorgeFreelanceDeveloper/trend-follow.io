@@ -10,8 +10,9 @@
 - title: Strategies
   link: /strategies/
 
-- title: Hire us
-  link: /hire-us/
+# Uncoment when you looking for work
+# - title: Hire us
+#   link: /hire-us/
 
 - title: About
   link: /about/
