@@ -1,15 +1,5 @@
 # Mean reversal strategy
 
-## About strategies
-In this project, we unveil 5 powerful and proven swing trading strategies for the stock market that you can start using yourself turn a profit. All 5 systems have been backtested over a period of 30 years on the S&P 500, and we will show you the exact trading rules we applied. You'll also learn how to combine all five strats into one portfolio of swing trading strategies.
-
-The first swing trading strategy involves entering when the price has dropped from a recent high and selling on strength. The second strategy is known as Turnaround Tuesday and involves buying at the close on Monday if the close is lower for the second day in a row. The third swing trading strategy is a simple mean reversion strategy that involves buying when the close is lower than the low of the previous 5 trading days. The fourth trading strategy is based on volatility and involves buying when today's range is lower than the daily range of the previous 6 trading days and the close is above the 200-day moving average. The fifth and final swing trading strategy involves buying on a weak day when the price has set a new ten-day high earlier in the trading session.
-
-All five swing trading strategies are backtested and have produced impressive returns over the years. But when combined, they have produced even better results with only three losing years since 1993. The combined trading systems have returned an average of 0.38% per trade, resulting in a compounding return of 14.1% with max drawdown around 25% (index has drawdown above 50%).
-
-**Goal mean reverting strategies**
-> Beat buy and hold with significantly smaller drawdowns and less time spent invested in the market.
-
 ## What is Mean Reversion in Trading?
 
 Mean reversion in trading is a concept that refers to the assumption that asset prices and historical returns eventually will return to the long-term mean. This concept is rooted in the statistical phenomenon known as regression toward the mean. Traders who use this strategy typically look for opportunities to buy or sell assets when prices deviate significantly from their historical mean in anticipation of their eventual return to it.
@@ -19,6 +9,10 @@ The rationale behind the mean reversion theory is that over time, prices that ar
 For example, if a stock’s price has historically oscillated around $50 but suddenly spikes to $80 without any significant change in the company’s fundamentals, a mean reversion trader might see this as an opportunity to sell the stock, expecting the stock price to fall back to its historical norm. Conversely, if the stock drops to $20, the trader might buy it, anticipating a rise back to the $50 level.
 
 And that’s the basic idea of using mean reversion strategies – looking for extreme changes in prices in an asset price with the assumption that prices tend to return to their average prices. 
+
+**Goal mean reverting strategies**
+> Beat buy and hold with significantly smaller drawdowns and less time spent invested in the market.
+
 
 ## The Mean Reversion Trading Strategy
 
