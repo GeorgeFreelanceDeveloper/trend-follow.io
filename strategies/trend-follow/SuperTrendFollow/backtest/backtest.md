@@ -21,27 +21,29 @@
 - Basic settings
     - ATR Length 10
     - Factor: 3
-    - Risk per trade: 2%
+    - Risk per trade: 2.5%
+    - ATR multiplier: 2
+    - ATR length: 20
 
 - Filter settings
-    - Enable filter: True
+    - Enable filter: False
     - Benchmark: SPX
 
 - Time settings
     - From date: 1.1.1990
-    - To date: 5.5.2024
+    - To date: 11.5.2024
 
 - Properties
     - Initial capital: 100 000 USD
     - Pyramiding: 0
 
 **Outputs**
-- Net profit: 33.06% (CAGR 0.97%)
-- Total count trades: 101 (avg 2-3 trades per year) 
-- Percentage profitability: 43.56%
-- Profit factor: 1.447
-- Ratio Avg Win / Avg Loss: 1.874
-- Max drawdown: 11.73%
+- Net profit: 247% (CAGR 7.2%)
+- Total count trades: 145 (avg 4-5 trades per year) 
+- Percentage profitability: 47.59%
+- Profit factor: 1.64
+- Ratio Avg Win / Avg Loss: 1.8
+- Max drawdown: 31.37%
 
 **Equity**
 ![SPX equity](resources/SPX-equity.png)
@@ -54,10 +56,12 @@
 - Basic settings
     - ATR Length 10
     - Factor: 3
-    - Risk per trade: 2%
+    - Risk per trade: 2.5%
+    - ATR multiplier: 2
+    - ATR length: 20
 
 - Filter settings
-    - Enable filter: True
+    - Enable filter: False
     - Benchmark: SPX
 
 - Time settings
@@ -69,12 +73,12 @@
     - Pyramiding: 0
 
 **Outputs**
-- Net profit: 39.53% (CAGR: 1.16%)
-- Total count trades: 104 (avg 3-4 trades per year) 
-- Percentage profitability: 44.23%
-- Profit factor: 1.541
+- Net profit: 477% (CAGR: 14%)
+- Total count trades: 150 (avg 4-5 trades per year) 
+- Percentage profitability: 48%
+- Profit factor: 2.1
 - Ratio Avg Win / Avg Loss: 1.943
-- Max drawdown: 14.92%
+- Max drawdown: 16.03%
 
 **Equity**
 ![NDQ equity](resources/NDQ-equity.png)
@@ -87,27 +91,29 @@
 - Basic settings
     - ATR Length 10
     - Factor: 3
-    - Risk per trade: 2%
+    - Risk per trade: 2.5%
+    - ATR multiplier: 2
+    - ATR length: 20
 
 - Filter settings
-    - Enable filter: True
+    - Enable filter: False
     - Benchmark: SPX
 
 - Time settings
     - From date: 1.1.1990
-    - To date: 5.5.2024
+    - To date: 11.5.2024
 
 - Properties
     - Initial capital: 100 000 USD
     - Pyramiding: 0
 
 **Outputs**
-- Net profit: 94.76% (CAGR: 2.78%)
-- Total count trades: 85 (avg 2-3 trades per year) 
-- Percentage profitability: 46.88%
-- Profit factor: 2.159
+- Net profit: 358% (CAGR: 10.52%)
+- Total count trades: 126 (avg 3-4 trades per year) 
+- Percentage profitability: 50.79%
+- Profit factor: 1.8
 - Ratio Avg Win / Avg Loss: 2.109
-- Max drawdown: 8.51%
+- Max drawdown: 18.67%
 
 **Equity**
 ![DJI equity](resources/DJI-equity.png)
