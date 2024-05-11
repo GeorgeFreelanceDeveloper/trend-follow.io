@@ -14,7 +14,7 @@
 
 ## Interval
 - 30+ years
-- 1.1.1990 - 4.5.2024
+- 1.1.1990 - 11.5.2024
 
 ## SPX
 
@@ -103,7 +103,7 @@
 
 - Time settings
     - From date: 1.1.1990
-    - To date: 4.5.2024
+    - To date: 11.5.2024
 
 - Properties
     - Initial capital: 100 000 USD
@@ -138,7 +138,7 @@
 
 - Time settings
     - From date: 1.1.2009
-    - To date: 4.5.2024
+    - To date: 11.5.2024
 
 - Properties
     - Initial capital: 1 000 USD
@@ -173,7 +173,7 @@
 
 - Time settings
     - From date: 1.1.2015
-    - To date: 4.5.2024
+    - To date: 11.5.2024
 
 - Properties
     - Initial capital: 1 000 USD
