@@ -1,0 +1,17 @@
+title: trend-follow.io
+description: Opensource trend-following systematic trading algorithms based on top trend following traders (Richard Dennis, Olivier Seban and Nick Radge).
+
+# disabled because we are using a custom domain
+#baseurl: /business-frontpage 
+
+color-scheme: "mediumseagreen" # the scheme can be any HEX code like "#00aa55"
+
+sass:
+  sass_dir: /assets/css/_sass
+  style: compressed
+
+include:
+  - _pages
+
+exclude:
+  - .sass-cache
