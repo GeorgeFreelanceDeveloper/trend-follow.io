@@ -22,29 +22,29 @@
 - Basic settings
     - Entry length: 20
     - Exit length: 10
-    - Risk per trade: 2%
+    - Risk per trade: 2.5%
     - ATR multiplier: 2
     - ATR length: 20
 
 - Filter settings
-    - Enable filter: True
+    - Enable filter: False
     - Benchmark: SPX
 
 - Time settings
     - From date: 1.1.1990
-    - To date: 4.5.2024
+    - To date: 11.5.2024
 
 - Properties
     - Initial capital: 100 000 USD
     - Pyramiding: 0
 
 **Outputs**
-- Net profit: 126% (CAGR 3.70%)
-- Total count trades: 133 (avg 3-4 trades per year) 
-- Percentage profitability: 45.86%
-- Profit factor: 1.75
-- Ratio Avg Win / Avg Loss: 2.07
-- Max drawdown: 23.25%
+- Net profit: 221% (CAGR 6.5%)
+- Total count trades: 152 (avg 4-5 trades per year) 
+- Percentage profitability: 48%
+- Profit factor: 1.92
+- Ratio Avg Win / Avg Loss: 2.08
+- Max drawdown: 26.78%
 
 **Equity**
 ![SPX equity](resources/SPX-equity.png)
@@ -57,29 +57,29 @@
 - Basic settings
     - Entry length: 20
     - Exit length: 10
-    - Risk per trade: 2%
+    - Risk per trade: 2.5%
     - ATR multiplier: 2
     - ATR length: 20
 
 - Filter settings
-    - Enable filter: True
+    - Enable filter: False
     - Benchmark: SPX
 
 - Time settings
     - From date: 1.1.1990
-    - To date: 4.5.2024
+    - To date: 11.5.2024
 
 - Properties
     - Initial capital: 100 000 USD
     - Pyramiding: 0
 
 **Outputs**
-- Net profit: 196% (CAGR: 5.76%)
-- Total count trades: 132 (avg 3-4 trades per year) 
-- Percentage profitability: 53.03%
-- Profit factor: 1.84
-- Ratio Avg Win / Avg Loss: 1.63
-- Max drawdown: 17.07%
+- Net profit: 378% (CAGR: 11.12%)
+- Total count trades: 154 (avg 4-5 trades per year) 
+- Percentage profitability: 51.95%
+- Profit factor: 1.82
+- Ratio Avg Win / Avg Loss: 1.68
+- Max drawdown: 17.12%
 
 **Equity**
 ![NDQ equity](resources/NDQ-equity.png)
@@ -93,12 +93,12 @@
 - Basic settings
     - Entry length: 20
     - Exit length: 10
-    - Risk per trade: 2%
+    - Risk per trade: 2.5%
     - ATR multiplier: 2
     - ATR length: 20
 
 - Filter settings
-    - Enable filter: True
+    - Enable filter: False
     - Benchmark: SPX
 
 - Time settings
@@ -110,12 +110,12 @@
     - Pyramiding: 0
 
 **Outputs**
-- Net profit: 100% (CAGR: 2.94%)
-- Total count trades: 128 (avg 3-4 trades per year) 
+- Net profit: 179% (CAGR: 5.2%)
+- Total count trades: 149 (avg 3-4 trades per year) 
 - Percentage profitability: 46.88%
-- Profit factor: 1.58
+- Profit factor: 1.88
 - Ratio Avg Win / Avg Loss: 1.79
-- Max drawdown: 18%
+- Max drawdown: 21.64%
 
 **Equity**
 ![DJI equity](resources/DJI-equity.png)
