@@ -1,6 +1,6 @@
 # trend-follow.io
 
-Open source momentum base trend following systematic trading algorithms inspired from top trend following traders (Richard Denis, Olivier Seban and Nick Radge) for various trading platforms as TradingView, cTrader, MetaTrader, Multicharts and TradeStation.
+This open source project is about momentum base trend following systematic trading strategies inspired from top trend following traders (Richard Denis, Olivier Seban and Nick Radge) implemented for various trading platforms as TradingView, cTrader, MetaTrader, Multicharts and TradeStation.
 
 ## System Design Considerations
 Here is a flow chart diagram uses to explain fundamental ideas and thesis around system design.

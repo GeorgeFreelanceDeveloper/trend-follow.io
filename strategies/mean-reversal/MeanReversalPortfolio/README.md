@@ -5,7 +5,7 @@ In this project, we unveil 5 powerful and proven swing trading strategies for th
 
 The first swing trading strategy involves entering when the price has dropped from a recent high and selling on strength. The second strategy is known as Turnaround Tuesday and involves buying at the close on Monday if the close is lower for the second day in a row. The third swing trading strategy is a simple mean reversion strategy that involves buying when the close is lower than the low of the previous 5 trading days. The fourth trading strategy is based on volatility and involves buying when today's range is lower than the daily range of the previous 6 trading days and the close is above the 200-day moving average. The fifth and final swing trading strategy involves buying on a weak day when the price has set a new ten-day high earlier in the trading session.
 
-All five swing trading strategies are backtested and have produced impressive returns over the years. But when combined, they have produced even better results with only three losing years since 1993. The combined trading systems have returned an average of 0.38% per trade, resulting in a compounding return of 14.1%.
+All five swing trading strategies are backtested and have produced impressive returns over the years. But when combined, they have produced even better results with only three losing years since 1993. The combined trading systems have returned an average of 0.38% per trade, resulting in a compounding return of 14.1% with max drawdown around 25% (index has drawdown above 50%).
 
 **Prerequisites**
 * Liquidity
