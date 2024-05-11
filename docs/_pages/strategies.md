@@ -79,9 +79,9 @@ Author: Richard Denis
 
 <img src="../assets/images/turtle_example.png" width=750px>
 
-* [Documentation]()
-* [Backtest]()
-* **SourceCode**: [TradingView](), [cTrader]() [MetaTrader](), [Multicharts](), [TradeStation]()
+* [Documentation](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/tree/master/strategies/trend-follow/TurtleTrendFollow)
+* [Backtest](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/TurtleTrendFollow/backtest/backtest.md)
+* **SourceCode**: [TradingView](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.pinescript), [cTrader](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.cs) [MetaTrader](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.mq5), [Multicharts](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.easylanguage), [TradeStation](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.easylanguage)
 
 
 ## Supertrend
@@ -110,9 +110,9 @@ Super trend indicator parameters: (Time frame: Daily, ATR lenght: 10, Factor: 3)
 
 <img src="../assets/images/supertrend_example.png" width=750px>
 
-* [Documentation]()
-* [Backtest]()
-* **SourceCode**: [TradingView](), [cTrader]() [MetaTrader](), [Multicharts](), [TradeStation]()
+* [Documentation](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/SuperTrendFollow/README.md)
+* [Backtest](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/SuperTrendFollow/backtest/backtest.md)
+* **SourceCode**: [TradingView](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.pinescript), [cTrader](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.cs) [MetaTrader](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.mq5), [Multicharts](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.easylanguage), [TradeStation](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.easylanguage)
 
 
 ## Bollinger Band Breakout
@@ -146,6 +146,6 @@ double lowerBand = ta.sma(close, length) - multiplierLower * ta.stdev(close, len
 
 <img src="../assets/images/bollinger_example.png" width=750px>
 
-* [Documentation]()
-* [Backtest]()
-* **SourceCode**: [TradingView](), [cTrader]() [MetaTrader](), [Multicharts](), [TradeStation]()
+* [Documentation](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/BollingerBandTrendFollow/README.md)
+* [Backtest](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/BollingerBandTrendFollow/backtest/backtest.md)
+* **SourceCode**: [TradingView](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.pinescript), [cTrader](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.cs) [MetaTrader](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.mq5), [Multicharts](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.easylanguage), [TradeStation](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.easylanguage)
