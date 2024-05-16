@@ -76,8 +76,8 @@
 - Net profit: 477% (CAGR: 14%)
 - Total count trades: 150 (avg 4-5 trades per year) 
 - Percentage profitability: 48%
-- Profit factor: 2.1
-- Ratio Avg Win / Avg Loss: 1.943
+- Profit factor: 1.98
+- Ratio Avg Win / Avg Loss: 2.144
 - Max drawdown: 16.03%
 
 **Equity**
@@ -111,8 +111,8 @@
 - Net profit: 358% (CAGR: 10.52%)
 - Total count trades: 126 (avg 3-4 trades per year) 
 - Percentage profitability: 50.79%
-- Profit factor: 1.8
-- Ratio Avg Win / Avg Loss: 2.109
+- Profit factor: 1.864
+- Ratio Avg Win / Avg Loss: 1.806
 - Max drawdown: 18.67%
 
 **Equity**

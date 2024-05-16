@@ -25,7 +25,7 @@ As a trader, Seban advocates for a systematic approach to trading, focusing on i
 
 The SuperTrend indicator was created by Olivier Seban. The SuperTrend indicator is designed to identify trends in financial markets and provide traders with signals for potential entry and exit points based on the direction of those trends. It has become widely used by traders around the world due to its simplicity and effectiveness in capturing trends while minimizing false signals.
 
-## Entry and exit conditions
+## Entry and exit conditions for long side
 **Entry**
 * Daily close price is above value of  Super trend indicator from previous day
 
@@ -39,7 +39,7 @@ Super trend indicator parameters: (Time frame: Daily, ATR lenght: 10, Factor: 3)
 
 **Advance**
 
-Using Super trend indicator is more accurate determination of medium-term trend changes from bear market to bull market and vice versa.
+I think using Super trend indicator is more accurate determination of medium-term trend changes from bear market to bull market and vice versa.
 
 * Daily close price is above Super trend indicator(Time frame: Weekly, ATR lenght: 10, Factor: 3)
 
@@ -77,7 +77,7 @@ private double ComputeTradeAmount(double entryPrice, double stopPrice)
 * Cryptocurrencies (Bitcoin, Ethereum)
 * Stock indexies (S&P 500, Nasdaq, DJI, NIFTY50)
 * Stocks in long-term uptrend (AAPL, MSFT, NVDA, TSLA, AMZN, NFLX, SHOP, MA, ASML, PANW)
-* Forex pairs in long-term uptrend (USDTRY, EURTRY, GBPTRY, USDINR, USDCNH) - warning: in reality impossible to trade due to high swap
+* Forex pairs in long-term uptrend (USDTRY, EURTRY, GBPTRY, USDINR, USDCNH) - <span style="color:red">warning: in reality impossible to trade due to high swap</span>
 
 ## Notes
 
