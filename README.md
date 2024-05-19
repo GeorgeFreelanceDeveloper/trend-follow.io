@@ -7,8 +7,7 @@
 [![Build Status](https://img.shields.io/badge/TradeStation-blue)](https://www.tradestation.com/)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-
+<!-- [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-) -->
 <!-- ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) -->
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
