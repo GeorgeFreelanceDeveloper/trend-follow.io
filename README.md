@@ -80,13 +80,13 @@ Author: Nick Radge
 
 ## Top trend follow traders
 ### Richard Dennis
-Richard Dennis was an American trader who became famous as a commodity trader and creator of the strategy known as "Turtle Trading". Born in 1949 in Chicago, he showed an interest in financial markets from a young age. Dennis' career began as a stock trader, but he soon turned his attention to commodity trading, where he found his true calling.
+Richard Dennis is an American trader who became famous as a commodity trader and creator of the strategy known as "Turtle Trading". Born in 1949 in Chicago, he showed an interest in financial markets from a young age. Dennis' career began as a stock trader, but he soon turned his attention to commodity trading, where he found his true calling.
 
 His greatest success came in the 1980s when he and partner William Eckhardt developed and taught the Turtle Trading strategy. This strategy was based on simple rules that aimed to identify long-term trends in the markets. Dennis and Eckhardt recruited and trained a group of traders they called "turtles" and taught these people their strategy. The Turtles were then tasked with trading according to these rules in real markets.
 
 Richard Dennis became famous for his approach to trading that emphasized discipline and psychological resilience. His story is proof that with a solid plan and discipline, success can be achieved even in volatile financial markets.
 
-Dennis' legacy in commodity trading and his Turtle Trading strategy continue to inspire many traders around the world. Richard Dennis died in 2015, but his influence on the world of financial markets remains so strong that his name is still associated with innovative approaches to trading.
+Dennis' legacy in commodity trading and his Turtle Trading strategy continue to inspire many traders around the world. Influence of Richard Dennis on the world of financial markets remains so strong that his name is still associated with innovative approaches to trading.
 
 ### Olivier Seban
 Olivier Seban is a French trader and author who is best known for his contribution to trading in the financial markets. Born in 1970, he has specialized in technical analysis and development of trading strategies throughout his career.

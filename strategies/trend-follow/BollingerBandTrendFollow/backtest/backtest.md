@@ -10,6 +10,9 @@
 
 * **ETHUSD**: Ethereum (ETH) is a decentralized, open-source blockchain that aims to become a global platform for decentralized applications and strives to enable users worldwide to write and run software resistant to censorship, downtime, and fraud. As the nonprofit Ethereum Foundation puts it, it "Is for more than payments. It's a marketplace of financial services, games, and apps that can't steal your data or censor you." Ethereum is the second-biggest cryptocurrency by market cap after Bitcoin and a decentralized computing platform that can run a wide variety of applications — including a universe of decentralized finance (or DeFi) apps and services. This platform is powered by its native cryptocurrency, Ether, which is used within the Ethereum network for various operations, making it an integral part of the system.
 
+## Timeframe
+- D
+
 ## Interval
 - 30+ years
 - 1.1.1990 - 11.5.2024
@@ -38,10 +41,10 @@
 
 **Outputs**
 - Net profit: 209% (CAGR 6.15%)
-- Total count trades: 239 (avg 6-7 trades per year) 
+- Total count trades: 239 (avg 7 trades per year) 
 - Percentage profitability: 43.51%
-- Profit Factor: 1.95
-- Ratio Avg Win / Avg Loss: 2.05
+- Profit Factor: 1.509
+- Ratio Avg Win / Avg Loss: 1.959
 - Max drawdown: 27.57%
 
 **Equity**
@@ -76,8 +79,8 @@
 - Net profit: 511% (CAGR: 15%)
 - Total count trades: 237 (avg 6.97 trades per year) 
 - Percentage profitability: 45%
-- Profit Factor: 2.15
-- Ratio Avg Win / Avg Loss: 1.973
+- Profit Factor: 1.775
+- Ratio Avg Win / Avg Loss: 2.157
 - Max drawdown: 22.71%
 
 **Equity**
@@ -129,9 +132,12 @@
     - Length 20
     - Upper: 1
     - Lower: 0.5
+    - Risk per trade: 2.5%
+    - ATR multiplier: 2
+    - ATR length: 20
 
 - Filter settings
-    - Enable filter: True
+    - Enable filter: False
     - Benchmark: BTCUSD
 
 - Time settings
@@ -145,12 +151,12 @@
 
 
 **Outputs**
-- Net profit: 11 443.14% (CAGR: 762.876%)
-- Total count trades: 69 (avg 5-6 trades per year) 
-- Percentage profitability: 44.93%
-- Profit Factor: 3.981
-- Ratio Avg Win / Avg Loss: 4.752
-- Max drawdown: 19.05%
+- Net profit: 421 818.07% (CAGR: 28 121.205%)
+- Total count trades: 105 (avg 7 trades per year) 
+- Percentage profitability: 47.62%
+- Profit Factor: 3.7
+- Ratio Avg Win / Avg Loss: 3.775
+- Max drawdown: 18.73%
 
 **Equity**
 ![BTCUSD equity](resources/BTCUSD-equity.png)
@@ -164,9 +170,12 @@
     - Length 20
     - Upper: 1
     - Lower: 0.5
+    - Risk per trade: 2.5%
+    - ATR multiplier: 2
+    - ATR length: 20
 
 - Filter settings
-    - Enable filter: True
+    - Enable filter: False
     - Benchmark: BTCUSD
 
 - Time settings
@@ -179,12 +188,12 @@
     - Pyramiding: 0
 
 **Outputs**
-- Net profit: 906.5% (CAGR: 100.72%)
-- Total count trades: 39 (avg 4-5 trades per year) 
-- Percentage profitability: 43.59%
-- Profit Factor: 4.528
-- Ratio Avg Win / Avg Loss: 5.86
-- Max drawdown: 13.05%
+- Net profit: 4 271.75% (CAGR: 473.64%)
+- Total count trades: 61 (avg 6-7 trades per year) 
+- Percentage profitability: 49.18%
+- Profit Factor: 3.859
+- Ratio Avg Win / Avg Loss: 3.988
+- Max drawdown: 8.13%
 
 **Equity**
 ![ETHUSD equity](resources/ETHUSD-equity.png)
