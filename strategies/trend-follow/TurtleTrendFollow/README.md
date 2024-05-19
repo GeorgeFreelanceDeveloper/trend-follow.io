@@ -23,7 +23,7 @@ Dennis' trading philosophy emphasized the importance of following systematic rul
 
 Richard Dennis's legacy endures as a testament to the power of disciplined trading strategies and the potential for individuals to achieve success in the financial markets with the right guidance and methodology.
 
-## Entry and exit conditions
+## Entry and exit conditions for long side
 **Entry**
 * Daily close price is above max 20 days high price
 
@@ -36,7 +36,7 @@ Richard Dennis's legacy endures as a testament to the power of disciplined tradi
 
 **Advance**
 
-Using Super trend indicator is more accurate determination of medium-term trend changes from bear market to bull market and vice versa.
+I think using Super trend indicator is more accurate determination of medium-term trend changes from bear market to bull market and vice versa.
 
 * Daily close price is above Super trend indicator(Time frame: Weekly, ATR lenght: 10, Factor: 3)
 
@@ -72,7 +72,7 @@ private double ComputeTradeAmount(double entryPrice, double stopPrice)
 * Cryptocurrencies (Bitcoin, Ethereum)
 * Stock indexies (S&P 500, Nasdaq, DJI, NIFTY50)
 * Stocks in long-term uptrend (AAPL, MSFT, NVDA, TSLA, AMZN, NFLX, SHOP, MA, ASML, PANW)
-* Forex pairs in long-term uptrend (USDTRY, EURTRY, GBPTRY, USDINR, USDCNH) - warning: in reality impossible to trade due to high swap
+* Forex pairs in long-term uptrend (USDTRY, EURTRY, GBPTRY, USDINR, USDCNH) - <span style="color:red">warning: in reality impossible to trade due to high swap</span>
 
 ## Notes
 

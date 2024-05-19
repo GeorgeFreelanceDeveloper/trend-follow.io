@@ -11,6 +11,8 @@
 
 * **ETHUSD**: Ethereum (ETH) is a decentralized, open-source blockchain that aims to become a global platform for decentralized applications and strives to enable users worldwide to write and run software resistant to censorship, downtime, and fraud. As the nonprofit Ethereum Foundation puts it, it "Is for more than payments. It's a marketplace of financial services, games, and apps that can't steal your data or censor you." Ethereum is the second-biggest cryptocurrency by market cap after Bitcoin and a decentralized computing platform that can run a wide variety of applications — including a universe of decentralized finance (or DeFi) apps and services. This platform is powered by its native cryptocurrency, Ether, which is used within the Ethereum network for various operations, making it an integral part of the system.
 
+## Timeframe
+- D
 
 ## Interval
 - 30+ years
@@ -111,10 +113,10 @@
 
 **Outputs**
 - Net profit: 179% (CAGR: 5.2%)
-- Total count trades: 149 (avg 3-4 trades per year) 
-- Percentage profitability: 46.88%
-- Profit factor: 1.88
-- Ratio Avg Win / Avg Loss: 1.79
+- Total count trades: 149 (avg 4-5 trades per year) 
+- Percentage profitability: 46.98%
+- Profit factor: 1.7
+- Ratio Avg Win / Avg Loss: 1.88
 - Max drawdown: 21.64%
 
 **Equity**
