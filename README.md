@@ -8,7 +8,8 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
+
+<!-- ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) -->
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This open source project is about momentum base trend following systematic trading strategies inspired from top trend following traders (Richard Denis, Olivier Seban and Nick Radge) implemented for various trading platforms as TradingView, cTrader, MetaTrader, Multicharts and TradeStation.
