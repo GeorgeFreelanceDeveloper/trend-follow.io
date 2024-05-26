@@ -140,6 +140,9 @@ Through his work and publications, Michael Covel has become an influential figur
 * [Trend Following: How to Make a Fortune in Bull, Bear, and Black Swan Markets (Wiley Trading)](https://www.amazon.com/dp/B06Y63RDS2?ref_=cm_sw_r_kb_dp_8SJ3XXZX75AQPNFZV0PN&tag=kpembed-20&linkCode=kpe)
 * [Trend Following Mindset: The Genius of Legendary Trader Tom Basso](https://www.amazon.com/dp/B08TRN5LRT?ref_=cm_sw_r_kb_dp_A29QMGVX07EC2P47T8KW&tag=kpembed-20&linkCode=kpe)
 
+## Usefull links
+* [PineScript documentation](https://www.tradingview.com/pine-script-docs/en/v5/Introduction.html)
+* [cTrader documentation](https://help.ctrader.com/)
 
 ## Contributors
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
