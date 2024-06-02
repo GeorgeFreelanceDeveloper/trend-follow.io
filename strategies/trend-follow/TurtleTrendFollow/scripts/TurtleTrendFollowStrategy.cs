@@ -52,38 +52,24 @@ namespace cAlgo.Robots
             // **********************************
             
             // Basic
-            Print("-----------------------------------------------------------------------------------------");
             double upperChannel = Indicators.DonchianChannel(EntryLength).Top.LastValue;
-            Print($"upperChannel:{upperChannel}");
             double lowerChannel = Indicators.DonchianChannel(ExitLength).Bottom.LastValue;
-            Print($"lowerChannel:{lowerChannel}");
             double closePrice = Bars.ClosePrices.LastValue;
-            Print($"closePrice:{closePrice}");
             string label = $"TurtleTrendFollow_cBot-{Symbol.Name}";
-            Print($"label:{label}");
             
             // Trade amount
             double qty = ((RiskPercentage/100) * Account.Balance) / (AtrMultiplier * Indicators.AverageTrueRange(20,MovingAverageType.Simple).Result.LastValue);
-            Print($"qty:{qty}");
             double qtyInLots = ((int)(qty /Symbol.VolumeInUnitsStep)) * Symbol.VolumeInUnitsStep;
-            Print($"qtyInLots:{qtyInLots}");
             
             // Filter
             DataSeries benchmarkSymbolClosePrices = MarketData.GetBars(TimeFrame.Daily, BenchmarkSymbol).ClosePrices;
-            Print($"benchmarkSymbolClosePrices:{benchmarkSymbolClosePrices}");
             double benchmarkSymbolClose = MarketData.GetBars(TimeFrame.Daily, BenchmarkSymbol).ClosePrices.LastValue;
-            Print($"benchmarkSymbolClose:{benchmarkSymbolClose}");
             bool filter = EnableFilter ? benchmarkSymbolClose >= Indicators.SimpleMovingAverage(benchmarkSymbolClosePrices, 200).Result.LastValue: true;
-            Print($"filter:{filter}");
             Position position = Positions.Find(label);
-            Print($"position:{position}");
             bool isOpenPosition = position != null;
-            Print($"isOpenPosition:{isOpenPosition}");
             
             bool buyCondition = closePrice > upperChannel && !isOpenPosition && filter;
-            Print($"buyCondition:{buyCondition}");
             bool sellCondition = closePrice < lowerChannel && isOpenPosition;
-            Print($"sellCondition:{sellCondition}");
             
             // ********************************
             // Manage trade
