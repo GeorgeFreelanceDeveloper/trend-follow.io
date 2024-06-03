@@ -33,8 +33,6 @@ namespace cAlgo.Robots
         [Parameter("Atr Length", Group ="Basic settings", DefaultValue = 20)]
         public int AtrLength { get; set; }
         
-        private Supertrend _supertrend;
-        
         // Filter settings
         [Parameter("Enable Filter", Group ="Filter settings", DefaultValue =false)]
         public bool EnableFilter {get; set;} 
@@ -44,8 +42,7 @@ namespace cAlgo.Robots
         
         protected override void OnStart()
         {   
-            
-            
+
         }
         
         protected override void OnBar()
@@ -54,8 +51,10 @@ namespace cAlgo.Robots
             // Perform calculations and analysis
             // **********************************
 
-            _supertrend = Indicators.Supertrend(AtrPeriod, Factor);
-             string label = $"SuperTrendFolow_cBot-{Symbol.Name}";
+            Supertrend supertrend = Indicators.Supertrend(AtrPeriod, Factor);
+            bool isSupertrend = !Double.IsNaN(supertrend.UpTrend.Last());
+            
+            string label = $"SuperTrendFolow_cBot-{Symbol.Name}";
              
             // Filter
             DataSeries benchmarkSymbolClosePrices = MarketData.GetBars(TimeFrame.Daily, BenchmarkSymbol).ClosePrices;
@@ -70,8 +69,8 @@ namespace cAlgo.Robots
             double qty = ((RiskPercentage/100) * Account.Balance) / (AtrMultiplier * Indicators.AverageTrueRange(AtrLength, MovingAverageType.Simple).Result.LastValue);
             double qtyInLots = ((int)(qty /Symbol.VolumeInUnitsStep)) * Symbol.VolumeInUnitsStep;
             
-            bool buyCondition = IsUptrend() && !isOpenPosition && filter;
-            bool sellCondition = !IsUptrend() && isOpenPosition;
+            bool buyCondition = isSupertrend && !isOpenPosition && filter;
+            bool sellCondition = !isSupertrend && isOpenPosition;
            
             
             // ********************************
@@ -88,11 +87,6 @@ namespace cAlgo.Robots
             if(sellCondition) {
                 position.Close();
             }
-        }
-        
-        private bool IsUptrend()
-        {
-            return !Double.IsNaN(_supertrend.UpTrend.Last());
         }
     }
 }
