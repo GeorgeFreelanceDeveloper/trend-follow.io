@@ -11,7 +11,7 @@ using cAlgo.API.Internals;
 namespace cAlgo.Robots
 {
     [Robot(TimeZone = TimeZones.UTC, AccessRights = AccessRights.None)]
-    public class SuperTrendFollow_test_cBot : Robot
+    public class SuperTrendFollow_cBot : Robot
     {
         // ********************************
         // User defined inputs
