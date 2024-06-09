@@ -57,8 +57,8 @@ namespace cAlgo.Robots
             double stdLastValue = Indicators.StandardDeviation(Bars.ClosePrices, Length, MovingAverageType.Simple).Result.LastValue;
             double smaLastValue = Indicators.SimpleMovingAverage(Bars.ClosePrices, Length).Result.LastValue;
             
-            double upperBand = smaLastValue + MultiplierUpper * stdLastValue;
-            double lowerBand = smaLastValue + MultiplierLower * stdLastValue;  
+            double upperBand = smaLastValue + (MultiplierUpper * stdLastValue);
+            double lowerBand = smaLastValue - (MultiplierLower * stdLastValue);  
             
             string label = $"BollingerBandTrendFollow_cBot-{Symbol.Name}";
              
