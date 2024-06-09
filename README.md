@@ -2,7 +2,6 @@
 
 [![Build Status](https://img.shields.io/badge/TradingView-blue)](https://www.tradingview.com/)
 [![Build Status](https://img.shields.io/badge/cTrader-blue)](https://ctrader.com/)
-[![Build Status](https://img.shields.io/badge/MetaTrader-blue)](https://www.metatrader5.com/)
 [![Build Status](https://img.shields.io/badge/MultiCharts-blue)](https://www.multicharts.com/)
 [![Build Status](https://img.shields.io/badge/TradeStation-blue)](https://www.tradestation.com/)
 
@@ -11,7 +10,7 @@
 <!-- ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) -->
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-This open source project is about momentum base trend following systematic trading strategies inspired from top trend following traders (Richard Denis, Olivier Seban and Nick Radge) implemented for various trading platforms as TradingView, cTrader, MetaTrader, Multicharts and TradeStation.
+This open source project is about momentum base trend following systematic trading strategies inspired from top trend following traders (Richard Denis, Olivier Seban and Nick Radge) implemented for various trading platforms as TradingView, cTrader, Multicharts and TradeStation.
 
 ## System Design Considerations
 Here is a flow chart diagram uses to explain fundamental ideas and thesis around system design.
@@ -66,7 +65,7 @@ Author: Richard Denis
 
 - [Documentation](strategies/trend-follow/TurtleTrendFollow/README.md)
 - [Backtest](strategies/trend-follow/TurtleTrendFollow/backtest/backtest.md)
-- **SourceCode**: [TradingView](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.pinescript), [cTrader](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.cs) [MetaTrader](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.mq5), [Multicharts](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.easylanguage), [TradeStation](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.easylanguage)
+- **SourceCode**: [TradingView](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.pinescript), [cTrader](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.cs), [Multicharts](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.easylanguage), [TradeStation](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.easylanguage)
 
 ### Super trend follow
 The Supertrend Strategy is a trend trading strategy that uses the Supertrend indicator to identify and trade trends in the financial markets. This strategy focuses on entering the market in line with the main trend and exiting the market when the trend begins to reverse.
@@ -77,7 +76,7 @@ Author: Olivier Seban
 
 - [Documentation](strategies/trend-follow/SuperTrendFollow/README.md)
 - [Backtest](strategies/trend-follow/SuperTrendFollow/backtest/backtest.md)
-- **SourceCode**: [TradingView](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.pinescript), [cTrader](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.cs) [MetaTrader](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.mq5), [Multicharts](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.easylanguage), [TradeStation](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.easylanguage)
+- **SourceCode**: [TradingView](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.pinescript), [cTrader](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.cs), [Multicharts](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.easylanguage), [TradeStation](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.easylanguage)
 
 ### Bollinger band trend follow
 The purpose of this strategy is to use the Bollinger Bands to generate trading signals designed to capture powerful breakout price moves and to capitalize on the resulting trends from these breakouts.
@@ -87,7 +86,7 @@ The Bollinger Bands are often used for the purpose of generating signals to dete
 Author: Nick Radge
 - [Documentation](strategies/trend-follow/BollingerBandTrendFollow/README.md)
 - [Backtest](strategies/trend-follow/BollingerBandTrendFollow/backtest/backtest.md)
-- **SourceCode**: [TradingView](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.pinescript), [cTrader](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.cs) [MetaTrader](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.mq5), [Multicharts](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.easylanguage), [TradeStation](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.easylanguage)
+- **SourceCode**: [TradingView](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.pinescript), [cTrader](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.cs), [Multicharts](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.easylanguage), [TradeStation](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.easylanguage)
 
 ## Top trend follow traders
 ### Richard Dennis
