@@ -42,17 +42,17 @@ namespace cAlgo.Robots
         
         protected override void OnStart()
         {   
-
+        
         }
         
-        protected override void OnBar()
+        protected override void OnBarClosed()
         {   
             // **********************************
             // Perform calculations and analysis
             // **********************************
 
             Supertrend supertrend = Indicators.Supertrend(AtrPeriod, Factor);
-            bool isSupertrend = !Double.IsNaN(supertrend.UpTrend.Last());
+            bool isUpTrend = !Double.IsNaN(supertrend.UpTrend.Last());
             
             string label = $"SuperTrendFolow_cBot-{Symbol.Name}";
              
@@ -69,9 +69,8 @@ namespace cAlgo.Robots
             double qty = ((RiskPercentage/100) * Account.Balance) / (AtrMultiplier * Indicators.AverageTrueRange(AtrLength, MovingAverageType.Simple).Result.LastValue);
             double qtyInLots = ((int)(qty /Symbol.VolumeInUnitsStep)) * Symbol.VolumeInUnitsStep;
             
-            bool buyCondition = isSupertrend && !isOpenPosition && filter;
-            bool sellCondition = !isSupertrend && isOpenPosition;
-           
+            bool buyCondition = isUpTrend && !isOpenPosition && filter;
+            bool sellCondition = !isUpTrend && isOpenPosition;
             
             // ********************************
             // Manage trade
