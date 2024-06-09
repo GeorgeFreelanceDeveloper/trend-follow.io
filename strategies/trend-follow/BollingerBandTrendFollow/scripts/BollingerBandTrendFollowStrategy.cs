@@ -22,10 +22,10 @@ namespace cAlgo.Robots
         public int Length { get; set; }
         
         [Parameter("Upper", Group ="Basic settings", DefaultValue = 1)]
-        public int Upper { get; set; }
+        public int MultiplierUpper { get; set; }
         
         [Parameter("Lower", Group ="Basic settings", DefaultValue = 0.5)]
-        public double Lower { get; set; }
+        public double MultiplierLower { get; set; }
         
         [Parameter("Risk percentage", Group ="Basic settings", DefaultValue = 2.5)]
         public double RiskPercentage { get; set; }
@@ -48,24 +48,23 @@ namespace cAlgo.Robots
 
         }
         
-        protected override void OnBar()
+        protected override void OnBarClosed()
         {   
             // **********************************
             // Perform calculations and analysis
             // **********************************
             
-            DataSeries symbolClosePrices = MarketData.GetBars(TimeFrame.Daily, BenchmarkSymbol).ClosePrices;
-            StandardDeviation std = Indicators.StandardDeviation(symbolClosePrices, Length, MovingAverageType.Simple);
-            BollingerBands bollingerBands = Indicators.BollingerBands(symbolClosePrices, Length, std.Result[0], MovingAverageType.Simple);
+            double stdLastValue = Indicators.StandardDeviation(Bars.ClosePrices, Length, MovingAverageType.Simple).Result.LastValue;
+            double smaLastValue = Indicators.SimpleMovingAverage(Bars.ClosePrices, Length).Result.LastValue;
             
-            IndicatorDataSeries topBand = bollingerBands.Top;
-            IndicatorDataSeries bottomBand = bollingerBands.Bottom;
+            double upperBand = smaLastValue + MultiplierUpper * stdLastValue;
+            double lowerBand = smaLastValue + MultiplierLower * stdLastValue;  
             
             string label = $"BollingerBandTrendFollow_cBot-{Symbol.Name}";
              
             // Filter
             DataSeries benchmarkSymbolClosePrices = MarketData.GetBars(TimeFrame.Daily, BenchmarkSymbol).ClosePrices;
-            double benchmarkSymbolClose = MarketData.GetBars(TimeFrame.Daily, BenchmarkSymbol).ClosePrices.LastValue;
+            double benchmarkSymbolClose =benchmarkSymbolClosePrices.LastValue;
             bool filter = EnableFilter ? benchmarkSymbolClose >= Indicators.SimpleMovingAverage(benchmarkSymbolClosePrices, 200).Result.LastValue: true;
             
             // Check position
@@ -76,12 +75,10 @@ namespace cAlgo.Robots
             double qty = ((RiskPercentage/100) * Account.Balance) / (AtrMultiplier * Indicators.AverageTrueRange(AtrLength, MovingAverageType.Simple).Result.LastValue);
             double qtyInLots = ((int)(qty /Symbol.VolumeInUnitsStep)) * Symbol.VolumeInUnitsStep;
             
-            DataSeries close = Bars.ClosePrices;
+            double lastClose = Bars.ClosePrices.LastValue;
             
-            bool crossOverUpperBand = close.Last(1) < topBand.Last(1) && close.Last(0) > topBand.Last(0);
-            bool crossOverLowerBand = close.Last(1) > bottomBand.Last(1) && close.Last(0) < bottomBand.Last(0);
-            bool buyCondition = crossOverUpperBand && !isOpenPosition && filter;
-            bool sellCondition = crossOverLowerBand && isOpenPosition;
+            bool buyCondition = lastClose > upperBand && !isOpenPosition && filter;
+            bool sellCondition = lastClose < lowerBand && isOpenPosition;
            
             
             // ********************************
