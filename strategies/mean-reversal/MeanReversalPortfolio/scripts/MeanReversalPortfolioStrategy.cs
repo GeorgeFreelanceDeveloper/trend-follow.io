@@ -78,27 +78,38 @@ namespace cAlgo.Robots
         // Functions
         // ********************************
 
-        private void strategy1(PositionOpenedEventArgs args){
+        private bool strategy1(PositionOpenedEventArgs args){
         
+            DataSeries highPrices = Bars.HighPrices;
+            DataSeries lowPrices = Bars.HighPrices;
+            DataSeries closePrices = Bars.HighPrices;
+            
             // Calculate the Average of High minus Low over the Last 25 Days
-            int len = 25;
-            double highMinusLow = high-low;
-            double avgHighLow = Indicators.SimpleMovingAverage(highMinusLow, len);
+            double sumHighLowDifferences = 0;
+            for (int i = 0; i < 25; i++)
+            {
+                double high = highPrices.Last(i);
+                double low = lowPrices.Last(i);
+                sumHighLowDifferences += high - low;
+            }
+            double averageHighLowDifference = sumHighLowDifferences / 25;
 
             // Calculate the IBS (Internal Bar Strength) Indicator:
-            double ibs = (close - low) / (high - low);
+            double ibs = (closePrices.LastValue - lowPrices.LastValue) / (highPrices.LastValue - lowPrices.LastValue);
 
             // Calculate a band 2.5 times lower than tthe high over the last 10 days by using average from point number 1
-            double lowerBand = ta.highest(10) - avgHighLow * 2.5;
-            bool strategy1a = enableStrategy1 ? close < lowerBand and ibs < 0.3 : false;
+            double lowerBand = Bars.HighPrices.Maximum(10) - averageHighLowDifference * 2.5;
+            bool strategy1a = EnableStrategy1 ? closePrices.LastValue < lowerBand && ibs < 0.3 : false;
+            return strategy1a;
 
         }
         
-        private void strategy2 (){
-            monday = dayofweek == dayofweek.monday
+        private bool strategy2 (){
+            DayOfWeek monday = DayOfWeek.Monday;
             bool today_close_lower_than_friday_close = close < close[1];
             bool friday_close_lower_than_thursday_close = close[1] < close[2];
             bool strategy2a = enableStrategy2 ? monday and today_close_lower_than_friday_close and friday_close_lower_than_thursday_close : false;
+            return strategy2a;
         }
         
         private void strategy3 () {
