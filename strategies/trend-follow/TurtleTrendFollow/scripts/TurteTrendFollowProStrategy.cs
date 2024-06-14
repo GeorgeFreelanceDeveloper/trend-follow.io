@@ -51,9 +51,6 @@ namespace cAlgo.Robots
             string label = $"TurtleTrendFollow_cBot-{Symbol.Name}-L1";
             Position position = Positions.Find(label);
             
-            
-            Print($"Position: {position}");
-            
             // Trade amount
             double qtyInLots = ComputeTradeAmount(upperChannel,lowerChannel);
             
