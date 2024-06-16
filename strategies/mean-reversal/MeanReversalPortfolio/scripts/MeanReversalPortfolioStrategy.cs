@@ -49,17 +49,28 @@ namespace cAlgo.Robots
             // **********************************
             // Perform calculations and analysis
             // **********************************
+            
+            DataSeries highPrices = Bars.HighPrices;
+            DataSeries lowPrices = Bars.LowPrices;
+            DataSeries closePrices = Bars.ClosePrices;
         
-            string label = $"BollingerBandTrendFollow_cBot-{Symbol.Name}";
+            string label = $"MeanReversalPortfolio_cBot-{Symbol.Name}";
              
             // Filter
             DataSeries benchmarkSymbolClosePrices = MarketData.GetBars(TimeFrame.Daily, BenchmarkSymbol).ClosePrices;
-            double benchmarkSymbolClose =benchmarkSymbolClosePrices.LastValue;
+            double benchmarkSymbolClose = benchmarkSymbolClosePrices.LastValue;
             bool filter = EnableFilter ? benchmarkSymbolClose >= Indicators.SimpleMovingAverage(benchmarkSymbolClosePrices, 200).Result.LastValue: true;
 
+            // Check position
+            Position position = Positions.Find(label);
+            bool isOpenPosition = position != null;
 
-            buyCondition = (strategy1() or strategy2() or strategy3() or strategy4() or strategy5()) and filter and tradeDateIsAllowed()
-            sellCondition = close > high[1]
+            bool buyCondition = (strategy1(highPrices, lowPrices, closePrices) || strategy2(closePrices) || strategy3(lowPrices, closePrices) || strategy4(lowPrices, highPrices, closePrices) || strategy5(highPrices, lowPrices, closePrices)) && filter && !isOpenPosition;
+            bool sellCondition = closePrices.LastValue > highPrices.Last(1) && isOpenPosition;
+            
+            // Trade amount
+            double qty = Account.Balance / closePrices.LastValue;
+            double qtyInLots = ((int)(qty /Symbol.VolumeInUnitsStep)) * Symbol.VolumeInUnitsStep;
             
             // ********************************
             // Manage trade
@@ -78,11 +89,7 @@ namespace cAlgo.Robots
         // Functions
         // ********************************
 
-        private bool strategy1(PositionOpenedEventArgs args){
-        
-            DataSeries highPrices = Bars.HighPrices;
-            DataSeries lowPrices = Bars.HighPrices;
-            DataSeries closePrices = Bars.HighPrices;
+        private bool strategy1 (DataSeries highPrices,  DataSeries lowPrices,  DataSeries closePrices){
             
             // Calculate the Average of High minus Low over the Last 25 Days
             double sumHighLowDifferences = 0;
@@ -99,45 +106,76 @@ namespace cAlgo.Robots
 
             // Calculate a band 2.5 times lower than tthe high over the last 10 days by using average from point number 1
             double lowerBand = Bars.HighPrices.Maximum(10) - averageHighLowDifference * 2.5;
-            bool strategy1a = EnableStrategy1 ? closePrices.LastValue < lowerBand && ibs < 0.3 : false;
-            return strategy1a;
+            return EnableStrategy1 ? closePrices.LastValue < lowerBand && ibs < 0.3 : false;
 
         }
         
-        private bool strategy2 (){
+        private bool strategy2 (DataSeries closePrices){
             DayOfWeek monday = DayOfWeek.Monday;
-            bool today_close_lower_than_friday_close = close < close[1];
-            bool friday_close_lower_than_thursday_close = close[1] < close[2];
-            bool strategy2a = enableStrategy2 ? monday and today_close_lower_than_friday_close and friday_close_lower_than_thursday_close : false;
-            return strategy2a;
+            //DateTime now = DateTime.Now;
+            bool isMonday = Bars.LastBar.OpenTime.DayOfWeek == monday;
+            bool isFriday = Bars.Last(1).OpenTime.DayOfWeek == DayOfWeek.Friday;
+            bool isThursday = Bars.Last(2).OpenTime.DayOfWeek == DayOfWeek.Thursday;
+            bool today_close_lower_than_friday_close = false;
+            bool friday_close_lower_than_thursday_close = false;
+            
+            Print($"isMonday: {isMonday}");
+            Print($"isFriday: {isFriday}");
+            Print($"isThursday: {isThursday}");
+           
+            if (isMonday && isFriday && isThursday)
+            {
+                 today_close_lower_than_friday_close = closePrices.LastValue < closePrices.Last(1);
+                 friday_close_lower_than_thursday_close = closePrices.Last(1) < closePrices.Last(2);
+                 Print($"today_close_lower_than_friday_close: {today_close_lower_than_friday_close}");
+                 Print($"friday_close_lower_than_thursday_close: {friday_close_lower_than_thursday_close}");
+                 
+            }  
+            
+            Print($"today_close_lower_than_friday_close: {today_close_lower_than_friday_close}");
+            Print($"friday_close_lower_than_thursday_close: {friday_close_lower_than_thursday_close}");
+            return EnableStrategy2 ? isMonday && today_close_lower_than_friday_close && friday_close_lower_than_thursday_close : false;
         }
         
-        private void strategy3 () {
-            lowerChannel = ta.lowest(low[1], 5)
-            enableStrategy3 ?  close <= lowerChannel : false
+        private bool strategy3 (DataSeries lowPrices,  DataSeries closePrices) {
+            double lowerChannel = double.MaxValue;
+            for (int i = 1; i <= 5; i++)
+            {
+                 lowerChannel = Math.Min(lowerChannel, lowPrices.Last(i));
+            }
+            return EnableStrategy3 ? closePrices.LastValue <= lowerChannel : false;
         }
         
-        private void strategy4 () {
+        private bool strategy4 (DataSeries lowPrices, DataSeries highPrices, DataSeries closePrices) {
             // Calculate the lowest range of the previous 6 trading days
-            lowestRange = ta.lowest(high - low, 6)
+            double lowestRange = double.MaxValue;
+            for (int i = 0; i < 6; i++)
+            {
+                double range = highPrices.Last(i) - lowPrices.Last(i);
+                lowestRange = Math.Min(lowestRange, range);
+            }
 
             // Calculate the 200-day moving average
-            ma200 = ta.sma(close, 200)
+            double ma200 = Indicators.SimpleMovingAverage(closePrices, 200).Result[0];
 
             // Entry condition: Today's range is the lowest of the last 6 days AND close is above the 200-day MA
-            enableStrategy4 ? (lowestRange == high - low) and (close > ma200) : false
+            return EnableStrategy4 ? (lowestRange == highPrices.LastValue - lowPrices.LastValue) && (closePrices.LastValue > ma200) : false;
         }
 
-        private void strategy5(){
+        private bool strategy5 (DataSeries highPrices, DataSeries lowPrices, DataSeries closePrices){
             // Calculate the highest high of the last ten days
-            highestHigh = ta.highest(high[1], 10)
-
+            
+            double highestHigh = double.MaxValue;
+            for (int i = 1; i <= 10; i++)
+            {
+                 highestHigh = Math.Max(highestHigh, highPrices.Last(i));
+            }
 
             // Calculate the IBS indicator
-            ibs = (close - low) / (high - low)
+            double ibs = (closePrices.LastValue - lowPrices.LastValue) / (highPrices.LastValue - lowPrices.LastValue);
 
             // Entry condition: Today's high is higher than the previous high of the last ten days AND IBS is below 0.15
-            enableStrategy5 ? high >= highestHigh and ibs < 0.15 : false
+            return EnableStrategy5 ? highPrices.LastValue >= highestHigh && ibs < 0.15 : false;
         }
     }
 }
