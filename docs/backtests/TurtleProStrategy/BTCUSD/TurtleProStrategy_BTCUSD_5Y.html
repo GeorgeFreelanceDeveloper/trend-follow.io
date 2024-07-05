@@ -1,0 +1,921 @@
+
+<!DOCTYPE html>
+<html data-app-version="4.8.2">
+    <head>
+        <title>Historical Replay Report | cTrader</title>
+
+        <meta name="title" content="Historical Replay Report | cTrader">
+        <meta name="description" content="Backtesting report of a cBot from cTrader Algo: equity, trade statistics, parameters, used symbols, positions, orders, history.">
+
+        <meta name="author" content="Spotware Systems Ltd">
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-eval' 'unsafe-inline' data: https: http: gap: ws: wss: blob: filesystem: file:">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+
+        <style type="text/css" data-fela-rehydration="58" data-fela-type="KEYFRAME">@-webkit-keyframes spinner-k1{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@-moz-keyframes spinner-k1{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes spinner-k1{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@-webkit-keyframes spinner-k2{0%{transform:rotate(0deg)}100%{transform:rotate(-360deg)}}@-moz-keyframes spinner-k2{0%{transform:rotate(0deg)}100%{transform:rotate(-360deg)}}@keyframes spinner-k2{0%{transform:rotate(0deg)}100%{transform:rotate(-360deg)}}</style><style type="text/css" data-fela-rehydration="58" data-fela-type="RULE">.spinner-a{position:absolute}.spinner-b{margin-left:auto}.spinner-c{margin-bottom:auto}.spinner-d{margin-right:auto}.spinner-e{margin-top:auto}.spinner-f{top:0}.spinner-g{bottom:0}.spinner-h{left:0}.spinner-i{right:0}.spinner-j{width:50px}.spinner-k{height:50px}.spinner-l{display:flex}.spinner-m{z-index:200}.spinner-n:before{content:""}.spinner-o:before{position:absolute}.spinner-p:before{border-style:solid}.spinner-q:before{border-top-left-radius:50%}.spinner-r:before{border-top-right-radius:50%}.spinner-s:before{border-bottom-right-radius:50%}.spinner-t:before{border-bottom-left-radius:50%}.spinner-u:before{display:inline-block}.spinner-v:before{box-sizing:border-box}.spinner-w:before{border-width:7px}.spinner-x:before{border-top-color:transparent}.spinner-y:before{border-left-color:transparent}.spinner-z:before{margin-top:7px}.spinner-ab:before{margin-right:7px}.spinner-ac:before{margin-bottom:7px}.spinner-ae:before{margin-left:7px}.spinner-af:before{width:calc(100% - 14px)}.spinner-ag:before{height:calc(100% - 14px)}.spinner-ah:before{border-right-color:#e75731}.spinner-ai:before{border-bottom-color:#e75731}.spinner-aj:before{animation-iteration-count:infinite}.spinner-ak:before{animation-timing-function:linear}.spinner-al:before{animation-duration:0.6s}.spinner-am:before{animation-name:spinner-k2}.spinner-an:after{content:""}.spinner-ao:after{position:absolute}.spinner-ap:after{border-style:solid}.spinner-aq:after{border-top-left-radius:50%}.spinner-ar:after{border-top-right-radius:50%}.spinner-as:after{border-bottom-right-radius:50%}.spinner-at:after{border-bottom-left-radius:50%}.spinner-au:after{display:inline-block}.spinner-av:after{box-sizing:border-box}.spinner-aw:after{border-width:7px}.spinner-ax:after{border-top-color:transparent}.spinner-ay:after{border-left-color:transparent}.spinner-az:after{width:100%}.spinner-ba:after{height:100%}.spinner-bb:after{border-right-color:rgba(36, 150, 73, 0.9)}.spinner-bc:after{border-bottom-color:rgba(36, 150, 73, 0.9)}.spinner-bd:after{animation-iteration-count:infinite}.spinner-be:after{animation-timing-function:linear}.spinner-bf:after{animation-duration:0.9s}.spinner-bg:after{animation-name:spinner-k1}</style>
+
+        <style>
+            html {
+                height: 100%;
+            }
+
+            body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            #root {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+
+        <!-- startBacktestingReport -->
+        <script type="application/json" id="backtesting-report">{
+  "main": {
+    "utcOffset": 120,
+    "language": "en",
+    "depositAsset": "EUR",
+    "depositAssetDigits": 2,
+    "period": "D1",
+    "symbol": "BTCUSD",
+    "brokerTitle": "Fusion Markets",
+    "cBotName": "TurtleTrendFollowPro cBot",
+    "roi": 214.63,
+    "netProfit": 21463.28,
+    "startingCapital": 10000,
+    "endingEquity": 31463.28,
+    "endingBalance": 31463.28,
+    "testingPeriod": {
+      "duration": "5y",
+      "startDate": 1562284800000,
+      "endDate": 1720137600000,
+      "formatted": "5y (05/07/2019 - 05/07/2024)"
+    },
+    "accountType": "hedging",
+    "accountLeverage": 100,
+    "data": {
+      "type": "m1BarsFromServer"
+    },
+    "spread": {
+      "type": "fixed",
+      "min": null,
+      "max": null,
+      "value": 1
+    },
+    "commissions": {
+      "type": "usdPerMillionUsdVolume",
+      "value": 30
+    },
+    "theme": "dark",
+    "titleKind": "backtesting",
+    "authorNickName": "jiri.work",
+    "authorLink": null,
+    "cBotLink": null,
+    "embedded": false
+  },
+  "equity": {
+    "points": [
+      {
+        "balance": 10000,
+        "minEquity": 10000,
+        "maxEquity": 10000,
+        "timestamp": 1562284800000
+      },
+      {
+        "balance": 9851.56,
+        "minEquity": 9855.64,
+        "maxEquity": 10036.47,
+        "timestamp": 1573563600000
+      },
+      {
+        "balance": 10097.79,
+        "minEquity": 9832.26,
+        "maxEquity": 10603.65,
+        "timestamp": 1582754400000
+      },
+      {
+        "balance": 10759.3,
+        "minEquity": 10024.96,
+        "maxEquity": 11186.35,
+        "timestamp": 1599166800000
+      },
+      {
+        "balance": 22500.42,
+        "minEquity": 10668.85,
+        "maxEquity": 25072.13,
+        "timestamp": 1616706300000
+      },
+      {
+        "balance": 22196.9,
+        "minEquity": 22080.41,
+        "maxEquity": 22722.82,
+        "timestamp": 1618843200000
+      },
+      {
+        "balance": 22448.56,
+        "minEquity": 22164.79,
+        "maxEquity": 23343.35,
+        "timestamp": 1632258060000
+      },
+      {
+        "balance": 22893.81,
+        "minEquity": 22343.95,
+        "maxEquity": 23534.57,
+        "timestamp": 1637272860000
+      },
+      {
+        "balance": 22349.54,
+        "minEquity": 22366.05,
+        "maxEquity": 22893.81,
+        "timestamp": 1641322380000
+      },
+      {
+        "balance": 22179.04,
+        "minEquity": 22199.88,
+        "maxEquity": 22486.74,
+        "timestamp": 1645121820000
+      },
+      {
+        "balance": 22160.91,
+        "minEquity": 22155.77,
+        "maxEquity": 22572.49,
+        "timestamp": 1649253900000
+      },
+      {
+        "balance": 22031.44,
+        "minEquity": 21611.24,
+        "maxEquity": 22622.32,
+        "timestamp": 1660891140000
+      },
+      {
+        "balance": 21534.65,
+        "minEquity": 21573.18,
+        "maxEquity": 22146.58,
+        "timestamp": 1663553880000
+      },
+      {
+        "balance": 21372.24,
+        "minEquity": 21385.36,
+        "maxEquity": 21816.57,
+        "timestamp": 1667880660000
+      },
+      {
+        "balance": 21093.76,
+        "minEquity": 21109.22,
+        "maxEquity": 21782.16,
+        "timestamp": 1671231720000
+      },
+      {
+        "balance": 24453.94,
+        "minEquity": 21054.59,
+        "maxEquity": 26211.03,
+        "timestamp": 1675980120000
+      },
+      {
+        "balance": 24048.46,
+        "minEquity": 24126.6,
+        "maxEquity": 24644.55,
+        "timestamp": 1677807120000
+      },
+      {
+        "balance": 24192.74,
+        "minEquity": 23888.68,
+        "maxEquity": 24579.24,
+        "timestamp": 1682110920000
+      },
+      {
+        "balance": 24325.33,
+        "minEquity": 24142.9,
+        "maxEquity": 24813.65,
+        "timestamp": 1690232520000
+      },
+      {
+        "balance": 23791.62,
+        "minEquity": 23893.43,
+        "maxEquity": 24552.98,
+        "timestamp": 1697038080000
+      },
+      {
+        "balance": 26923.05,
+        "minEquity": 23513.68,
+        "maxEquity": 29111.53,
+        "timestamp": 1705615320000
+      },
+      {
+        "balance": 32108.45,
+        "minEquity": 26640.76,
+        "maxEquity": 34816.3,
+        "timestamp": 1710882300000
+      },
+      {
+        "balance": 31333.16,
+        "minEquity": 31407.88,
+        "maxEquity": 32194.01,
+        "timestamp": 1713038100000
+      },
+      {
+        "balance": 31463.28,
+        "minEquity": 31164.36,
+        "maxEquity": 32182.98,
+        "timestamp": 1718139900000
+      },
+      {
+        "balance": 31463.28,
+        "minEquity": 31392.87,
+        "maxEquity": 31463.28,
+        "timestamp": 1720161060000
+      }
+    ],
+    "maxBalanceDrawdownPercent": 7.862605656288764,
+    "maxEquityDrawdownPercent": 19.897822253865456,
+    "maxBalanceDrawdownAbsolute": 1800.05,
+    "maxEquityDrawdownAbsolute": 4018.74
+  },
+  "tradeStatistics": {
+    "netProfit": {
+      "all": 21463.28,
+      "long": 21463.28,
+      "short": 0
+    },
+    "profitFactor": {
+      "all": 6.41,
+      "long": 6.41,
+      "short": 0
+    },
+    "commissions": {
+      "all": -17.02,
+      "long": -17.02,
+      "short": 0
+    },
+    "swaps": {
+      "all": -1603.8,
+      "long": -1603.8,
+      "short": 0
+    },
+    "totalTrades": {
+      "all": 23,
+      "long": 23,
+      "short": 0
+    },
+    "winningTrades": {
+      "all": 11,
+      "long": 11,
+      "short": 0
+    },
+    "maxConsecutiveWinningTrades": {
+      "all": 3,
+      "long": 3,
+      "short": 0
+    },
+    "largestWinningTrade": {
+      "all": 11741.12,
+      "long": 11741.12,
+      "short": 0
+    },
+    "losingTrades": {
+      "all": 12,
+      "long": 12,
+      "short": 0
+    },
+    "maxConsecutiveLosingTrades": {
+      "all": 7,
+      "long": 7,
+      "short": 0
+    },
+    "largestLosingTrade": {
+      "all": -775.29,
+      "long": -775.29,
+      "short": 0
+    },
+    "averageTrade": {
+      "all": 933.19,
+      "long": 933.19,
+      "short": 0
+    }
+  },
+  "parameters": [
+    {
+      "group": "Basic settings",
+      "displayName": "Entry Length",
+      "propertyName": "EntryLength",
+      "value": 20
+    },
+    {
+      "group": "Basic settings",
+      "displayName": "Exit Length",
+      "propertyName": "ExitLength",
+      "value": 10
+    },
+    {
+      "group": "Basic settings",
+      "displayName": "Risk Percentage",
+      "propertyName": "RiskPercentage",
+      "value": 2.5
+    },
+    {
+      "group": "Filter settings",
+      "displayName": "Enable Filter",
+      "propertyName": "EnableFilter",
+      "value": "false"
+    },
+    {
+      "group": "Filter settings",
+      "displayName": "Benchmark Symbol",
+      "propertyName": "BenchmarkSymbol",
+      "value": "US500"
+    }
+  ],
+  "usedSymbols": [
+    {
+      "symbol": "BTCUSD",
+      "period": "D1",
+      "swapTime": "21:00",
+      "baseAsset": "BTC",
+      "quoteAsset": "USD",
+      "commissions": {
+        "type": "usdPerMillionUsdVolume",
+        "value": 30
+      },
+      "swapLong": -10,
+      "swapShort": -10,
+      "threeDaySwaps": "friday",
+      "weekendSwaps": false,
+      "swapPeriods": 24,
+      "gracePeriods": 0,
+      "digits": 2,
+      "lotSize": 1,
+      "stepVolume": 0.01,
+      "pipPosition": 1,
+      "swapCalculationType": "percent"
+    },
+    {
+      "symbol": "US500",
+      "period": "D1",
+      "swapTime": "21:00",
+      "baseAsset": "US500",
+      "quoteAsset": "USD",
+      "commissions": {
+        "type": "usdPerMillionUsdVolume",
+        "value": 30
+      },
+      "swapLong": -7.68,
+      "swapShort": 3.14,
+      "threeDaySwaps": "friday",
+      "weekendSwaps": false,
+      "swapPeriods": 24,
+      "gracePeriods": 0,
+      "digits": 2,
+      "lotSize": 1,
+      "stepVolume": 0.01,
+      "pipPosition": 1,
+      "swapCalculationType": "percent"
+    }
+  ],
+  "positions": {
+    "columns": [
+      "id",
+      "symbol",
+      "quantity",
+      "volume",
+      "direction",
+      "entryPrice",
+      "tp",
+      "sl",
+      "commissions",
+      "closingCommissions",
+      "swaps",
+      "created",
+      "label",
+      "comment",
+      "pips",
+      "gross",
+      "net"
+    ],
+    "items": [],
+    "marginUsed": 0,
+    "freeMargin": 31463.28,
+    "marginLevel": null,
+    "unrealizedNet": 0,
+    "unrealizedGross": 0
+  },
+  "orders": {
+    "columns": [
+      "id",
+      "direction",
+      "orderType",
+      "created",
+      "symbol",
+      "quantity",
+      "volume",
+      "submittedPrice",
+      "distance",
+      "tp",
+      "sl"
+    ],
+    "items": [
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 808,
+        "created": 1720127100000,
+        "quantity": 0.09,
+        "volume": 0.09,
+        "orderType": "stop",
+        "submittedPrice": 67356.14,
+        "distance": 130616.6,
+        "tp": null,
+        "sl": 58208.34,
+        "expiryDate": null,
+        "currentPrice": 54294.48,
+        "limitRange": null,
+        "comment": null,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1"
+      }
+    ]
+  },
+  "history": {
+    "columns": [
+      "id",
+      "label",
+      "entryTime",
+      "symbol",
+      "quantity",
+      "volume",
+      "direction",
+      "entryPrice",
+      "commissions",
+      "swaps",
+      "closePrice",
+      "closeTime",
+      "net",
+      "pips",
+      "gross"
+    ],
+    "items": [
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 1,
+        "net": -148.44,
+        "gross": -141.99,
+        "entryTime": 1572210000000,
+        "closeTime": 1573563600000,
+        "entryPrice": 9522.48,
+        "closePrice": 8619.5,
+        "commissions": -0.56,
+        "swaps": -5.89,
+        "volume": 0.17,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 9851.56,
+        "quantity": 0.17,
+        "pips": -9029.8
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 2,
+        "net": 246.23,
+        "gross": 284.07,
+        "entryTime": 1578351600000,
+        "closeTime": 1582754400000,
+        "entryPrice": 7755.78,
+        "closePrice": 8746.5,
+        "commissions": -1,
+        "swaps": -36.84,
+        "volume": 0.31,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 10097.79,
+        "quantity": 0.31,
+        "pips": 9907.2
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 3,
+        "net": 661.51,
+        "gross": 752.84,
+        "entryTime": 1587654000000,
+        "closeTime": 1599166800000,
+        "entryPrice": 7760.98,
+        "closePrice": 10775.5,
+        "commissions": -0.88,
+        "swaps": -90.45,
+        "volume": 0.27,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 10759.3,
+        "quantity": 0.27,
+        "pips": 30145.2
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 4,
+        "net": 11741.12,
+        "gross": 12162.17,
+        "entryTime": 1602244800000,
+        "closeTime": 1616706300000,
+        "entryPrice": 11098.6,
+        "closePrice": 52189.26,
+        "commissions": -1.04,
+        "swaps": -420.01,
+        "volume": 0.32,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 22500.42,
+        "quantity": 0.32,
+        "pips": 410906.6
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 5,
+        "net": -303.52,
+        "gross": -296.98,
+        "entryTime": 1618210680000,
+        "closeTime": 1618843200000,
+        "entryPrice": 60768.57,
+        "closePrice": 55417.21,
+        "commissions": -0.2,
+        "swaps": -6.34,
+        "volume": 0.06,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 22196.9,
+        "quantity": 0.06,
+        "pips": -53513.6
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 6,
+        "net": 251.66,
+        "gross": 305.56,
+        "entryTime": 1627261140000,
+        "closeTime": 1632258060000,
+        "entryPrice": 36850.6,
+        "closePrice": 40980,
+        "commissions": -0.26,
+        "swaps": -53.64,
+        "volume": 0.08,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 22448.56,
+        "quantity": 0.08,
+        "pips": 41294
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 7,
+        "net": 445.25,
+        "gross": 488.48,
+        "entryTime": 1633283460000,
+        "closeTime": 1637272860000,
+        "entryPrice": 48788.1,
+        "closePrice": 57590,
+        "commissions": -0.2,
+        "swaps": -43.03,
+        "volume": 0.06,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 22893.81,
+        "quantity": 0.06,
+        "pips": 88019
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 8,
+        "net": -544.27,
+        "gross": -535.36,
+        "entryTime": 1640626560000,
+        "closeTime": 1641322380000,
+        "entryPrice": 51974.1,
+        "closePrice": 45543,
+        "commissions": -0.3,
+        "swaps": -8.61,
+        "volume": 0.09,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 22349.54,
+        "quantity": 0.09,
+        "pips": -64311
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 9,
+        "net": -170.5,
+        "gross": -162.58,
+        "entryTime": 1644248100000,
+        "closeTime": 1645121820000,
+        "entryPrice": 43611.1,
+        "closePrice": 41100,
+        "commissions": -0.22,
+        "swaps": -7.7,
+        "volume": 0.07,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 22179.04,
+        "quantity": 0.07,
+        "pips": -25111
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 10,
+        "net": -18.13,
+        "gross": -3.8,
+        "entryTime": 1648155720000,
+        "closeTime": 1649253900000,
+        "entryPrice": 43898.1,
+        "closePrice": 43857,
+        "commissions": -0.32,
+        "swaps": -14.01,
+        "volume": 0.1,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 22160.91,
+        "quantity": 0.1,
+        "pips": -411
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 11,
+        "net": -129.47,
+        "gross": -85.43,
+        "entryTime": 1657243680000,
+        "closeTime": 1660891140000,
+        "entryPrice": 22180.1,
+        "closePrice": 21667,
+        "commissions": -0.58,
+        "swaps": -43.46,
+        "volume": 0.18,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 22031.44,
+        "quantity": 0.18,
+        "pips": -5131
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 12,
+        "net": -496.79,
+        "gross": -490.14,
+        "entryTime": 1662946200000,
+        "closeTime": 1663553880000,
+        "entryPrice": 21958.1,
+        "closePrice": 18841,
+        "commissions": -0.56,
+        "swaps": -6.09,
+        "volume": 0.17,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 21534.65,
+        "quantity": 0.17,
+        "pips": -31171
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 13,
+        "net": -162.41,
+        "gross": -138.91,
+        "entryTime": 1666773480000,
+        "closeTime": 1667880660000,
+        "entryPrice": 20463.1,
+        "closePrice": 20008,
+        "commissions": -1.06,
+        "swaps": -22.44,
+        "volume": 0.33,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 21372.24,
+        "quantity": 0.33,
+        "pips": -4551
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 14,
+        "net": -278.48,
+        "gross": -250.33,
+        "entryTime": 1670205180000,
+        "closeTime": 1671231720000,
+        "entryPrice": 17287.1,
+        "closePrice": 16672,
+        "commissions": -1.42,
+        "swaps": -26.73,
+        "volume": 0.44,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 21093.76,
+        "quantity": 0.44,
+        "pips": -6151
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 15,
+        "net": 3360.18,
+        "gross": 3502.22,
+        "entryTime": 1673219400000,
+        "closeTime": 1675980120000,
+        "entryPrice": 17057.1,
+        "closePrice": 21850,
+        "commissions": -2.56,
+        "swaps": -139.48,
+        "volume": 0.79,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 24453.94,
+        "quantity": 0.79,
+        "pips": 47929
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 16,
+        "net": -405.48,
+        "gross": -383.39,
+        "entryTime": 1676493300000,
+        "closeTime": 1677807120000,
+        "entryPrice": 24289.1,
+        "closePrice": 22405,
+        "commissions": -0.72,
+        "swaps": -21.37,
+        "volume": 0.22,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 24048.46,
+        "quantity": 0.22,
+        "pips": -18841
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 17,
+        "net": 144.28,
+        "gross": 176.72,
+        "entryTime": 1678797120000,
+        "closeTime": 1682110920000,
+        "entryPrice": 25534.1,
+        "closePrice": 27271,
+        "commissions": -0.36,
+        "swaps": -32.08,
+        "volume": 0.11,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 24192.74,
+        "quantity": 0.11,
+        "pips": 17369
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 18,
+        "net": 132.59,
+        "gross": 184.16,
+        "entryTime": 1687285320000,
+        "closeTime": 1690232520000,
+        "entryPrice": 28086.1,
+        "closePrice": 29134,
+        "commissions": -0.62,
+        "swaps": -50.95,
+        "volume": 0.19,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 24325.33,
+        "quantity": 0.19,
+        "pips": 10479
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 19,
+        "net": -533.71,
+        "gross": -505.15,
+        "entryTime": 1696198680000,
+        "closeTime": 1697038080000,
+        "entryPrice": 27977.1,
+        "closePrice": 26707,
+        "commissions": -1.4,
+        "swaps": -27.16,
+        "volume": 0.43,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 23791.62,
+        "quantity": 0.43,
+        "pips": -12701
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 20,
+        "net": 3131.43,
+        "gross": 3414.7,
+        "entryTime": 1697462940000,
+        "closeTime": 1705615320000,
+        "entryPrice": 28835.1,
+        "closePrice": 41141,
+        "commissions": -0.98,
+        "swaps": -282.29,
+        "volume": 0.3,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 26923.05,
+        "quantity": 0.3,
+        "pips": 123059
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 21,
+        "net": 5185.4,
+        "gross": 5367.74,
+        "entryTime": 1707336660000,
+        "closeTime": 1710882300000,
+        "entryPrice": 43855.1,
+        "closePrice": 63866.41,
+        "commissions": -0.94,
+        "swaps": -181.4,
+        "volume": 0.29,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 32108.45,
+        "quantity": 0.29,
+        "pips": 200113.1
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 22,
+        "net": -775.29,
+        "gross": -761.51,
+        "entryTime": 1712566440000,
+        "closeTime": 1713038100000,
+        "entryPrice": 71941.26,
+        "closePrice": 64456.74,
+        "commissions": -0.36,
+        "swaps": -13.42,
+        "volume": 0.11,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 31333.16,
+        "quantity": 0.11,
+        "pips": -74845.2
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 23,
+        "net": 130.12,
+        "gross": 201.01,
+        "entryTime": 1715807100000,
+        "closeTime": 1718139900000,
+        "entryPrice": 65811.54,
+        "closePrice": 67260.34,
+        "commissions": -0.48,
+        "swaps": -70.41,
+        "volume": 0.15,
+        "label": "TurtleTrendFollow_cBot-BTCUSD-L1",
+        "comment": null,
+        "balance": 31463.28,
+        "quantity": 0.15,
+        "pips": 14488
+      }
+    ]
+  }
+}</script>
+        <!-- endBacktestingReport -->
+    </head>
+    <body>
+        <div class="spinner-a spinner-b spinner-c spinner-d spinner-e spinner-f spinner-g spinner-h spinner-i spinner-j spinner-k spinner-l spinner-m spinner-n spinner-o spinner-p spinner-q spinner-r spinner-s spinner-t spinner-u spinner-v spinner-w spinner-x spinner-y spinner-z spinner-ab spinner-ac spinner-ae spinner-af spinner-ag spinner-ah spinner-ai spinner-aj spinner-ak spinner-al spinner-am spinner-an spinner-ao spinner-ap spinner-aq spinner-ar spinner-as spinner-at spinner-au spinner-av spinner-aw spinner-ax spinner-ay spinner-az spinner-ba spinner-bb spinner-bc spinner-bd spinner-be spinner-bf spinner-bg waitingIndicator" data-test-id="loader"></div>
+        <div id="root"></div>
+
+            <script id="init" defer src="https://backtesting.ctrader.com/v5.0.0/bundle/index-31bd62a5e13b796fd66a.js"></script>
+
+        <script type="text/javascript" id="app-init">
+            var script = document.getElementById('init');
+            script.onload = () => {
+                initApp('root');
+
+                script.remove();
+                document.getElementById('app-init').remove();
+            }
+        </script>
+    </body>
+</html>

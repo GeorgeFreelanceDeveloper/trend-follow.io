@@ -1,0 +1,1065 @@
+
+<!DOCTYPE html>
+<html data-app-version="4.8.2">
+    <head>
+        <title>Historical Replay Report | cTrader</title>
+
+        <meta name="title" content="Historical Replay Report | cTrader">
+        <meta name="description" content="Backtesting report of a cBot from cTrader Algo: equity, trade statistics, parameters, used symbols, positions, orders, history.">
+
+        <meta name="author" content="Spotware Systems Ltd">
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-eval' 'unsafe-inline' data: https: http: gap: ws: wss: blob: filesystem: file:">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+
+        <style type="text/css" data-fela-rehydration="58" data-fela-type="KEYFRAME">@-webkit-keyframes spinner-k1{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@-moz-keyframes spinner-k1{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes spinner-k1{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@-webkit-keyframes spinner-k2{0%{transform:rotate(0deg)}100%{transform:rotate(-360deg)}}@-moz-keyframes spinner-k2{0%{transform:rotate(0deg)}100%{transform:rotate(-360deg)}}@keyframes spinner-k2{0%{transform:rotate(0deg)}100%{transform:rotate(-360deg)}}</style><style type="text/css" data-fela-rehydration="58" data-fela-type="RULE">.spinner-a{position:absolute}.spinner-b{margin-left:auto}.spinner-c{margin-bottom:auto}.spinner-d{margin-right:auto}.spinner-e{margin-top:auto}.spinner-f{top:0}.spinner-g{bottom:0}.spinner-h{left:0}.spinner-i{right:0}.spinner-j{width:50px}.spinner-k{height:50px}.spinner-l{display:flex}.spinner-m{z-index:200}.spinner-n:before{content:""}.spinner-o:before{position:absolute}.spinner-p:before{border-style:solid}.spinner-q:before{border-top-left-radius:50%}.spinner-r:before{border-top-right-radius:50%}.spinner-s:before{border-bottom-right-radius:50%}.spinner-t:before{border-bottom-left-radius:50%}.spinner-u:before{display:inline-block}.spinner-v:before{box-sizing:border-box}.spinner-w:before{border-width:7px}.spinner-x:before{border-top-color:transparent}.spinner-y:before{border-left-color:transparent}.spinner-z:before{margin-top:7px}.spinner-ab:before{margin-right:7px}.spinner-ac:before{margin-bottom:7px}.spinner-ae:before{margin-left:7px}.spinner-af:before{width:calc(100% - 14px)}.spinner-ag:before{height:calc(100% - 14px)}.spinner-ah:before{border-right-color:#e75731}.spinner-ai:before{border-bottom-color:#e75731}.spinner-aj:before{animation-iteration-count:infinite}.spinner-ak:before{animation-timing-function:linear}.spinner-al:before{animation-duration:0.6s}.spinner-am:before{animation-name:spinner-k2}.spinner-an:after{content:""}.spinner-ao:after{position:absolute}.spinner-ap:after{border-style:solid}.spinner-aq:after{border-top-left-radius:50%}.spinner-ar:after{border-top-right-radius:50%}.spinner-as:after{border-bottom-right-radius:50%}.spinner-at:after{border-bottom-left-radius:50%}.spinner-au:after{display:inline-block}.spinner-av:after{box-sizing:border-box}.spinner-aw:after{border-width:7px}.spinner-ax:after{border-top-color:transparent}.spinner-ay:after{border-left-color:transparent}.spinner-az:after{width:100%}.spinner-ba:after{height:100%}.spinner-bb:after{border-right-color:rgba(36, 150, 73, 0.9)}.spinner-bc:after{border-bottom-color:rgba(36, 150, 73, 0.9)}.spinner-bd:after{animation-iteration-count:infinite}.spinner-be:after{animation-timing-function:linear}.spinner-bf:after{animation-duration:0.9s}.spinner-bg:after{animation-name:spinner-k1}</style>
+
+        <style>
+            html {
+                height: 100%;
+            }
+
+            body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            #root {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+
+        <!-- startBacktestingReport -->
+        <script type="application/json" id="backtesting-report">{
+  "main": {
+    "utcOffset": 120,
+    "language": "en",
+    "depositAsset": "EUR",
+    "depositAssetDigits": 2,
+    "period": "D1",
+    "symbol": "NAS100",
+    "brokerTitle": "Fusion Markets",
+    "cBotName": "BollingerBandTrendFollow cBot",
+    "roi": 88.26,
+    "netProfit": 8826.29,
+    "startingCapital": 10000,
+    "endingEquity": 18826.29,
+    "endingBalance": 16690.01,
+    "testingPeriod": {
+      "duration": "5y",
+      "startDate": 1562284800000,
+      "endDate": 1720137600000,
+      "formatted": "5y (05/07/2019 - 05/07/2024)"
+    },
+    "accountType": "hedging",
+    "accountLeverage": 100,
+    "data": {
+      "type": "m1BarsFromServer"
+    },
+    "spread": {
+      "type": "fixed",
+      "min": null,
+      "max": null,
+      "value": 1
+    },
+    "commissions": {
+      "type": "usdPerMillionUsdVolume",
+      "value": 30
+    },
+    "theme": "dark",
+    "titleKind": "backtesting",
+    "authorNickName": "jiri.work",
+    "authorLink": null,
+    "cBotLink": null,
+    "embedded": false
+  },
+  "equity": {
+    "points": [
+      {
+        "balance": 10000,
+        "minEquity": 10000,
+        "maxEquity": 10000,
+        "timestamp": 1562284800000
+      },
+      {
+        "balance": 9898.47,
+        "minEquity": 9932.44,
+        "maxEquity": 10380.5,
+        "timestamp": 1564606800000
+      },
+      {
+        "balance": 9842.58,
+        "minEquity": 9806.5,
+        "maxEquity": 10151.58,
+        "timestamp": 1569362400000
+      },
+      {
+        "balance": 10213,
+        "minEquity": 9643.3,
+        "maxEquity": 10540.37,
+        "timestamp": 1575414000000
+      },
+      {
+        "balance": 11689.97,
+        "minEquity": 9953.69,
+        "maxEquity": 13667.34,
+        "timestamp": 1582585200000
+      },
+      {
+        "balance": 12932.44,
+        "minEquity": 11265.11,
+        "maxEquity": 13630.19,
+        "timestamp": 1599602400000
+      },
+      {
+        "balance": 12824.11,
+        "minEquity": 12645.98,
+        "maxEquity": 13428.27,
+        "timestamp": 1603749600000
+      },
+      {
+        "balance": 13338.92,
+        "minEquity": 12300.69,
+        "maxEquity": 14120.98,
+        "timestamp": 1612134000000
+      },
+      {
+        "balance": 12976.78,
+        "minEquity": 12957.67,
+        "maxEquity": 13730.13,
+        "timestamp": 1614034800000
+      },
+      {
+        "balance": 13307.26,
+        "minEquity": 12914.62,
+        "maxEquity": 13621.4,
+        "timestamp": 1620079200000
+      },
+      {
+        "balance": 14527.02,
+        "minEquity": 13010.67,
+        "maxEquity": 14829.45,
+        "timestamp": 1629237600000
+      },
+      {
+        "balance": 14345.07,
+        "minEquity": 14237.92,
+        "maxEquity": 15136.76,
+        "timestamp": 1632088800000
+      },
+      {
+        "balance": 15235.62,
+        "minEquity": 14187.93,
+        "maxEquity": 16124.14,
+        "timestamp": 1638140400000
+      },
+      {
+        "balance": 14468.61,
+        "minEquity": 14461.94,
+        "maxEquity": 15317.07,
+        "timestamp": 1641423600000
+      },
+      {
+        "balance": 14163.8,
+        "minEquity": 14153.49,
+        "maxEquity": 15009.78,
+        "timestamp": 1649714400000
+      },
+      {
+        "balance": 13411.95,
+        "minEquity": 13459.5,
+        "maxEquity": 14244.52,
+        "timestamp": 1655071200000
+      },
+      {
+        "balance": 14030.8,
+        "minEquity": 12863.59,
+        "maxEquity": 14734.15,
+        "timestamp": 1661205600000
+      },
+      {
+        "balance": 13535.01,
+        "minEquity": 13519.08,
+        "maxEquity": 14193.29,
+        "timestamp": 1667426400000
+      },
+      {
+        "balance": 13426.76,
+        "minEquity": 13357.37,
+        "maxEquity": 13871.11,
+        "timestamp": 1670367600000
+      },
+      {
+        "balance": 14003.13,
+        "minEquity": 13187.06,
+        "maxEquity": 14932.19,
+        "timestamp": 1677020400000
+      },
+      {
+        "balance": 14241.03,
+        "minEquity": 13777.9,
+        "maxEquity": 14772.1,
+        "timestamp": 1682460000000
+      },
+      {
+        "balance": 13980.65,
+        "minEquity": 13902.11,
+        "maxEquity": 14478.05,
+        "timestamp": 1683237600000
+      },
+      {
+        "balance": 16834.17,
+        "minEquity": 13810.59,
+        "maxEquity": 17818.9,
+        "timestamp": 1691100000000
+      },
+      {
+        "balance": 16460.7,
+        "minEquity": 16290.06,
+        "maxEquity": 17141.41,
+        "timestamp": 1695160800000
+      },
+      {
+        "balance": 15645.07,
+        "minEquity": 15637.17,
+        "maxEquity": 16552.1,
+        "timestamp": 1697752800000
+      },
+      {
+        "balance": 16967,
+        "minEquity": 15593.84,
+        "maxEquity": 17967.3,
+        "timestamp": 1704409200000
+      },
+      {
+        "balance": 17710.48,
+        "minEquity": 16686.28,
+        "maxEquity": 18717.66,
+        "timestamp": 1708470000000
+      },
+      {
+        "balance": 17349.43,
+        "minEquity": 17243.87,
+        "maxEquity": 18324.17,
+        "timestamp": 1710712800000
+      },
+      {
+        "balance": 16690.01,
+        "minEquity": 16626.4,
+        "maxEquity": 17595.56,
+        "timestamp": 1712268000000
+      },
+      {
+        "balance": 16690.01,
+        "minEquity": 16572.09,
+        "maxEquity": 18828.95,
+        "timestamp": 1720161600000
+      }
+    ],
+    "maxBalanceDrawdownPercent": 11.969778715930168,
+    "maxEquityDrawdownPercent": 20.221543598604324,
+    "maxBalanceDrawdownAbsolute": 1823.67,
+    "maxEquityDrawdownAbsolute": 3260.55
+  },
+  "tradeStatistics": {
+    "netProfit": {
+      "all": 6690.01,
+      "long": 6690.01,
+      "short": 0
+    },
+    "profitFactor": {
+      "all": 2.17,
+      "long": 2.17,
+      "short": 0
+    },
+    "commissions": {
+      "all": -43.66,
+      "long": -43.66,
+      "short": 0
+    },
+    "swaps": {
+      "all": -3730.5,
+      "long": -3730.5,
+      "short": 0
+    },
+    "totalTrades": {
+      "all": 28,
+      "long": 28,
+      "short": 0
+    },
+    "winningTrades": {
+      "all": 13,
+      "long": 13,
+      "short": 0
+    },
+    "maxConsecutiveWinningTrades": {
+      "all": 3,
+      "long": 3,
+      "short": 0
+    },
+    "largestWinningTrade": {
+      "all": 2853.52,
+      "long": 2853.52,
+      "short": 0
+    },
+    "losingTrades": {
+      "all": 15,
+      "long": 15,
+      "short": 0
+    },
+    "maxConsecutiveLosingTrades": {
+      "all": 3,
+      "long": 3,
+      "short": 0
+    },
+    "largestLosingTrade": {
+      "all": -815.63,
+      "long": -815.63,
+      "short": 0
+    },
+    "averageTrade": {
+      "all": 238.93,
+      "long": 238.93,
+      "short": 0
+    }
+  },
+  "parameters": [
+    {
+      "group": "Basic settings",
+      "displayName": "Length",
+      "propertyName": "Length",
+      "value": 20
+    },
+    {
+      "group": "Basic settings",
+      "displayName": "Upper",
+      "propertyName": "MultiplierUpper",
+      "value": 1
+    },
+    {
+      "group": "Basic settings",
+      "displayName": "Lower",
+      "propertyName": "MultiplierLower",
+      "value": 0.5
+    },
+    {
+      "group": "Basic settings",
+      "displayName": "Risk percentage",
+      "propertyName": "RiskPercentage",
+      "value": 5
+    },
+    {
+      "group": "Basic settings",
+      "displayName": "Atr Multiplier",
+      "propertyName": "AtrMultiplier",
+      "value": 2
+    },
+    {
+      "group": "Basic settings",
+      "displayName": "Atr Length",
+      "propertyName": "AtrLength",
+      "value": 20
+    },
+    {
+      "group": "Filter settings",
+      "displayName": "Enable Filter",
+      "propertyName": "EnableFilter",
+      "value": "false"
+    },
+    {
+      "group": "Filter settings",
+      "displayName": "Benchmark Symbol",
+      "propertyName": "BenchmarkSymbol",
+      "value": "US500"
+    }
+  ],
+  "usedSymbols": [
+    {
+      "symbol": "NAS100",
+      "period": "D1",
+      "swapTime": "21:00",
+      "baseAsset": "NAS100",
+      "quoteAsset": "USD",
+      "commissions": {
+        "type": "usdPerMillionUsdVolume",
+        "value": 30
+      },
+      "swapLong": -7.68,
+      "swapShort": 3.14,
+      "threeDaySwaps": "friday",
+      "weekendSwaps": false,
+      "swapPeriods": 24,
+      "gracePeriods": 0,
+      "digits": 2,
+      "lotSize": 1,
+      "stepVolume": 0.01,
+      "pipPosition": 1,
+      "swapCalculationType": "percent"
+    },
+    {
+      "symbol": "US500",
+      "period": "D1",
+      "swapTime": "21:00",
+      "baseAsset": "US500",
+      "quoteAsset": "USD",
+      "commissions": {
+        "type": "usdPerMillionUsdVolume",
+        "value": 30
+      },
+      "swapLong": -7.68,
+      "swapShort": 3.14,
+      "threeDaySwaps": "friday",
+      "weekendSwaps": false,
+      "swapPeriods": 24,
+      "gracePeriods": 0,
+      "digits": 2,
+      "lotSize": 1,
+      "stepVolume": 0.01,
+      "pipPosition": 1,
+      "swapCalculationType": "percent"
+    }
+  ],
+  "positions": {
+    "columns": [
+      "id",
+      "symbol",
+      "quantity",
+      "volume",
+      "direction",
+      "entryPrice",
+      "tp",
+      "sl",
+      "commissions",
+      "closingCommissions",
+      "swaps",
+      "created",
+      "label",
+      "comment",
+      "pips",
+      "gross",
+      "net"
+    ],
+    "items": [
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 29,
+        "created": 1715032800000,
+        "quantity": 1.21,
+        "volume": 1.21,
+        "entryPrice": 18075.46,
+        "tp": null,
+        "sl": null,
+        "commissions": -0.68,
+        "closingCommissions": -0.68,
+        "swaps": -265.06,
+        "pips": 21468.2,
+        "gross": 2402.7,
+        "net": 2136.28,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null
+      }
+    ],
+    "marginUsed": 225.4982296,
+    "freeMargin": 18600.7917704,
+    "marginLevel": 8349.054461933569,
+    "unrealizedNet": 2136.28,
+    "unrealizedGross": 2402.7
+  },
+  "orders": {
+    "columns": [
+      "id",
+      "direction",
+      "orderType",
+      "created",
+      "symbol",
+      "quantity",
+      "volume",
+      "submittedPrice",
+      "distance",
+      "tp",
+      "sl"
+    ],
+    "items": []
+  },
+  "history": {
+    "columns": [
+      "id",
+      "label",
+      "entryTime",
+      "symbol",
+      "quantity",
+      "volume",
+      "direction",
+      "entryPrice",
+      "commissions",
+      "swaps",
+      "closePrice",
+      "closeTime",
+      "net",
+      "pips",
+      "gross"
+    ],
+    "items": [
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 1,
+        "net": -101.53,
+        "gross": -6.52,
+        "entryTime": 1562706000000,
+        "closeTime": 1564606800000,
+        "entryPrice": 7822.2,
+        "closePrice": 7819.6,
+        "commissions": -3.04,
+        "swaps": -91.97,
+        "volume": 2.71,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 9898.47,
+        "quantity": 2.71,
+        "pips": -26
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 2,
+        "net": -55.89,
+        "gross": -8.68,
+        "entryTime": 1567630800000,
+        "closeTime": 1569362400000,
+        "entryPrice": 7718.5,
+        "closePrice": 7712.2,
+        "commissions": -1.66,
+        "swaps": -45.55,
+        "volume": 1.49,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 9842.58,
+        "quantity": 1.49,
+        "pips": -63
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 3,
+        "net": 370.42,
+        "gross": 505.03,
+        "entryTime": 1571176800000,
+        "closeTime": 1575414000000,
+        "entryPrice": 7931.6,
+        "closePrice": 8252.78,
+        "commissions": -1.9,
+        "swaps": -132.71,
+        "volume": 1.7,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 10213,
+        "quantity": 1.7,
+        "pips": 3211.8
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 4,
+        "net": 1476.97,
+        "gross": 1905.29,
+        "entryTime": 1575846000000,
+        "closeTime": 1582585200000,
+        "entryPrice": 8402.25,
+        "closePrice": 9066.73,
+        "commissions": -3.46,
+        "swaps": -424.86,
+        "volume": 3.1,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11689.97,
+        "quantity": 3.1,
+        "pips": 6644.8
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 5,
+        "net": 1242.47,
+        "gross": 1398.27,
+        "entryTime": 1586210400000,
+        "closeTime": 1599602400000,
+        "entryPrice": 8036.28,
+        "closePrice": 11000.45,
+        "commissions": -0.58,
+        "swaps": -155.22,
+        "volume": 0.51,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 12932.44,
+        "quantity": 0.51,
+        "pips": 29641.7
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 6,
+        "net": -108.33,
+        "gross": -57.95,
+        "entryTime": 1601589600000,
+        "closeTime": 1603749600000,
+        "entryPrice": 11575.9,
+        "closePrice": 11503.88,
+        "commissions": -0.98,
+        "swaps": -49.4,
+        "volume": 0.87,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 12824.11,
+        "quantity": 0.87,
+        "pips": -720.2
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 7,
+        "net": 514.81,
+        "gross": 746.23,
+        "entryTime": 1604617200000,
+        "closeTime": 1612134000000,
+        "entryPrice": 12087.38,
+        "closePrice": 12834.4,
+        "commissions": -1.2,
+        "swaps": -230.22,
+        "volume": 1.08,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 13338.92,
+        "quantity": 1.08,
+        "pips": 7470.2
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 8,
+        "net": -362.14,
+        "gross": -298.68,
+        "entryTime": 1612306800000,
+        "closeTime": 1614034800000,
+        "entryPrice": 13507.25,
+        "closePrice": 13231.25,
+        "commissions": -1.3,
+        "swaps": -62.16,
+        "volume": 1.17,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 12976.78,
+        "quantity": 1.17,
+        "pips": -2760
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 9,
+        "net": 330.48,
+        "gross": 417.63,
+        "entryTime": 1617314400000,
+        "closeTime": 1620079200000,
+        "entryPrice": 13335.63,
+        "closePrice": 13787.15,
+        "commissions": -1.12,
+        "swaps": -86.03,
+        "volume": 1,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 13307.26,
+        "quantity": 1,
+        "pips": 4515.2
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 10,
+        "net": 1219.76,
+        "gross": 1510.3,
+        "entryTime": 1622412000000,
+        "closeTime": 1629237600000,
+        "entryPrice": 13701.85,
+        "closePrice": 14967.62,
+        "commissions": -1.44,
+        "swaps": -289.1,
+        "volume": 1.29,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 14527.02,
+        "quantity": 1.29,
+        "pips": 12657.7
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 11,
+        "net": -181.95,
+        "gross": -22.65,
+        "entryTime": 1629756000000,
+        "closeTime": 1632088800000,
+        "entryPrice": 15327.39,
+        "closePrice": 15314.7,
+        "commissions": -2.16,
+        "swaps": -157.14,
+        "volume": 1.93,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 14345.07,
+        "quantity": 1.93,
+        "pips": -126.9
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 12,
+        "net": 890.55,
+        "gross": 1063.5,
+        "entryTime": 1634508000000,
+        "closeTime": 1638140400000,
+        "entryPrice": 15168.85,
+        "closePrice": 16046.55,
+        "commissions": -1.46,
+        "swaps": -171.49,
+        "volume": 1.31,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 15235.62,
+        "quantity": 1.31,
+        "pips": 8777
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 13,
+        "net": -767.01,
+        "gross": -737.58,
+        "entryTime": 1640646000000,
+        "closeTime": 1641423600000,
+        "entryPrice": 16566.65,
+        "closePrice": 15761.17,
+        "commissions": -1.1,
+        "swaps": -28.33,
+        "volume": 0.99,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 14468.61,
+        "quantity": 0.99,
+        "pips": -8054.8
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 14,
+        "net": -304.81,
+        "gross": -259.99,
+        "entryTime": 1647813600000,
+        "closeTime": 1649714400000,
+        "entryPrice": 14401.6,
+        "closePrice": 14000.05,
+        "commissions": -0.78,
+        "swaps": -44.04,
+        "volume": 0.7,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 14163.8,
+        "quantity": 0.7,
+        "pips": -4015.5
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 15,
+        "net": -751.85,
+        "gross": -727.48,
+        "entryTime": 1653948000000,
+        "closeTime": 1655071200000,
+        "entryPrice": 12812.68,
+        "closePrice": 11764,
+        "commissions": -0.84,
+        "swaps": -23.53,
+        "volume": 0.75,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 13411.95,
+        "quantity": 0.75,
+        "pips": -10486.8
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 16,
+        "net": 618.85,
+        "gross": 726.08,
+        "entryTime": 1657231200000,
+        "closeTime": 1661205600000,
+        "entryPrice": 12071.2,
+        "closePrice": 12915.28,
+        "commissions": -1.04,
+        "swaps": -106.19,
+        "volume": 0.93,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 14030.8,
+        "quantity": 0.93,
+        "pips": 8440.8
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 17,
+        "net": -495.79,
+        "gross": -478.53,
+        "entryTime": 1666735200000,
+        "closeTime": 1667426400000,
+        "entryPrice": 11456.59,
+        "closePrice": 10894.25,
+        "commissions": -1.02,
+        "swaps": -16.24,
+        "volume": 0.92,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 13535.01,
+        "quantity": 0.92,
+        "pips": -5623.4
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 18,
+        "net": -108.25,
+        "gross": -57.29,
+        "entryTime": 1668121200000,
+        "closeTime": 1670367600000,
+        "entryPrice": 11631.52,
+        "closePrice": 11557.78,
+        "commissions": -0.94,
+        "swaps": -50.02,
+        "volume": 0.84,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 13426.76,
+        "quantity": 0.84,
+        "pips": -737.4
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 19,
+        "net": 576.37,
+        "gross": 689,
+        "entryTime": 1673564400000,
+        "closeTime": 1677020400000,
+        "entryPrice": 11446.09,
+        "closePrice": 12077.37,
+        "commissions": -1.32,
+        "swaps": -111.31,
+        "volume": 1.18,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 14003.13,
+        "quantity": 1.18,
+        "pips": 6312.8
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 20,
+        "net": 237.9,
+        "gross": 376.41,
+        "entryTime": 1679004000000,
+        "closeTime": 1682460000000,
+        "entryPrice": 12577.86,
+        "closePrice": 12877.09,
+        "commissions": -1.52,
+        "swaps": -136.99,
+        "volume": 1.36,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 14241.03,
+        "quantity": 1.36,
+        "pips": 2992.3
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 21,
+        "net": -260.38,
+        "gross": -226.87,
+        "entryTime": 1682632800000,
+        "closeTime": 1683237600000,
+        "entryPrice": 13140.2,
+        "closePrice": 13000.84,
+        "commissions": -1.96,
+        "swaps": -31.55,
+        "volume": 1.76,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 13980.65,
+        "quantity": 1.76,
+        "pips": -1393.6
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 22,
+        "net": 2853.52,
+        "gross": 3282.76,
+        "entryTime": 1683496800000,
+        "closeTime": 1691100000000,
+        "entryPrice": 13256.99,
+        "closePrice": 15357.06,
+        "commissions": -1.88,
+        "swaps": -427.36,
+        "volume": 1.69,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 16834.17,
+        "quantity": 1.69,
+        "pips": 21000.7
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 23,
+        "net": -373.47,
+        "gross": -278.85,
+        "entryTime": 1693346400000,
+        "closeTime": 1695160800000,
+        "entryPrice": 15394.29,
+        "closePrice": 15190.59,
+        "commissions": -1.66,
+        "swaps": -92.96,
+        "volume": 1.48,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 16460.7,
+        "quantity": 1.48,
+        "pips": -2037
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 24,
+        "net": -815.63,
+        "gross": -777.16,
+        "entryTime": 1697061600000,
+        "closeTime": 1697752800000,
+        "entryPrice": 15266.6,
+        "closePrice": 14731.43,
+        "commissions": -1.76,
+        "swaps": -36.71,
+        "volume": 1.57,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 15645.07,
+        "quantity": 1.57,
+        "pips": -5351.7
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 25,
+        "net": 1321.93,
+        "gross": 1604.33,
+        "entryTime": 1699311600000,
+        "closeTime": 1704409200000,
+        "entryPrice": 15137.86,
+        "closePrice": 16286.54,
+        "commissions": -1.68,
+        "swaps": -280.72,
+        "volume": 1.51,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 16967,
+        "quantity": 1.51,
+        "pips": 11486.8
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 26,
+        "net": 743.48,
+        "gross": 964.85,
+        "entryTime": 1705618800000,
+        "closeTime": 1708470000000,
+        "entryPrice": 16981.48,
+        "closePrice": 17519.18,
+        "commissions": -2.16,
+        "swaps": -219.21,
+        "volume": 1.94,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 17710.48,
+        "quantity": 1.94,
+        "pips": 5377
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 27,
+        "net": -361.05,
+        "gross": -213.37,
+        "entryTime": 1708642800000,
+        "closeTime": 1710712800000,
+        "entryPrice": 17973.15,
+        "closePrice": 17839.81,
+        "commissions": -1.94,
+        "swaps": -145.74,
+        "volume": 1.73,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 17349.43,
+        "quantity": 1.73,
+        "pips": -1333.4
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 28,
+        "net": -659.42,
+        "gross": -573.91,
+        "entryTime": 1710972000000,
+        "closeTime": 1712268000000,
+        "entryPrice": 18301.67,
+        "closePrice": 17906.46,
+        "commissions": -1.76,
+        "swaps": -83.75,
+        "volume": 1.57,
+        "label": "BollingerBandTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 16690.01,
+        "quantity": 1.57,
+        "pips": -3952.1
+      }
+    ]
+  }
+}</script>
+        <!-- endBacktestingReport -->
+    </head>
+    <body>
+        <div class="spinner-a spinner-b spinner-c spinner-d spinner-e spinner-f spinner-g spinner-h spinner-i spinner-j spinner-k spinner-l spinner-m spinner-n spinner-o spinner-p spinner-q spinner-r spinner-s spinner-t spinner-u spinner-v spinner-w spinner-x spinner-y spinner-z spinner-ab spinner-ac spinner-ae spinner-af spinner-ag spinner-ah spinner-ai spinner-aj spinner-ak spinner-al spinner-am spinner-an spinner-ao spinner-ap spinner-aq spinner-ar spinner-as spinner-at spinner-au spinner-av spinner-aw spinner-ax spinner-ay spinner-az spinner-ba spinner-bb spinner-bc spinner-bd spinner-be spinner-bf spinner-bg waitingIndicator" data-test-id="loader"></div>
+        <div id="root"></div>
+
+            <script id="init" defer src="https://backtesting.ctrader.com/v5.0.0/bundle/index-31bd62a5e13b796fd66a.js"></script>
+
+        <script type="text/javascript" id="app-init">
+            var script = document.getElementById('init');
+            script.onload = () => {
+                initApp('root');
+
+                script.remove();
+                document.getElementById('app-init').remove();
+            }
+        </script>
+    </body>
+</html>

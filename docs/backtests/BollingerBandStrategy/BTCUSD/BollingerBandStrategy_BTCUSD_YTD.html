@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<html data-app-version="4.8.2">
+    <head>
+        <title>Historical Replay Report | cTrader</title>
+
+        <meta name="title" content="Historical Replay Report | cTrader">
+        <meta name="description" content="Backtesting report of a cBot from cTrader Algo: equity, trade statistics, parameters, used symbols, positions, orders, history.">
+
+        <meta name="author" content="Spotware Systems Ltd">
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-eval' 'unsafe-inline' data: https: http: gap: ws: wss: blob: filesystem: file:">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+
+        <style type="text/css" data-fela-rehydration="58" data-fela-type="KEYFRAME">@-webkit-keyframes spinner-k1{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@-moz-keyframes spinner-k1{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes spinner-k1{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@-webkit-keyframes spinner-k2{0%{transform:rotate(0deg)}100%{transform:rotate(-360deg)}}@-moz-keyframes spinner-k2{0%{transform:rotate(0deg)}100%{transform:rotate(-360deg)}}@keyframes spinner-k2{0%{transform:rotate(0deg)}100%{transform:rotate(-360deg)}}</style><style type="text/css" data-fela-rehydration="58" data-fela-type="RULE">.spinner-a{position:absolute}.spinner-b{margin-left:auto}.spinner-c{margin-bottom:auto}.spinner-d{margin-right:auto}.spinner-e{margin-top:auto}.spinner-f{top:0}.spinner-g{bottom:0}.spinner-h{left:0}.spinner-i{right:0}.spinner-j{width:50px}.spinner-k{height:50px}.spinner-l{display:flex}.spinner-m{z-index:200}.spinner-n:before{content:""}.spinner-o:before{position:absolute}.spinner-p:before{border-style:solid}.spinner-q:before{border-top-left-radius:50%}.spinner-r:before{border-top-right-radius:50%}.spinner-s:before{border-bottom-right-radius:50%}.spinner-t:before{border-bottom-left-radius:50%}.spinner-u:before{display:inline-block}.spinner-v:before{box-sizing:border-box}.spinner-w:before{border-width:7px}.spinner-x:before{border-top-color:transparent}.spinner-y:before{border-left-color:transparent}.spinner-z:before{margin-top:7px}.spinner-ab:before{margin-right:7px}.spinner-ac:before{margin-bottom:7px}.spinner-ae:before{margin-left:7px}.spinner-af:before{width:calc(100% - 14px)}.spinner-ag:before{height:calc(100% - 14px)}.spinner-ah:before{border-right-color:#e75731}.spinner-ai:before{border-bottom-color:#e75731}.spinner-aj:before{animation-iteration-count:infinite}.spinner-ak:before{animation-timing-function:linear}.spinner-al:before{animation-duration:0.6s}.spinner-am:before{animation-name:spinner-k2}.spinner-an:after{content:""}.spinner-ao:after{position:absolute}.spinner-ap:after{border-style:solid}.spinner-aq:after{border-top-left-radius:50%}.spinner-ar:after{border-top-right-radius:50%}.spinner-as:after{border-bottom-right-radius:50%}.spinner-at:after{border-bottom-left-radius:50%}.spinner-au:after{display:inline-block}.spinner-av:after{box-sizing:border-box}.spinner-aw:after{border-width:7px}.spinner-ax:after{border-top-color:transparent}.spinner-ay:after{border-left-color:transparent}.spinner-az:after{width:100%}.spinner-ba:after{height:100%}.spinner-bb:after{border-right-color:rgba(36, 150, 73, 0.9)}.spinner-bc:after{border-bottom-color:rgba(36, 150, 73, 0.9)}.spinner-bd:after{animation-iteration-count:infinite}.spinner-be:after{animation-timing-function:linear}.spinner-bf:after{animation-duration:0.9s}.spinner-bg:after{animation-name:spinner-k1}</style>
+
+        <style>
+            html {
+                height: 100%;
+            }
+
+            body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            #root {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+
+        <!-- startBacktestingReport -->
+        <script type="application/json" id="backtesting-report">{
+  "main": {
+    "utcOffset": 120,
+    "language": "en",
+    "depositAsset": "EUR",
+    "depositAssetDigits": 2,
+    "period": "D1",
+    "symbol": "BTCUSD",
+    "brokerTitle": "Fusion Markets",
+    "cBotName": "BollingerBandTrendFollow cBot",
+    "roi": 13.18,
+    "netProfit": 1318.05,
+    "startingCapital": 10000,
+    "endingEquity": 11318.05,
+    "endingBalance": 11318.05,
+    "testingPeriod": {
+      "duration": "6m 4d",
+      "startDate": 1704067200000,
+      "endDate": 1720137600000,
+      "formatted": "6m 4d (01/01/2024 - 05/07/2024)"
+    },
+    "accountType": "hedging",
+    "accountLeverage": 100,
+    "data": {
+      "type": "m1BarsFromServer"
+    },
+    "spread": {
+      "type": "fixed",
+      "min": null,
+      "max": null,
+      "value": 1
+    },
+    "commissions": {
+      "type": "usdPerMillionUsdVolume",
+      "value": 30
+    },
+    "theme": "dark",
+    "titleKind": "backtesting",
+    "authorNickName": "jiri.work",
+    "authorLink": null,
+    "cBotLink": null,
+    "embedded": false
+  },
+  "equity": {
+    "points": [
+      {
+        "balance": 10000,
+        "minEquity": 10000,
+        "maxEquity": 10000,
+        "timestamp": 1704067200000
+      },
+      {
+        "balance": 9935.27,
+        "minEquity": 9838.62,
+        "maxEquity": 10382.24,
+        "timestamp": 1705183320000
+      },
+      {
+        "balance": 11603.96,
+        "minEquity": 9903.08,
+        "maxEquity": 12444.33,
+        "timestamp": 1710882300000
+      },
+      {
+        "balance": 11460.09,
+        "minEquity": 11430.98,
+        "maxEquity": 11629.36,
+        "timestamp": 1712091900000
+      },
+      {
+        "balance": 11274.68,
+        "minEquity": 11234.02,
+        "maxEquity": 11467.51,
+        "timestamp": 1712955900000
+      },
+      {
+        "balance": 11318.05,
+        "minEquity": 11218.41,
+        "maxEquity": 11557.95,
+        "timestamp": 1718139900000
+      },
+      {
+        "balance": 11318.05,
+        "minEquity": 11294.58,
+        "maxEquity": 11318.05,
+        "timestamp": 1720161060000
+      }
+    ],
+    "maxBalanceDrawdownPercent": 2.8376519739812864,
+    "maxEquityDrawdownPercent": 9.851233453307652,
+    "maxBalanceDrawdownAbsolute": 329.2799999,
+    "maxEquityDrawdownAbsolute": 1225.92
+  },
+  "tradeStatistics": {
+    "netProfit": {
+      "all": 1318.05,
+      "long": 1318.05,
+      "short": 0
+    },
+    "profitFactor": {
+      "all": 4.35,
+      "long": 4.35,
+      "short": 0
+    },
+    "commissions": {
+      "all": -0.94,
+      "long": -0.94,
+      "short": 0
+    },
+    "swaps": {
+      "all": -99.91,
+      "long": -99.91,
+      "short": 0
+    },
+    "totalTrades": {
+      "all": 5,
+      "long": 5,
+      "short": 0
+    },
+    "winningTrades": {
+      "all": 2,
+      "long": 2,
+      "short": 0
+    },
+    "maxConsecutiveWinningTrades": {
+      "all": 1,
+      "long": 1,
+      "short": 0
+    },
+    "largestWinningTrade": {
+      "all": 1668.69,
+      "long": 1668.69,
+      "short": 0
+    },
+    "losingTrades": {
+      "all": 3,
+      "long": 3,
+      "short": 0
+    },
+    "maxConsecutiveLosingTrades": {
+      "all": 2,
+      "long": 2,
+      "short": 0
+    },
+    "largestLosingTrade": {
+      "all": -185.41,
+      "long": -185.41,
+      "short": 0
+    },
+    "averageTrade": {
+      "all": 263.61,
+      "long": 263.61,
+      "short": 0
+    }
+  },
+  "parameters": [
+    {
+      "group": "Basic settings",
+      "displayName": "Length",
+      "propertyName": "Length",
+      "value": 20
+    },
+    {
+      "group": "Basic settings",
+      "displayName": "Upper",
+      "propertyName": "MultiplierUpper",
+      "value": 1
+    },
+    {
+      "group": "Basic settings",
+      "displayName": "Lower",
+      "propertyName": "MultiplierLower",
+      "value": 0.5
+    },
+    {
+      "group": "Basic settings",
+      "displayName": "Risk percentage",
+      "propertyName": "RiskPercentage",
+      "value": 2.5
+    },
+    {
+      "group": "Basic settings",
+      "displayName": "Atr Multiplier",
+      "propertyName": "AtrMultiplier",
+      "value": 2
+    },
+    {
+      "group": "Basic settings",
+      "displayName": "Atr Length",
+      "propertyName": "AtrLength",
+      "value": 20
+    },
+    {
+      "group": "Filter settings",
+      "displayName": "Enable Filter",
+      "propertyName": "EnableFilter",
+      "value": "false"
+    },
+    {
+      "group": "Filter settings",
+      "displayName": "Benchmark Symbol",
+      "propertyName": "BenchmarkSymbol",
+      "value": "US500"
+    }
+  ],
+  "usedSymbols": [
+    {
+      "symbol": "BTCUSD",
+      "period": "D1",
+      "swapTime": "21:00",
+      "baseAsset": "BTC",
+      "quoteAsset": "USD",
+      "commissions": {
+        "type": "usdPerMillionUsdVolume",
+        "value": 30
+      },
+      "swapLong": -10,
+      "swapShort": -10,
+      "threeDaySwaps": "friday",
+      "weekendSwaps": false,
+      "swapPeriods": 24,
+      "gracePeriods": 0,
+      "digits": 2,
+      "lotSize": 1,
+      "stepVolume": 0.01,
+      "pipPosition": 1,
+      "swapCalculationType": "percent"
+    },
+    {
+      "symbol": "US500",
+      "period": "D1",
+      "swapTime": "21:00",
+      "baseAsset": "US500",
+      "quoteAsset": "USD",
+      "commissions": {
+        "type": "usdPerMillionUsdVolume",
+        "value": 30
+      },
+      "swapLong": -7.68,
+      "swapShort": 3.14,
+      "threeDaySwaps": "friday",
+      "weekendSwaps": false,
+      "swapPeriods": 24,
+      "gracePeriods": 0,
+      "digits": 2,
+      "lotSize": 1,
+      "stepVolume": 0.01,
+      "pipPosition": 1,
+      "swapCalculationType": "percent"
+    }
+  ],
+  "positions": {
+    "columns": [
+      "id",
+      "symbol",
+      "quantity",
+      "volume",
+      "direction",
+      "entryPrice",
+      "tp",
+      "sl",
+      "commissions",
+      "closingCommissions",
+      "swaps",
+      "created",
+      "label",
+      "comment",
+      "pips",
+      "gross",
+      "net"
+    ],
+    "items": [],
+    "marginUsed": 0,
+    "freeMargin": 11318.05,
+    "marginLevel": null,
+    "unrealizedNet": 0,
+    "unrealizedGross": 0
+  },
+  "orders": {
+    "columns": [
+      "id",
+      "direction",
+      "orderType",
+      "created",
+      "symbol",
+      "quantity",
+      "volume",
+      "submittedPrice",
+      "distance",
+      "tp",
+      "sl"
+    ],
+    "items": []
+  },
+  "history": {
+    "columns": [
+      "id",
+      "label",
+      "entryTime",
+      "symbol",
+      "quantity",
+      "volume",
+      "direction",
+      "entryPrice",
+      "commissions",
+      "swaps",
+      "closePrice",
+      "closeTime",
+      "net",
+      "pips",
+      "gross"
+    ],
+    "items": [
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 1,
+        "net": -64.73,
+        "gross": -52.69,
+        "entryTime": 1704146520000,
+        "closeTime": 1705183320000,
+        "entryPrice": 43653.1,
+        "closePrice": 42941,
+        "commissions": -0.26,
+        "swaps": -11.78,
+        "volume": 0.08,
+        "label": "BollingerBandTrendFollow_cBot-BTCUSD",
+        "comment": null,
+        "balance": 9935.27,
+        "quantity": 0.08,
+        "pips": -7121
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 2,
+        "net": 1668.69,
+        "gross": 1725.29,
+        "entryTime": 1707256920000,
+        "closeTime": 1710882300000,
+        "entryPrice": 43141.1,
+        "closePrice": 63866.41,
+        "commissions": -0.3,
+        "swaps": -56.3,
+        "volume": 0.09,
+        "label": "BollingerBandTrendFollow_cBot-BTCUSD",
+        "comment": null,
+        "balance": 11603.96,
+        "quantity": 0.09,
+        "pips": 207253.1
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 3,
+        "net": -143.87,
+        "gross": -139.56,
+        "entryTime": 1711400700000,
+        "closeTime": 1712091900000,
+        "entryPrice": 70781.21,
+        "closePrice": 65751.61,
+        "commissions": -0.1,
+        "swaps": -4.21,
+        "volume": 0.03,
+        "label": "BollingerBandTrendFollow_cBot-BTCUSD",
+        "comment": null,
+        "balance": 11460.09,
+        "quantity": 0.03,
+        "pips": -50296
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 4,
+        "net": -185.41,
+        "gross": -181.14,
+        "entryTime": 1712610300000,
+        "closeTime": 1712955900000,
+        "entryPrice": 71801.01,
+        "closePrice": 66905.01,
+        "commissions": -0.12,
+        "swaps": -4.15,
+        "volume": 0.04,
+        "label": "BollingerBandTrendFollow_cBot-BTCUSD",
+        "comment": null,
+        "balance": 11274.68,
+        "quantity": 0.04,
+        "pips": -48960
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 5,
+        "net": 43.37,
+        "gross": 67,
+        "entryTime": 1715807100000,
+        "closeTime": 1718139900000,
+        "entryPrice": 65811.54,
+        "closePrice": 67260.34,
+        "commissions": -0.16,
+        "swaps": -23.47,
+        "volume": 0.05,
+        "label": "BollingerBandTrendFollow_cBot-BTCUSD",
+        "comment": null,
+        "balance": 11318.05,
+        "quantity": 0.05,
+        "pips": 14488
+      }
+    ]
+  }
+}</script>
+        <!-- endBacktestingReport -->
+    </head>
+    <body>
+        <div class="spinner-a spinner-b spinner-c spinner-d spinner-e spinner-f spinner-g spinner-h spinner-i spinner-j spinner-k spinner-l spinner-m spinner-n spinner-o spinner-p spinner-q spinner-r spinner-s spinner-t spinner-u spinner-v spinner-w spinner-x spinner-y spinner-z spinner-ab spinner-ac spinner-ae spinner-af spinner-ag spinner-ah spinner-ai spinner-aj spinner-ak spinner-al spinner-am spinner-an spinner-ao spinner-ap spinner-aq spinner-ar spinner-as spinner-at spinner-au spinner-av spinner-aw spinner-ax spinner-ay spinner-az spinner-ba spinner-bb spinner-bc spinner-bd spinner-be spinner-bf spinner-bg waitingIndicator" data-test-id="loader"></div>
+        <div id="root"></div>
+
+            <script id="init" defer src="https://backtesting.ctrader.com/v5.0.0/bundle/index-31bd62a5e13b796fd66a.js"></script>
+
+        <script type="text/javascript" id="app-init">
+            var script = document.getElementById('init');
+            script.onload = () => {
+                initApp('root');
+
+                script.remove();
+                document.getElementById('app-init').remove();
+            }
+        </script>
+    </body>
+</html>

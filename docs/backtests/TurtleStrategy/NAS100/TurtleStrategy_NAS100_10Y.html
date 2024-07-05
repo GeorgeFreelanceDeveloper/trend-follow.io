@@ -1,0 +1,1409 @@
+
+<!DOCTYPE html>
+<html data-app-version="4.8.2">
+    <head>
+        <title>Historical Replay Report | cTrader</title>
+
+        <meta name="title" content="Historical Replay Report | cTrader">
+        <meta name="description" content="Backtesting report of a cBot from cTrader Algo: equity, trade statistics, parameters, used symbols, positions, orders, history.">
+
+        <meta name="author" content="Spotware Systems Ltd">
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-eval' 'unsafe-inline' data: https: http: gap: ws: wss: blob: filesystem: file:">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+
+        <style type="text/css" data-fela-rehydration="58" data-fela-type="KEYFRAME">@-webkit-keyframes spinner-k1{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@-moz-keyframes spinner-k1{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes spinner-k1{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@-webkit-keyframes spinner-k2{0%{transform:rotate(0deg)}100%{transform:rotate(-360deg)}}@-moz-keyframes spinner-k2{0%{transform:rotate(0deg)}100%{transform:rotate(-360deg)}}@keyframes spinner-k2{0%{transform:rotate(0deg)}100%{transform:rotate(-360deg)}}</style><style type="text/css" data-fela-rehydration="58" data-fela-type="RULE">.spinner-a{position:absolute}.spinner-b{margin-left:auto}.spinner-c{margin-bottom:auto}.spinner-d{margin-right:auto}.spinner-e{margin-top:auto}.spinner-f{top:0}.spinner-g{bottom:0}.spinner-h{left:0}.spinner-i{right:0}.spinner-j{width:50px}.spinner-k{height:50px}.spinner-l{display:flex}.spinner-m{z-index:200}.spinner-n:before{content:""}.spinner-o:before{position:absolute}.spinner-p:before{border-style:solid}.spinner-q:before{border-top-left-radius:50%}.spinner-r:before{border-top-right-radius:50%}.spinner-s:before{border-bottom-right-radius:50%}.spinner-t:before{border-bottom-left-radius:50%}.spinner-u:before{display:inline-block}.spinner-v:before{box-sizing:border-box}.spinner-w:before{border-width:7px}.spinner-x:before{border-top-color:transparent}.spinner-y:before{border-left-color:transparent}.spinner-z:before{margin-top:7px}.spinner-ab:before{margin-right:7px}.spinner-ac:before{margin-bottom:7px}.spinner-ae:before{margin-left:7px}.spinner-af:before{width:calc(100% - 14px)}.spinner-ag:before{height:calc(100% - 14px)}.spinner-ah:before{border-right-color:#e75731}.spinner-ai:before{border-bottom-color:#e75731}.spinner-aj:before{animation-iteration-count:infinite}.spinner-ak:before{animation-timing-function:linear}.spinner-al:before{animation-duration:0.6s}.spinner-am:before{animation-name:spinner-k2}.spinner-an:after{content:""}.spinner-ao:after{position:absolute}.spinner-ap:after{border-style:solid}.spinner-aq:after{border-top-left-radius:50%}.spinner-ar:after{border-top-right-radius:50%}.spinner-as:after{border-bottom-right-radius:50%}.spinner-at:after{border-bottom-left-radius:50%}.spinner-au:after{display:inline-block}.spinner-av:after{box-sizing:border-box}.spinner-aw:after{border-width:7px}.spinner-ax:after{border-top-color:transparent}.spinner-ay:after{border-left-color:transparent}.spinner-az:after{width:100%}.spinner-ba:after{height:100%}.spinner-bb:after{border-right-color:rgba(36, 150, 73, 0.9)}.spinner-bc:after{border-bottom-color:rgba(36, 150, 73, 0.9)}.spinner-bd:after{animation-iteration-count:infinite}.spinner-be:after{animation-timing-function:linear}.spinner-bf:after{animation-duration:0.9s}.spinner-bg:after{animation-name:spinner-k1}</style>
+
+        <style>
+            html {
+                height: 100%;
+            }
+
+            body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            #root {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+
+        <!-- startBacktestingReport -->
+        <script type="application/json" id="backtesting-report">{
+  "main": {
+    "utcOffset": 120,
+    "language": "en",
+    "depositAsset": "EUR",
+    "depositAssetDigits": 2,
+    "period": "D1",
+    "symbol": "NAS100",
+    "brokerTitle": "Fusion Markets",
+    "cBotName": "TurtleTrendFollow",
+    "roi": 111.94,
+    "netProfit": 11194.41,
+    "startingCapital": 10000,
+    "endingEquity": 21194.41,
+    "endingBalance": 18618.92,
+    "testingPeriod": {
+      "duration": "10y",
+      "startDate": 1404518400000,
+      "endDate": 1720137600000,
+      "formatted": "10y (05/07/2014 - 05/07/2024)"
+    },
+    "accountType": "hedging",
+    "accountLeverage": 100,
+    "data": {
+      "type": "m1BarsFromServer"
+    },
+    "spread": {
+      "type": "fixed",
+      "min": null,
+      "max": null,
+      "value": 8
+    },
+    "commissions": {
+      "type": "usdPerMillionUsdVolume",
+      "value": 0
+    },
+    "theme": "dark",
+    "titleKind": "backtesting",
+    "authorNickName": "jiri.work",
+    "authorLink": null,
+    "cBotLink": null,
+    "embedded": false
+  },
+  "equity": {
+    "points": [
+      {
+        "balance": 10000,
+        "minEquity": 10000,
+        "maxEquity": 10000,
+        "timestamp": 1404518400000
+      },
+      {
+        "balance": 10246.98,
+        "minEquity": 9676.85,
+        "maxEquity": 10773.71,
+        "timestamp": 1412542800000
+      },
+      {
+        "balance": 10701.05,
+        "minEquity": 9889.86,
+        "maxEquity": 10747.07,
+        "timestamp": 1417989600000
+      },
+      {
+        "balance": 11074.85,
+        "minEquity": 10630.46,
+        "maxEquity": 11237.73,
+        "timestamp": 1425848400000
+      },
+      {
+        "balance": 11266.84,
+        "minEquity": 10755.38,
+        "maxEquity": 11839.5,
+        "timestamp": 1439758800000
+      },
+      {
+        "balance": 11840.12,
+        "minEquity": 10888.15,
+        "maxEquity": 11899.83,
+        "timestamp": 1447020000000
+      },
+      {
+        "balance": 11881.52,
+        "minEquity": 11642.57,
+        "maxEquity": 12299.08,
+        "timestamp": 1461704400000
+      },
+      {
+        "balance": 11762.38,
+        "minEquity": 11744.01,
+        "maxEquity": 12072.16,
+        "timestamp": 1465765200000
+      },
+      {
+        "balance": 12061.82,
+        "minEquity": 11690.69,
+        "maxEquity": 12729.96,
+        "timestamp": 1473627600000
+      },
+      {
+        "balance": 11673.09,
+        "minEquity": 11723.08,
+        "maxEquity": 12245.15,
+        "timestamp": 1476392400000
+      },
+      {
+        "balance": 10809.5,
+        "minEquity": 11037.9,
+        "maxEquity": 11673.09,
+        "timestamp": 1478034000000
+      },
+      {
+        "balance": 10445.73,
+        "minEquity": 10667.9,
+        "maxEquity": 10847.82,
+        "timestamp": 1483394400000
+      },
+      {
+        "balance": 11639.16,
+        "minEquity": 10370.35,
+        "maxEquity": 12154.57,
+        "timestamp": 1492376400000
+      },
+      {
+        "balance": 11894.29,
+        "minEquity": 11120.94,
+        "maxEquity": 12713.87,
+        "timestamp": 1495054800000
+      },
+      {
+        "balance": 11818.4,
+        "minEquity": 11743.43,
+        "maxEquity": 12716.63,
+        "timestamp": 1497214800000
+      },
+      {
+        "balance": 11404.68,
+        "minEquity": 11682.85,
+        "maxEquity": 12148.04,
+        "timestamp": 1502398800000
+      },
+      {
+        "balance": 10871.76,
+        "minEquity": 11071.75,
+        "maxEquity": 11404.68,
+        "timestamp": 1506373200000
+      },
+      {
+        "balance": 11976.07,
+        "minEquity": 10766.31,
+        "maxEquity": 12648.91,
+        "timestamp": 1514844000000
+      },
+      {
+        "balance": 12495.44,
+        "minEquity": 11464.6,
+        "maxEquity": 13763.36,
+        "timestamp": 1517781600000
+      },
+      {
+        "balance": 11571.09,
+        "minEquity": 11992,
+        "maxEquity": 12572.38,
+        "timestamp": 1521752400000
+      },
+      {
+        "balance": 11778.32,
+        "minEquity": 11535.65,
+        "maxEquity": 12325.79,
+        "timestamp": 1529960400000
+      },
+      {
+        "balance": 11283.59,
+        "minEquity": 11500.78,
+        "maxEquity": 11869.15,
+        "timestamp": 1532984400000
+      },
+      {
+        "balance": 10672.49,
+        "minEquity": 10778.15,
+        "maxEquity": 11608.66,
+        "timestamp": 1538946000000
+      },
+      {
+        "balance": 11149.72,
+        "minEquity": 10462.46,
+        "maxEquity": 11926.05,
+        "timestamp": 1557781200000
+      },
+      {
+        "balance": 11052.9,
+        "minEquity": 10915.7,
+        "maxEquity": 11803.68,
+        "timestamp": 1564952400000
+      },
+      {
+        "balance": 10792.35,
+        "minEquity": 10768.46,
+        "maxEquity": 11140.74,
+        "timestamp": 1569362400000
+      },
+      {
+        "balance": 12246.91,
+        "minEquity": 10748.73,
+        "maxEquity": 12910.59,
+        "timestamp": 1580166000000
+      },
+      {
+        "balance": 11606.31,
+        "minEquity": 11624.77,
+        "maxEquity": 12990.45,
+        "timestamp": 1582585200000
+      },
+      {
+        "balance": 12921.92,
+        "minEquity": 11526.04,
+        "maxEquity": 13756.49,
+        "timestamp": 1599602400000
+      },
+      {
+        "balance": 12683.94,
+        "minEquity": 12604.17,
+        "maxEquity": 13420.02,
+        "timestamp": 1603749600000
+      },
+      {
+        "balance": 13316.11,
+        "minEquity": 12373.93,
+        "maxEquity": 14133.85,
+        "timestamp": 1614034800000
+      },
+      {
+        "balance": 13394.79,
+        "minEquity": 13048.71,
+        "maxEquity": 13980.56,
+        "timestamp": 1620165600000
+      },
+      {
+        "balance": 14495.93,
+        "minEquity": 13276.15,
+        "maxEquity": 15019.04,
+        "timestamp": 1629324000000
+      },
+      {
+        "balance": 14314.89,
+        "minEquity": 14191.55,
+        "maxEquity": 15106.58,
+        "timestamp": 1632088800000
+      },
+      {
+        "balance": 14736.04,
+        "minEquity": 14135.98,
+        "maxEquity": 15882.78,
+        "timestamp": 1638399600000
+      },
+      {
+        "balance": 13830.35,
+        "minEquity": 13767.85,
+        "maxEquity": 14815.47,
+        "timestamp": 1641769200000
+      },
+      {
+        "balance": 13538.92,
+        "minEquity": 13529.06,
+        "maxEquity": 14348.65,
+        "timestamp": 1649714400000
+      },
+      {
+        "balance": 14034.03,
+        "minEquity": 13287.84,
+        "maxEquity": 14805.45,
+        "timestamp": 1661205600000
+      },
+      {
+        "balance": 13624.28,
+        "minEquity": 13581.81,
+        "maxEquity": 14349.98,
+        "timestamp": 1671145200000
+      },
+      {
+        "balance": 13785.38,
+        "minEquity": 13214.27,
+        "maxEquity": 14840.42,
+        "timestamp": 1677020400000
+      },
+      {
+        "balance": 16478.65,
+        "minEquity": 13495.05,
+        "maxEquity": 17219.78,
+        "timestamp": 1691013600000
+      },
+      {
+        "balance": 17451.06,
+        "minEquity": 15995.18,
+        "maxEquity": 18354.27,
+        "timestamp": 1704322800000
+      },
+      {
+        "balance": 18618.92,
+        "minEquity": 17192.38,
+        "maxEquity": 19766.73,
+        "timestamp": 1712268000000
+      },
+      {
+        "balance": 18618.92,
+        "minEquity": 18085.5,
+        "maxEquity": 21198.02,
+        "timestamp": 1720161600000
+      }
+    ],
+    "maxBalanceDrawdownPercent": 14.588922038759744,
+    "maxEquityDrawdownPercent": 23.983242464049486,
+    "maxBalanceDrawdownAbsolute": 1822.95,
+    "maxEquityDrawdownAbsolute": 3300.9
+  },
+  "tradeStatistics": {
+    "netProfit": {
+      "all": 8618.92,
+      "long": 8618.92,
+      "short": 0
+    },
+    "profitFactor": {
+      "all": 2.1,
+      "long": 2.1,
+      "short": 0
+    },
+    "commissions": {
+      "all": 0,
+      "long": 0,
+      "short": 0
+    },
+    "swaps": {
+      "all": -7444.48,
+      "long": -7444.48,
+      "short": 0
+    },
+    "totalTrades": {
+      "all": 42,
+      "long": 42,
+      "short": 0
+    },
+    "winningTrades": {
+      "all": 24,
+      "long": 24,
+      "short": 0
+    },
+    "maxConsecutiveWinningTrades": {
+      "all": 6,
+      "long": 6,
+      "short": 0
+    },
+    "largestWinningTrade": {
+      "all": 2693.27,
+      "long": 2693.27,
+      "short": 0
+    },
+    "losingTrades": {
+      "all": 18,
+      "long": 18,
+      "short": 0
+    },
+    "maxConsecutiveLosingTrades": {
+      "all": 3,
+      "long": 3,
+      "short": 0
+    },
+    "largestLosingTrade": {
+      "all": -924.35,
+      "long": -924.35,
+      "short": 0
+    },
+    "averageTrade": {
+      "all": 205.21,
+      "long": 205.21,
+      "short": 0
+    }
+  },
+  "parameters": [
+    {
+      "group": "Basic settings",
+      "displayName": "Entry Length",
+      "propertyName": "EntryLength",
+      "value": 20
+    },
+    {
+      "group": "Basic settings",
+      "displayName": "Exit Length",
+      "propertyName": "ExitLength",
+      "value": 10
+    },
+    {
+      "group": "Basic settings",
+      "displayName": "Risk Percentage",
+      "propertyName": "RiskPercentage",
+      "value": 5
+    },
+    {
+      "group": "Basic settings",
+      "displayName": "Atr Multiplier",
+      "propertyName": "AtrMultiplier",
+      "value": 2
+    },
+    {
+      "group": "Basic settings",
+      "displayName": "Atr Length",
+      "propertyName": "AtrLength",
+      "value": 20
+    },
+    {
+      "group": "Filter settings",
+      "displayName": "Enable Filter",
+      "propertyName": "EnableFilter",
+      "value": "false"
+    },
+    {
+      "group": "Filter settings",
+      "displayName": "Benchmark Symbol",
+      "propertyName": "BenchmarkSymbol",
+      "value": "US500"
+    }
+  ],
+  "usedSymbols": [
+    {
+      "symbol": "NAS100",
+      "period": "D1",
+      "swapTime": "21:00",
+      "baseAsset": "NAS100",
+      "quoteAsset": "USD",
+      "commissions": {
+        "type": "usdPerMillionUsdVolume",
+        "value": 0
+      },
+      "swapLong": -7.68,
+      "swapShort": 3.14,
+      "threeDaySwaps": "friday",
+      "weekendSwaps": false,
+      "swapPeriods": 24,
+      "gracePeriods": 0,
+      "digits": 2,
+      "lotSize": 1,
+      "stepVolume": 0.01,
+      "pipPosition": 1,
+      "swapCalculationType": "percent"
+    },
+    {
+      "symbol": "US500",
+      "period": "D1",
+      "swapTime": "21:00",
+      "baseAsset": "US500",
+      "quoteAsset": "USD",
+      "commissions": {
+        "type": "usdPerMillionUsdVolume",
+        "value": 0
+      },
+      "swapLong": -7.68,
+      "swapShort": 3.14,
+      "threeDaySwaps": "friday",
+      "weekendSwaps": false,
+      "swapPeriods": 24,
+      "gracePeriods": 0,
+      "digits": 2,
+      "lotSize": 1,
+      "stepVolume": 0.01,
+      "pipPosition": 1,
+      "swapCalculationType": "percent"
+    }
+  ],
+  "positions": {
+    "columns": [
+      "id",
+      "symbol",
+      "quantity",
+      "volume",
+      "direction",
+      "entryPrice",
+      "tp",
+      "sl",
+      "commissions",
+      "closingCommissions",
+      "swaps",
+      "created",
+      "label",
+      "comment",
+      "pips",
+      "gross",
+      "net"
+    ],
+    "items": [
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 43,
+        "created": 1715724000000,
+        "quantity": 1.64,
+        "volume": 1.64,
+        "entryPrice": 18318.13,
+        "tp": null,
+        "sl": null,
+        "commissions": 0,
+        "closingCommissions": 0,
+        "swaps": -312.95,
+        "pips": 19041.5,
+        "gross": 2888.44,
+        "net": 2575.49,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null
+      }
+    ],
+    "marginUsed": 305.6339641,
+    "freeMargin": 20888.7760359,
+    "marginLevel": 6934.572884401495,
+    "unrealizedNet": 2575.49,
+    "unrealizedGross": 2888.44
+  },
+  "orders": {
+    "columns": [
+      "id",
+      "direction",
+      "orderType",
+      "created",
+      "symbol",
+      "quantity",
+      "volume",
+      "submittedPrice",
+      "distance",
+      "tp",
+      "sl"
+    ],
+    "items": []
+  },
+  "history": {
+    "columns": [
+      "id",
+      "label",
+      "entryTime",
+      "symbol",
+      "quantity",
+      "volume",
+      "direction",
+      "entryPrice",
+      "commissions",
+      "swaps",
+      "closePrice",
+      "closeTime",
+      "net",
+      "pips",
+      "gross"
+    ],
+    "items": [
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 1,
+        "net": 246.98,
+        "gross": 604.1,
+        "entryTime": 1405285200000,
+        "closeTime": 1412542800000,
+        "entryPrice": 3890.1,
+        "closePrice": 4009.5,
+        "commissions": 0,
+        "swaps": -357.12,
+        "volume": 5.47,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 10246.98,
+        "quantity": 5.47,
+        "pips": 1194
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 2,
+        "net": 454.07,
+        "gross": 524.66,
+        "entryTime": 1414357200000,
+        "closeTime": 1417989600000,
+        "entryPrice": 4027.6,
+        "closePrice": 4304.3,
+        "commissions": 0,
+        "swaps": -70.59,
+        "volume": 2.05,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 10701.05,
+        "quantity": 2.05,
+        "pips": 2767
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 3,
+        "net": 373.8,
+        "gross": 432.78,
+        "entryTime": 1423432800000,
+        "closeTime": 1425848400000,
+        "entryPrice": 4214.8,
+        "closePrice": 4405,
+        "commissions": 0,
+        "swaps": -58.98,
+        "volume": 2.46,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11074.85,
+        "quantity": 2.46,
+        "pips": 1902
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 4,
+        "net": 191.99,
+        "gross": 570.68,
+        "entryTime": 1429477200000,
+        "closeTime": 1439758800000,
+        "entryPrice": 4359,
+        "closePrice": 4528.5,
+        "commissions": 0,
+        "swaps": -378.69,
+        "volume": 3.64,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11266.84,
+        "quantity": 3.64,
+        "pips": 1695
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 5,
+        "net": 573.28,
+        "gross": 622.81,
+        "entryTime": 1445202000000,
+        "closeTime": 1447020000000,
+        "entryPrice": 4436.2,
+        "closePrice": 4693.2,
+        "commissions": 0,
+        "swaps": -49.53,
+        "volume": 2.62,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11840.12,
+        "quantity": 2.62,
+        "pips": 2570
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 6,
+        "net": 41.4,
+        "gross": 178.91,
+        "entryTime": 1456869600000,
+        "closeTime": 1461704400000,
+        "entryPrice": 4336.8,
+        "closePrice": 4403.5,
+        "commissions": 0,
+        "swaps": -137.51,
+        "volume": 2.9,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11881.52,
+        "quantity": 2.9,
+        "pips": 667
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 7,
+        "net": -119.14,
+        "gross": -47.45,
+        "entryTime": 1464210000000,
+        "closeTime": 1465765200000,
+        "entryPrice": 4476.8,
+        "closePrice": 4465.5,
+        "commissions": 0,
+        "swaps": -71.69,
+        "volume": 4.54,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11762.38,
+        "quantity": 4.54,
+        "pips": -113
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 8,
+        "net": 299.44,
+        "gross": 524.68,
+        "entryTime": 1468184400000,
+        "closeTime": 1473627600000,
+        "entryPrice": 4517.8,
+        "closePrice": 4664,
+        "commissions": 0,
+        "swaps": -225.24,
+        "volume": 3.88,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 12061.82,
+        "quantity": 3.88,
+        "pips": 1462
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 9,
+        "net": -388.73,
+        "gross": -274.19,
+        "entryTime": 1474491600000,
+        "closeTime": 1476392400000,
+        "entryPrice": 4849.3,
+        "closePrice": 4795.5,
+        "commissions": 0,
+        "swaps": -114.54,
+        "volume": 5.51,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11673.09,
+        "quantity": 5.51,
+        "pips": -538
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 10,
+        "net": -863.59,
+        "gross": -819.76,
+        "entryTime": 1477342800000,
+        "closeTime": 1478034000000,
+        "entryPrice": 4906.3,
+        "closePrice": 4754.8,
+        "commissions": 0,
+        "swaps": -43.83,
+        "volume": 5.85,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 10809.5,
+        "quantity": 5.85,
+        "pips": -1515
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 11,
+        "net": -363.77,
+        "gross": -288.39,
+        "entryTime": 1481666400000,
+        "closeTime": 1483394400000,
+        "entryPrice": 4940.3,
+        "closePrice": 4876.8,
+        "commissions": 0,
+        "swaps": -75.38,
+        "volume": 4.91,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 10445.73,
+        "quantity": 4.91,
+        "pips": -635
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 12,
+        "net": 1193.43,
+        "gross": 1711.65,
+        "entryTime": 1483912800000,
+        "closeTime": 1492376400000,
+        "entryPrice": 5003.8,
+        "closePrice": 5352.3,
+        "commissions": 0,
+        "swaps": -518.22,
+        "volume": 5.31,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11639.16,
+        "quantity": 5.31,
+        "pips": 3485
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 13,
+        "net": 255.13,
+        "gross": 405.99,
+        "entryTime": 1493067600000,
+        "closeTime": 1495054800000,
+        "entryPrice": 5502.1,
+        "closePrice": 5575.5,
+        "commissions": 0,
+        "swaps": -150.86,
+        "volume": 5.98,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11894.29,
+        "quantity": 5.98,
+        "pips": 734
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 14,
+        "net": -75.89,
+        "gross": 59.66,
+        "entryTime": 1495659600000,
+        "closeTime": 1497214800000,
+        "entryPrice": 5732.1,
+        "closePrice": 5741.8,
+        "commissions": 0,
+        "swaps": -135.55,
+        "volume": 6.65,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11818.4,
+        "quantity": 6.65,
+        "pips": 97
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 15,
+        "net": -413.72,
+        "gross": -309.42,
+        "entryTime": 1500325200000,
+        "closeTime": 1502398800000,
+        "entryPrice": 5855.3,
+        "closePrice": 5766.8,
+        "commissions": 0,
+        "swaps": -104.3,
+        "volume": 3.78,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11404.68,
+        "quantity": 3.78,
+        "pips": -885
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 16,
+        "net": -532.92,
+        "gross": -427.47,
+        "entryTime": 1504213200000,
+        "closeTime": 1506373200000,
+        "entryPrice": 5995.8,
+        "closePrice": 5878.8,
+        "commissions": 0,
+        "swaps": -105.45,
+        "volume": 3.95,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 10871.76,
+        "quantity": 3.95,
+        "pips": -1170
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 17,
+        "net": 1104.31,
+        "gross": 1615.78,
+        "entryTime": 1507237200000,
+        "closeTime": 1514844000000,
+        "entryPrice": 6062.3,
+        "closePrice": 6405.5,
+        "commissions": 0,
+        "swaps": -511.47,
+        "volume": 5.09,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11976.07,
+        "quantity": 5.09,
+        "pips": 3432
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 18,
+        "net": 519.37,
+        "gross": 719.91,
+        "entryTime": 1515016800000,
+        "closeTime": 1517781600000,
+        "entryPrice": 6584.6,
+        "closePrice": 6749.5,
+        "commissions": 0,
+        "swaps": -200.54,
+        "volume": 4.72,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 12495.44,
+        "quantity": 4.72,
+        "pips": 1649
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 19,
+        "net": -924.35,
+        "gross": -888.91,
+        "entryTime": 1520802000000,
+        "closeTime": 1521752400000,
+        "entryPrice": 7097.8,
+        "closePrice": 6692.3,
+        "commissions": 0,
+        "swaps": -35.44,
+        "volume": 2.37,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11571.09,
+        "quantity": 2.37,
+        "pips": -4055
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 20,
+        "net": 207.23,
+        "gross": 354.21,
+        "entryTime": 1525899600000,
+        "closeTime": 1529960400000,
+        "entryPrice": 6896.3,
+        "closePrice": 7065,
+        "commissions": 0,
+        "swaps": -146.98,
+        "volume": 2.27,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11778.32,
+        "quantity": 2.27,
+        "pips": 1687
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 21,
+        "net": -494.73,
+        "gross": -433.31,
+        "entryTime": 1531429200000,
+        "closeTime": 1532984400000,
+        "entryPrice": 7382.5,
+        "closePrice": 7207.7,
+        "commissions": 0,
+        "swaps": -61.42,
+        "volume": 2.68,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11283.59,
+        "quantity": 2.68,
+        "pips": -1748
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 22,
+        "net": -611.1,
+        "gross": -401.07,
+        "entryTime": 1535403600000,
+        "closeTime": 1538946000000,
+        "entryPrice": 7568.6,
+        "closePrice": 7444,
+        "commissions": 0,
+        "swaps": -210.03,
+        "volume": 3.48,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 10672.49,
+        "quantity": 3.48,
+        "pips": -1246
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 23,
+        "net": 477.23,
+        "gross": 711.25,
+        "entryTime": 1548021600000,
+        "closeTime": 1557781200000,
+        "entryPrice": 6790.4,
+        "closePrice": 7313.5,
+        "commissions": 0,
+        "swaps": -234.02,
+        "volume": 1.47,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11149.72,
+        "quantity": 1.47,
+        "pips": 5231
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 24,
+        "net": -96.82,
+        "gross": 73,
+        "entryTime": 1560891600000,
+        "closeTime": 1564952400000,
+        "entryPrice": 7642.6,
+        "closePrice": 7675.9,
+        "commissions": 0,
+        "swaps": -169.82,
+        "volume": 2.37,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11052.9,
+        "quantity": 2.37,
+        "pips": 333
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 25,
+        "net": -260.55,
+        "gross": -216.93,
+        "entryTime": 1567717200000,
+        "closeTime": 1569362400000,
+        "entryPrice": 7851.8,
+        "closePrice": 7712.2,
+        "commissions": 0,
+        "swaps": -43.62,
+        "volume": 1.68,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 10792.35,
+        "quantity": 1.68,
+        "pips": -1396
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 26,
+        "net": 1454.56,
+        "gross": 1783.19,
+        "entryTime": 1572213600000,
+        "closeTime": 1580166000000,
+        "entryPrice": 8042.8,
+        "closePrice": 8943.68,
+        "commissions": 0,
+        "swaps": -328.63,
+        "volume": 2.14,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 12246.91,
+        "quantity": 2.14,
+        "pips": 9008.8
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 27,
+        "net": -640.6,
+        "gross": -560.33,
+        "entryTime": 1580857200000,
+        "closeTime": 1582585200000,
+        "entryPrice": 9345.9,
+        "closePrice": 9066.73,
+        "commissions": 0,
+        "swaps": -80.27,
+        "volume": 2.17,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 11606.31,
+        "quantity": 2.17,
+        "pips": -2791.7
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 28,
+        "net": 1315.61,
+        "gross": 1494.46,
+        "entryTime": 1586815200000,
+        "closeTime": 1599602400000,
+        "entryPrice": 8351.73,
+        "closePrice": 11000.45,
+        "commissions": 0,
+        "swaps": -178.85,
+        "volume": 0.61,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 12921.92,
+        "quantity": 0.61,
+        "pips": 26487.2
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 29,
+        "net": -237.98,
+        "gross": -201.5,
+        "entryTime": 1602453600000,
+        "closeTime": 1603749600000,
+        "entryPrice": 11709.4,
+        "closePrice": 11503.88,
+        "commissions": 0,
+        "swaps": -36.48,
+        "volume": 1.06,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 12683.94,
+        "quantity": 1.06,
+        "pips": -2055.2
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 30,
+        "net": 632.17,
+        "gross": 899.57,
+        "entryTime": 1606863600000,
+        "closeTime": 1614034800000,
+        "entryPrice": 12465.45,
+        "closePrice": 13231.25,
+        "commissions": 0,
+        "swaps": -267.4,
+        "volume": 1.27,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 13316.11,
+        "quantity": 1.27,
+        "pips": 7658
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 31,
+        "net": 78.68,
+        "gross": 170.01,
+        "entryTime": 1617314400000,
+        "closeTime": 1620165600000,
+        "entryPrice": 13336.33,
+        "closePrice": 13514.78,
+        "commissions": 0,
+        "swaps": -91.33,
+        "volume": 1.03,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 13394.79,
+        "quantity": 1.03,
+        "pips": 1784.5
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 32,
+        "net": 1101.14,
+        "gross": 1405.52,
+        "entryTime": 1623103200000,
+        "closeTime": 1629324000000,
+        "entryPrice": 13815.33,
+        "closePrice": 14842.06,
+        "commissions": 0,
+        "swaps": -304.38,
+        "volume": 1.48,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 14495.93,
+        "quantity": 1.48,
+        "pips": 10267.3
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 33,
+        "net": -181.04,
+        "gross": -23.9,
+        "entryTime": 1629756000000,
+        "closeTime": 1632088800000,
+        "entryPrice": 15328.09,
+        "closePrice": 15314.7,
+        "commissions": 0,
+        "swaps": -157.14,
+        "volume": 1.93,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 14314.89,
+        "quantity": 1.93,
+        "pips": -133.9
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 34,
+        "net": 421.15,
+        "gross": 606.57,
+        "entryTime": 1634680800000,
+        "closeTime": 1638399600000,
+        "entryPrice": 15416.43,
+        "closePrice": 15891.64,
+        "commissions": 0,
+        "swaps": -185.42,
+        "volume": 1.38,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 14736.04,
+        "quantity": 1.38,
+        "pips": 4752.1
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 35,
+        "net": -905.69,
+        "gross": -866.56,
+        "entryTime": 1640646000000,
+        "closeTime": 1641769200000,
+        "entryPrice": 16567.35,
+        "closePrice": 15591.44,
+        "commissions": 0,
+        "swaps": -39.13,
+        "volume": 0.96,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 13830.35,
+        "quantity": 0.96,
+        "pips": -9759.1
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 36,
+        "net": -291.43,
+        "gross": -249.28,
+        "entryTime": 1647813600000,
+        "closeTime": 1649714400000,
+        "entryPrice": 14402.3,
+        "closePrice": 14000.05,
+        "commissions": 0,
+        "swaps": -42.15,
+        "volume": 0.67,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 13538.92,
+        "quantity": 0.67,
+        "pips": -4022.5
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 37,
+        "net": 495.11,
+        "gross": 583.07,
+        "entryTime": 1658268000000,
+        "closeTime": 1661205600000,
+        "entryPrice": 12297.26,
+        "closePrice": 12915.28,
+        "commissions": 0,
+        "swaps": -87.96,
+        "volume": 1.02,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 14034.03,
+        "quantity": 1.02,
+        "pips": 6180.2
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 38,
+        "net": -409.75,
+        "gross": -344.08,
+        "entryTime": 1668380400000,
+        "closeTime": 1671145200000,
+        "entryPrice": 11751.36,
+        "closePrice": 11338.03,
+        "commissions": 0,
+        "swaps": -65.67,
+        "volume": 0.9,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 13624.28,
+        "quantity": 0.9,
+        "pips": -4133.3
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 39,
+        "net": 161.1,
+        "gross": 254.38,
+        "entryTime": 1674514800000,
+        "closeTime": 1677020400000,
+        "entryPrice": 11872.13,
+        "closePrice": 12077.37,
+        "commissions": 0,
+        "swaps": -93.28,
+        "volume": 1.34,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 13785.38,
+        "quantity": 1.34,
+        "pips": 2052.4
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 40,
+        "net": 2693.27,
+        "gross": 3176.74,
+        "entryTime": 1679436000000,
+        "closeTime": 1691013600000,
+        "entryPrice": 12750.37,
+        "closePrice": 15372.13,
+        "commissions": 0,
+        "swaps": -483.47,
+        "volume": 1.31,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 16478.65,
+        "quantity": 1.31,
+        "pips": 26217.6
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 41,
+        "net": 972.41,
+        "gross": 1231.09,
+        "entryTime": 1699830000000,
+        "closeTime": 1704322800000,
+        "entryPrice": 15529.59,
+        "closePrice": 16377.35,
+        "commissions": 0,
+        "swaps": -258.68,
+        "volume": 1.57,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 17451.06,
+        "quantity": 1.57,
+        "pips": 8477.6
+      },
+      {
+        "symbol": "NAS100",
+        "direction": "buy",
+        "id": 42,
+        "net": 1167.86,
+        "gross": 1701.28,
+        "entryTime": 1705618800000,
+        "closeTime": 1712268000000,
+        "entryPrice": 16982.18,
+        "closePrice": 17906.46,
+        "commissions": 0,
+        "swaps": -533.42,
+        "volume": 1.99,
+        "label": "TurtleTrendFollow_cBot-NAS100",
+        "comment": null,
+        "balance": 18618.92,
+        "quantity": 1.99,
+        "pips": 9242.8
+      }
+    ]
+  }
+}</script>
+        <!-- endBacktestingReport -->
+    </head>
+    <body>
+        <div class="spinner-a spinner-b spinner-c spinner-d spinner-e spinner-f spinner-g spinner-h spinner-i spinner-j spinner-k spinner-l spinner-m spinner-n spinner-o spinner-p spinner-q spinner-r spinner-s spinner-t spinner-u spinner-v spinner-w spinner-x spinner-y spinner-z spinner-ab spinner-ac spinner-ae spinner-af spinner-ag spinner-ah spinner-ai spinner-aj spinner-ak spinner-al spinner-am spinner-an spinner-ao spinner-ap spinner-aq spinner-ar spinner-as spinner-at spinner-au spinner-av spinner-aw spinner-ax spinner-ay spinner-az spinner-ba spinner-bb spinner-bc spinner-bd spinner-be spinner-bf spinner-bg waitingIndicator" data-test-id="loader"></div>
+        <div id="root"></div>
+
+            <script id="init" defer src="https://backtesting.ctrader.com/v5.0.0/bundle/index-31bd62a5e13b796fd66a.js"></script>
+
+        <script type="text/javascript" id="app-init">
+            var script = document.getElementById('init');
+            script.onload = () => {
+                initApp('root');
+
+                script.remove();
+                document.getElementById('app-init').remove();
+            }
+        </script>
+    </body>
+</html>
