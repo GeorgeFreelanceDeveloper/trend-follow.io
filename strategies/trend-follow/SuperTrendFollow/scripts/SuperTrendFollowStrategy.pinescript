@@ -17,7 +17,7 @@ riskPercentage = input.float(defval = 1.00, title = "Risk per trade", step = 0.0
 atrMultiplier = input.int(defval = 2, title = "ATR multiplier", group = G_BASIC_SETTINGS)
 atrLength = input.int(defval = 20, title = "ATR length", group = G_BASIC_SETTINGS)
 
-enableFilter = input.bool(defval = true, title = "Enable filter", tooltip = "Filter is close price is above 200 day simple moving average of benchmark",  group = G_FILTER_SETTINGS)
+enableFilter = input.bool(defval = false, title = "Enable filter", tooltip = "Filter is close price is above 200 day simple moving average of benchmark",  group = G_FILTER_SETTINGS)
 benchmarkSymbol = input.symbol(defval = "SPX", title = "Benchmark", group = G_FILTER_SETTINGS)
 
 fromDateTime = input.time(defval = timestamp("2012-01-01T01:01+0000"), title = "From Date and time", group = G_TIME) 
