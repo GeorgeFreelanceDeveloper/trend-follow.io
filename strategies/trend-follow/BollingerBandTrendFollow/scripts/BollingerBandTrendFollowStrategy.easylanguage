@@ -1,0 +1,56 @@
+Inputs:
+    Length(20),               // Length for Bollinger Bands
+    MultiplierUpper(1),       // Multiplier for the upper band
+    MultiplierLower(0.5),     // Multiplier for the lower band
+    RiskPercentage(1.00),     // Risk percentage per trade
+    ATRMultiplier(2),         // ATR multiplier
+    ATRLength(20),            // ATR length
+    EnableFilter(false),      // Enable filter
+    BenchmarkSymbol("SPX");   // Benchmark symbol
+
+Vars:
+    CentralMA(0),             // Central moving average for Bollinger Bands
+    UpperBand(0),             // Upper Bollinger Band
+    LowerBand(0),             // Lower Bollinger Band
+    BenchmarkClose(0),        // Closing price of the benchmark
+    Filter(false),            // Filter condition
+    Qty(0),                   // Trade quantity
+    BuyCondition(false),      // Buy condition
+    SellCondition(false);     // Sell condition
+
+// **********************************
+// Functions
+// **********************************
+
+
+// **********************************
+// Perform calculations and analysis
+// **********************************
+
+// Bollinger Bands calculations
+CentralMA = Average(Close, Length);
+UpperBand = CentralMA + MultiplierUpper * StdDev(Close, Length);
+LowerBand = CentralMA - MultiplierLower * StdDev(Close, Length);
+
+// Filter
+If EnableFilter then
+    BenchmarkClose = Close of Data2;
+    Filter = BenchmarkClose >= Average(Close of Data2, 200);
+else
+    Filter = true;
+
+// Trade quantity
+Qty = ((RiskPercentage / 100) * I_OpenEquity) / (ATRMultiplier * AvgTrueRange(ATRLength));
+
+// Entry and exit conditions
+BuyCondition = Close crosses over UpperBand and Filter;
+SellCondition = Close crosses under LowerBand;
+
+// **********************************
+// Manage trade
+// **********************************
+
+If BuyCondition then
+    Buy("Long") Qty shares next bar at market;
+If SellCondition then
+    Sell("Long") Qty shares next bar at market;
