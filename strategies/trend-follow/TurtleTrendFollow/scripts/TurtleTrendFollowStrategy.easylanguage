@@ -1,0 +1,59 @@
+inputs:
+    EntryLength(20),
+    ExitLength(10),
+    RiskPercentage(1),
+    ATRMultiplier(2),
+    ATRLength(20),
+    EnableFilter(false),
+    BenchmarkSymbol("SPX");
+
+variables:
+    UpperChannel(0),
+    LowerChannel(0),
+    ExitLong(0),
+    Qty(0),
+    BenchmarkClose(0),
+    Filter(false),
+    BuyCondition(false),
+    SellCondition(false),
+    ATRValue(0);
+
+// **********************************
+// Functions
+// **********************************
+
+
+// **********************************
+// Perform calculations and analysis
+// **********************************
+
+// Basic 
+UpperChannel = Highest(High[1], EntryLength);
+LowerChannel = Lowest(Low[1], EntryLength);
+ExitLong = Lowest(Low[1], ExitLength);
+
+// Trade amount
+ATRValue = AvgTrueRange(ATRLength);
+Qty = ((RiskPercentage / 100) * NetProfit) / (ATRMultiplier * ATRValue);
+
+// Filter
+if EnableFilter then
+    BenchmarkClose = Close of data2;
+    Filter = BenchmarkClose[1] >= Average(Close of data2, 200)
+else
+    Filter = true;
+
+BuyCondition = Close crosses over UpperChannel and Filter;
+SellCondition = Close crosses under ExitLong;
+
+// **********************************
+// Manage trade
+// **********************************
+
+// Entry
+if BuyCondition then
+    Buy("Long") next bar at market;
+
+// Exit
+if SellCondition then
+    Sell("Long") next bar at market;
