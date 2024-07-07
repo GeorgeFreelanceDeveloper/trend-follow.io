@@ -5,8 +5,29 @@ permalink: /markets/
 ---
 
 # Markets
-
 Updated 7.7.2024
+
+The article describes markets suitable for trading the long only trend follow strategies. Markets that are in a long-term growth trend and have strong momentum are suitable for long-only trend strategies, such as the cryptocurrency Bitcoin, the Nasdaq stock index or selected top performing stocks this year.
+
+**Table of Contents**
+* [Markets in long-term up trend](#markets-in-long-term-up-trend)
+    * [Bitcoin](#bitcoin)
+    * [Etherem](#ethereum)
+    * [NAS 100](#nasdaq-100)
+    * [S&P 500](#s&p-500)
+    * [NIFTY 50](#nifty-50)
+* [Top 10 US stocks by momentum](#top-10-us-stocks-by-momentum)
+    * [Intro into selecting stocks](#intro-into-selecting-stocks)
+    * [Super Micro Computer](#super-micro-computer)
+    * [NVIDIA](#nvidia)
+    * [Vistra corp](#vistra-corp)
+    * [Constellation Energy Corporation](#constellation-energy-corporation)
+    * [Micron technology](#micron-technology)
+    * [NRG energy](#nrg-energy)
+    * [Eli Lilly and Company](#eli-lilly-and-company)
+    * [CrowdStrike Holdings](#crowdstrike-holdings)
+    * [NetApp](#netapp)
+
 
 ## Markets in long-term up trend
 
