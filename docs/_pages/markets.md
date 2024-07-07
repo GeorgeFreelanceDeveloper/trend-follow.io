@@ -26,6 +26,7 @@ The article describes markets suitable for trading the long only trend follow st
     * [NRG energy](#nrg-energy)
     * [Eli Lilly and Company](#eli-lilly-and-company)
     * [CrowdStrike Holdings](#crowdstrike-holdings)
+    * [Arista Networks](#arista-networks)
     * [NetApp](#netapp)
 
 
@@ -178,7 +179,7 @@ The NIFTY 50 Index is a key benchmark index for the Indian equity market, repres
 ### Intro into selecting stocks
 **Entry stock into portfolio**
 
-Long-term up trend market with actual strong momentum from index S&P 500.
+Select top performing stocks from index S&P500 in long-term up trend with actual strong momentum.
 
 - performance all time > 0%
 - performance 10 years > 0%
@@ -217,6 +218,36 @@ Super Micro Computer, Inc. engages in the distribution and manufacture of inform
       <td>3 236%</td>
       <td>4 379%</td>
       <td>202%</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+
+### NVIDIA
+NVIDIA Corp engages in the design and manufacture of computer graphics processors, chipsets, and related multimedia software. It operates through the following segments: Graphics Processing Unit (GPU), Tegra Processor, and All Other. The GPU segment comprises of product brands, which aims specialized markets including GeForce for gamers; Quadro for designers; Tesla and DGX for AI data scientists and big data researchers; and GRID for cloud-based visual computing users. The Tegra Processor segment integrates an entire computer onto a single chip, and incorporates GPUs and multi-core CPUs to drive supercomputing for autonomous robots, drones, and cars, as well as for consoles and mobile gaming and entertainment devices. The All Other segment refers to the stock-based compensation expense, corporate infrastructure and support costs, acquisition-related costs, legal settlement costs, and other non-recurring charges. The company was founded by Jen Hsun Huang, Chris A. Malachowsky, and Curtis R. Priem in January 1993 and is headquartered in Santa Clara, CA.
+
+**Sector**: Electronic Technology
+
+<img src="../assets/images/nvda.png" title="NVIDIA" width=700px>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Market</th>
+      <th scope="col">Perf All Time > 0%</th>
+      <th scope="col">Perf 10Y</th>
+      <th scope="col">Perf 5Y</th>
+      <th scope="col">Perf YTD</th>
+      <th scope="col">Price above 200D SMA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">NVDA</th>
+      <td>True</td>
+      <td>26 887%</td>
+      <td>3 037%</td>
+      <td>155%</td>
       <td>True</td>
     </tr>
   </tbody>
