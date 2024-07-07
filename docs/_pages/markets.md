@@ -40,7 +40,7 @@ Bitcoin (BTC) is a decentralized cryptocurrency that was first described in a 20
 </table>
 
 ### Ethereum
-Ethereum (ETH) is a decentralized, open-source blockchain that aims to become a global platform for decentralized applications and strives to enable users worldwide to write and run software resistant to censorship, downtime, and fraud. As the nonprofit Ethereum Foundation puts it, it "Is for more than payments. It's a marketplace of financial services, games, and apps that can't steal your data or censor you." Ethereum is the second-biggest cryptocurrency by market cap after Bitcoin as of 2023 and a decentralized computing platform that can run a wide variety of applications — including a universe of decentralized finance (or DeFi) apps and services. This platform is powered by its native cryptocurrency, Ether, which is used within the Ethereum network for various operations, making it an integral part of the system.
+Ethereum is a decentralized, open-source blockchain platform that enables the creation and execution of smart contracts and decentralized applications (dApps) without any downtime, fraud, control, or interference from a third party. Launched in 2015 by Vitalik Buterin and other developers, Ethereum extends the capabilities of Bitcoin's blockchain technology by incorporating a built-in programming language that allows developers to write their own code and create personalized applications. Ether (ETH) is the platform's native cryptocurrency, which is used to pay for transaction fees and computational services on the Ethereum network.
 
 <img src="../assets/images/ethereum.png" title="Ethereum" width=700px>
 
@@ -69,6 +69,32 @@ Ethereum (ETH) is a decentralized, open-source blockchain that aims to become a 
 </table>
 
 ### Nasdaq 100
+The Nasdaq 100 Index is a benchmark stock market index comprising 100 of the largest non-financial companies listed on the Nasdaq Stock Market, a premier global electronic marketplace for buying and selling securities. Launched in 1985, the index includes diverse sectors such as technology, consumer services, healthcare, and biotechnology, with a significant emphasis on technology-driven firms. Renowned for its high growth potential and innovation, the Nasdaq 100 features prominent companies like Apple, Microsoft, Amazon, and Alphabet (Google). The index is often used as a barometer for the performance of the technology and innovation sectors within the U.S. stock market.
+
+<img src="../assets/images/nasdaq100.png" title="Nasdaq 100" width=700px>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Market</th>
+      <th scope="col">Perf All Time > 0%</th>
+      <th scope="col">Perf 10Y</th>
+      <th scope="col">Perf 5Y</th>
+      <th scope="col">Perf YTD</th>
+      <th scope="col">Price above 200D SMA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Ethereum</th>
+      <td>True</td>
+      <td>420%</td>
+      <td>160%</td>
+      <td>22%</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
 
 ### S&P 500
 
