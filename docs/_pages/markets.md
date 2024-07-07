@@ -86,7 +86,7 @@ The Nasdaq 100 Index is a benchmark stock market index comprising 100 of the lar
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Ethereum</th>
+      <th scope="row">Nasdaq 100</th>
       <td>True</td>
       <td>420%</td>
       <td>160%</td>
@@ -97,8 +97,60 @@ The Nasdaq 100 Index is a benchmark stock market index comprising 100 of the lar
 </table>
 
 ### S&P 500
+The S&P 500 Index, or Standard & Poor's 500 Index, is a widely regarded stock market index that tracks the performance of 500 of the largest publicly traded companies in the United States, spanning various industries and sectors. Established in 1957, it serves as a key indicator of the overall health and performance of the U.S. stock market and economy. The index is market-capitalization-weighted, meaning larger companies have a more significant impact on its performance. With its diverse representation, the S&P 500 includes companies like Apple, Microsoft, Amazon, and Johnson & Johnson, making it a common benchmark for investors and a popular investment vehicle through mutual funds and exchange-traded funds (ETFs).
+
+<img src="../assets/images/spx.png" title="S&P 500" width=700px>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Market</th>
+      <th scope="col">Perf All Time > 0%</th>
+      <th scope="col">Perf 10Y</th>
+      <th scope="col">Perf 5Y</th>
+      <th scope="col">Perf YTD</th>
+      <th scope="col">Price above 200D SMA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">S&P 500</th>
+      <td>True</td>
+      <td>181%</td>
+      <td>86%</td>
+      <td>17%</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
 
 ### NIFTY 50
+The NIFTY 50 Index is a key benchmark index for the Indian equity market, representing the weighted average of 50 of the largest and most liquid stocks listed on the National Stock Exchange of India (NSE). Introduced in 1990 by the NSE, it encompasses various sectors of the Indian economy, providing a comprehensive overview of the market's performance. The index is market-capitalization-weighted, ensuring that larger companies have a greater influence on its movements. By including major corporations such as Reliance Industries, Tata Consultancy Services (TCS), and HDFC Bank, the NIFTY 50 serves as a crucial barometer for investors and analysts assessing the economic health and trends of the Indian stock market.
+
+<img src="../assets/images/nifty50.png" title="NIFTY 50" width=700px>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Market</th>
+      <th scope="col">Perf All Time > 0%</th>
+      <th scope="col">Perf 10Y</th>
+      <th scope="col">Perf 5Y</th>
+      <th scope="col">Perf YTD</th>
+      <th scope="col">Price above 200D SMA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">NIFTY 50</th>
+      <td>True</td>
+      <td>283%</td>
+      <td>124%</td>
+      <td>11%</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Top 10 US stocks by momentum
 
