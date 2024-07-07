@@ -253,3 +253,242 @@ NVIDIA Corp engages in the design and manufacture of computer graphics processor
   </tbody>
 </table>
 
+### Vistra Corp
+Vistra Corp. is a holding company, which engages in the provision of electricity and power generation. It operates through the following segments: Retail, Texas, East, West, Sunset, and Asset Closure. The Retail segment sells electricity and natural gas to residential, commercial, and industrial customers. The Texas and East segments are involved in electricity generation, wholesale energy sales and purchases, commodity risk management activities, fuel production and fuel logistics management. The West segment represents the company's electricity generation operations in CAISO. The Sunset segment includes generation plants with announced retirement plans. The Asset Closure segment refers to the decommissioning and reclamation of retired plants and mines. The company was founded in 1882 and is headquartered in Irving, TX.
+
+**Sector**: Utilities
+
+<img src="../assets/images/vst.png" title="Vistra Corp" width=700px>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Market</th>
+      <th scope="col">Perf All Time > 0%</th>
+      <th scope="col">Perf 10Y</th>
+      <th scope="col">Perf 5Y</th>
+      <th scope="col">Perf YTD</th>
+      <th scope="col">Price above 200D SMA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">VST</th>
+      <td>True</td>
+      <td>491%</td>
+      <td>297%</td>
+      <td>133%</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+
+### Constellation Energy Corporation
+Constellation Energy Corp. engages in the generation, supply, and marketing of clean electricity, and renewable energy products and solutions. The firm also offers wholesale energy, retail products and services. It operates under the following geographical segments: Mid-Atlantic, Midwest, New York, Electric Reliability Council of Texas (ERCOT), and Other Power Regions Segment. The company was founded in 1960 and is headquartered in Baltimore, MD.
+
+**Sector**: Utilities
+
+<img src="../assets/images/ceg.png" title="Constellation Energy Corporation" width=700px>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Market</th>
+      <th scope="col">Perf All Time > 0%</th>
+      <th scope="col">Perf 10Y</th>
+      <th scope="col">Perf 5Y</th>
+      <th scope="col">Perf YTD</th>
+      <th scope="col">Price above 200D SMA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">CEG</th>
+      <td>True</td>
+      <td>456%</td>
+      <td>456%</td>
+      <td>81%</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+
+### Micron Technology
+Constellation Energy Corp. engages in the generation, supply, and marketing of clean electricity, and renewable energy products and solutions. The firm also offers wholesale energy, retail products and services. It operates under the following geographical segments: Mid-Atlantic, Midwest, New York, Electric Reliability Council of Texas (ERCOT), and Other Power Regions Segment. The company was founded in 1960 and is headquartered in Baltimore, MD.
+
+**Sector**: Electronic Technology
+
+<img src="../assets/images/mu.png" title="Micron Technology" width=700px>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Market</th>
+      <th scope="col">Perf All Time > 0%</th>
+      <th scope="col">Perf 10Y</th>
+      <th scope="col">Perf 5Y</th>
+      <th scope="col">Perf YTD</th>
+      <th scope="col">Price above 200D SMA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">MU</th>
+      <td>True</td>
+      <td>301%</td>
+      <td>237%</td>
+      <td>56%</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+
+### NRG Energy, Inc.
+NRG Energy, Inc. engages in the production, sale, and distribution of energy and energy services. It operates through the following segments: Generation, Retail, and Corporate. The Generation segment includes all power plant activities, domestic and international, as well as renewables. The Retail segment includes mass customers and business solutions, and other distributed and reliability products. The Corporate segment includes residential solar and electric vehicle services. The company was founded in 1989 and is headquartered in Houston, TX.
+
+**Sector**: Utilities
+
+<img src="../assets/images/nrg.png" title="NRG Energy, Inc." width=700px>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Market</th>
+      <th scope="col">Perf All Time > 0%</th>
+      <th scope="col">Perf 10Y</th>
+      <th scope="col">Perf 5Y</th>
+      <th scope="col">Perf YTD</th>
+      <th scope="col">Price above 200D SMA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">NRG</th>
+      <td>True</td>
+      <td>120%</td>
+      <td>116%</td>
+      <td>49%</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+
+### Eli Lilly and Company
+Eli Lilly & Co. engages in the discovery, development, manufacture, and sale of pharmaceutical products. The firm's products consist of diabetes, oncology, immunology, neuroscience, and other products and therapies. The company was founded by Eli Lilly in May 1876 and is headquartered in Indianapolis, IN.
+
+**Sector**: Health Technology
+
+<img src="../assets/images/lly.png" title="Eli Lilly and Company" width=700px>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Market</th>
+      <th scope="col">Perf All Time > 0%</th>
+      <th scope="col">Perf 10Y</th>
+      <th scope="col">Perf 5Y</th>
+      <th scope="col">Perf YTD</th>
+      <th scope="col">Price above 200D SMA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">LLY</th>
+      <td>True</td>
+      <td>1363%</td>
+      <td>701%</td>
+      <td>57%</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+
+### CrowdStrike Holdings, Inc.
+CrowdStrike Holdings, Inc. provides cybersecurity products and services to stop breaches. It offers cloud-delivered protection across endpoints, cloud workloads, identity and data, and threat intelligence, managed security services, IT operations management, threat hunting, Zero Trust identity protection, and log management. CrowdStrike serves customers worldwide. The company was founded by George P. Kurtz, Gregg Marston, and Dmitri Alperovitch on November 7, 2011, and is headquartered in Austin, TX.
+
+**Sector**: Technology Services
+
+<img src="../assets/images/crwd.png" title="CrowdStrike Holdings, Inc." width=700px>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Market</th>
+      <th scope="col">Perf All Time > 0%</th>
+      <th scope="col">Perf 10Y</th>
+      <th scope="col">Perf 5Y</th>
+      <th scope="col">Perf YTD</th>
+      <th scope="col">Price above 200D SMA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">CRWD</th>
+      <td>True</td>
+      <td>510%</td>
+      <td>470%</td>
+      <td>54%</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+
+### Arista Networks
+Arista Networks, Inc. engages in the business of developing, marketing, and selling cloud networking solutions. The firm is also involved in switching and routing platforms and related network applications. The company was founded by Andreas Bechtolsheim, David Cheriton, and Kenneth Duda in November 2004 and is headquartered in Santa Clara, CA.
+
+**Sector**: Electronic Technology
+
+<img src="../assets/images/anet.png" title="Arista Networks" width=700px>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Market</th>
+      <th scope="col">Perf All Time > 0%</th>
+      <th scope="col">Perf 10Y</th>
+      <th scope="col">Perf 5Y</th>
+      <th scope="col">Perf YTD</th>
+      <th scope="col">Price above 200D SMA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">ANET</th>
+      <td>True</td>
+      <td>1936%</td>
+      <td>446%</td>
+      <td>56%</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+
+### NetApp, Inc.
+NetApp, Inc. engages in the provision of software, systems, and services to manage and share data on-premises, and private and public clouds worldwide. It operates through Hybrid Cloud and Public Cloud segments. The Hybrid Cloud segment offers data storage portfolio for storage management and infrastructure solutions. The Public Cloud segment refers to a portfolio of products delivered primarily as-a-service, including related support. The company was founded by David Hitz, James K. Lau and Michael Malcolm in April 1992 and is headquartered in San Jose, CA.
+
+**Sector**: Electronic Technology
+
+<img src="../assets/images/ntap.png" title="NetApp, Inc." width=700px>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Market</th>
+      <th scope="col">Perf All Time > 0%</th>
+      <th scope="col">Perf 10Y</th>
+      <th scope="col">Perf 5Y</th>
+      <th scope="col">Perf YTD</th>
+      <th scope="col">Price above 200D SMA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">NTAP</th>
+      <td>True</td>
+      <td>248%</td>
+      <td>107%</td>
+      <td>48%</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
