@@ -175,5 +175,50 @@ The NIFTY 50 Index is a key benchmark index for the Indian equity market, repres
 
 ## Top 10 US stocks by momentum
 
+### Intro into selecting stocks
+**Entry stock into portfolio**
 
+Long-term up trend market with actual strong momentum from index S&P 500.
+
+- performance all time > 0%
+- performance 10 years > 0%
+- performance 5 years > 0%
+- performance YTD > 0% (first quarter in year use PREVIOUS YEAR)
+- daily close > 200 daily simple moving average
+
+**Exit stock from portfolio**
+
+Loss medium-term up trend and momentum.
+
+- Last 2 monthly candle close below 200D SMA
+
+### Super Micro Computer
+Super Micro Computer, Inc. engages in the distribution and manufacture of information technology solutions and other computer products. Its products include twin solutions, MP servers, GPU and coprocessor, MicroCloud, AMD solutions, power supplies, SuperServer, storage, motherboards, chassis, super workstations, accessories, SuperRack and server management products. The company was founded by Charles Liang, Yih-Shyan Liaw, Sara Liu, and Chiu-Chu Liu Liang in September 1993 and is headquartered in San Jose, CA.
+
+**Sector**: Electronic Technology
+
+<img src="../assets/images/smci.png" title="Super Micro Computer" width=700px>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Market</th>
+      <th scope="col">Perf All Time > 0%</th>
+      <th scope="col">Perf 10Y</th>
+      <th scope="col">Perf 5Y</th>
+      <th scope="col">Perf YTD</th>
+      <th scope="col">Price above 200D SMA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">SMCI</th>
+      <td>True</td>
+      <td>3 236%</td>
+      <td>4 379%</td>
+      <td>202%</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
 
