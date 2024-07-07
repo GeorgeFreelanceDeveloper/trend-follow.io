@@ -314,7 +314,7 @@ Constellation Energy Corp. engages in the generation, supply, and marketing of c
 </table>
 
 ### Micron Technology
-Constellation Energy Corp. engages in the generation, supply, and marketing of clean electricity, and renewable energy products and solutions. The firm also offers wholesale energy, retail products and services. It operates under the following geographical segments: Mid-Atlantic, Midwest, New York, Electric Reliability Council of Texas (ERCOT), and Other Power Regions Segment. The company was founded in 1960 and is headquartered in Baltimore, MD.
+Micron Technology, Inc. engages in the provision of innovative memory and storage solutions. It operates through the following segments: Compute and Networking Business Unit (CNBU), Mobile Business Unit (MBU), Embedded Business Unit (EBU), and Storage Business Unit (SBU). The CNBU segment includes memory products and solutions sold into client, cloud server, enterprise, graphics, and networking markets. The MBU segment is involved in memory and storage products sold into smartphone and other mobile-device markets. The EBU segment focuses on memory and storage products sold into automotive, industrial, and consumer Markets. The SBU segment consists of SSDs and component-level solutions sold into enterprise and cloud, client, and consumer storage markets. The company was founded by Ward D. Parkinson, Joseph Leon Parkinson, Dennis Wilson, and Doug Pitman on October 5, 1978 and is headquartered in Boise, ID.
 
 **Sector**: Electronic Technology
 
