@@ -77,7 +77,7 @@ Author: Richard Denis
 * Using Super trend indicator is more accurate determination of medium-term trend changes from bear market to bull market and vice versa.
 * Daily close price is above Super trend indicator(Time frame: Weekly, ATR lenght: 10, Factor: 3)
 
-<img src="../assets/images/turtle_example.png" width=750px>
+<img src="../assets/images/turtle_example.png" class="img-fluid">
 
 * [Documentation](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/tree/master/strategies/trend-follow/TurtleTrendFollow)
 * [Backtest](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/TurtleTrendFollow/backtest/backtest.md)
@@ -108,7 +108,7 @@ Super trend indicator parameters: (Time frame: Daily, ATR lenght: 10, Factor: 3)
 * Using Super trend indicator is more accurate determination of medium-term trend changes from bear market to bull market and vice versa.
 * Daily close price is above Super trend indicator(Time frame: Weekly, ATR lenght: 10, Factor: 3)
 
-<img src="../assets/images/supertrend_example.png" width=750px>
+<img src="../assets/images/supertrend_example.png" class="img-fluid">
 
 * [Documentation](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/SuperTrendFollow)
 * [Backtest](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/SuperTrendFollow/backtest/backtest.md)
