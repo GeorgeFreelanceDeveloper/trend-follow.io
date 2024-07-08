@@ -14,7 +14,7 @@ The article describes markets suitable for trading the long only trend follow st
     * [Bitcoin](#bitcoin)
     * [Etherem](#ethereum)
     * [NAS 100](#nasdaq-100)
-    * [S&P 500](#s&p-500)
+    * [SPX 500](#spx-500)
     * [NIFTY 50](#nifty-50)
 * [Top 10 US stocks by momentum](#top-10-us-stocks-by-momentum)
     * [Intro into selecting stocks](#intro-into-selecting-stocks)
@@ -35,7 +35,8 @@ The article describes markets suitable for trading the long only trend follow st
 ### Bitcoin
 Bitcoin (BTC) is a decentralized cryptocurrency that was first described in a 2008 whitepaper by an individual or group of individuals using the alias Satoshi Nakamoto. Officially launched in January 2009, Bitcoin is a peer-to-peer online currency that allows transactions to happen directly between equal and independent network participants without the need for any intermediary. Bitcoin is digital money that cannot be inflated or manipulated by any individual, company, government, or central bank. Bitcoin is recognized as one of the initial cryptocurrencies to come into use and has inspired the development of thousands of competing projects. There will only ever be 21 million BTC. Bitcoin is highly divisible, with its smallest unit, i.e. 0.000 000 01 BTC, called a "satoshi" or "sat." As bitcoin's value has risen, its easy divisibility has become a key attribute.
 
-<img src="../assets/images/bitcoin.png" class="img-fluid" title="Bitcoin">
+
+<div class="container-lg" style="height:400px">
 
 <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container" style="height:100%;width:100%">
@@ -45,18 +46,21 @@ Bitcoin (BTC) is a decentralized cryptocurrency that was first described in a 20
   {
   "autosize": true,
   "symbol": "INDEX:BTCUSD",
-  "interval": "W",
   "timezone": "Etc/UTC",
   "theme": "dark",
   "style": "1",
   "locale": "en",
-  "allow_symbol_change": false,
+  "range": "ALL",
+  "allow_symbol_change": true,
   "calendar": false,
+  "hide_volume": true,
   "support_host": "https://www.tradingview.com"
 }
   </script>
 </div>
 <!-- TradingView Widget END -->
+
+</div>
 
 
 <table class="table">
@@ -85,8 +89,32 @@ Bitcoin (BTC) is a decentralized cryptocurrency that was first described in a 20
 ### Ethereum
 Ethereum is a decentralized, open-source blockchain platform that enables the creation and execution of smart contracts and decentralized applications (dApps) without any downtime, fraud, control, or interference from a third party. Launched in 2015 by Vitalik Buterin and other developers, Ethereum extends the capabilities of Bitcoin's blockchain technology by incorporating a built-in programming language that allows developers to write their own code and create personalized applications. Ether (ETH) is the platform's native cryptocurrency, which is used to pay for transaction fees and computational services on the Ethereum network.
 
-<img src="../assets/images/ethereum.png" class="img-fluid" title="Ethereum">
 
+<div class="container-lg" style="height:400px">
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize": true,
+  "symbol": "INDEX:ETHUSD",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "range": "ALL",
+  "allow_symbol_change": true,
+  "calendar": false,
+  "hide_volume": true,
+  "support_host": "https://www.tradingview.com"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+</div>
 
 <table class="table">
   <thead>
@@ -114,7 +142,31 @@ Ethereum is a decentralized, open-source blockchain platform that enables the cr
 ### Nasdaq 100
 The Nasdaq 100 Index is a benchmark stock market index comprising 100 of the largest non-financial companies listed on the Nasdaq Stock Market, a premier global electronic marketplace for buying and selling securities. Launched in 1985, the index includes diverse sectors such as technology, consumer services, healthcare, and biotechnology, with a significant emphasis on technology-driven firms. Renowned for its high growth potential and innovation, the Nasdaq 100 features prominent companies like Apple, Microsoft, Amazon, and Alphabet (Google). The index is often used as a barometer for the performance of the technology and innovation sectors within the U.S. stock market.
 
-<img src="../assets/images/nasdaq100.png" class="img-fluid" title="Nasdaq 100">
+<div class="container-lg" style="height:400px">
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize": true,
+  "symbol": "NASDAQ:QQQ",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "range": "ALL",
+  "allow_symbol_change": true,
+  "calendar": false,
+  "hide_volume": true,
+  "support_host": "https://www.tradingview.com"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+</div>
 
 <table class="table">
   <thead>
@@ -139,10 +191,32 @@ The Nasdaq 100 Index is a benchmark stock market index comprising 100 of the lar
   </tbody>
 </table>
 
-### S&P 500
+### SPX 500
 The S&P 500 Index, or Standard & Poor's 500 Index, is a widely regarded stock market index that tracks the performance of 500 of the largest publicly traded companies in the United States, spanning various industries and sectors. Established in 1957, it serves as a key indicator of the overall health and performance of the U.S. stock market and economy. The index is market-capitalization-weighted, meaning larger companies have a more significant impact on its performance. With its diverse representation, the S&P 500 includes companies like Apple, Microsoft, Amazon, and Johnson & Johnson, making it a common benchmark for investors and a popular investment vehicle through mutual funds and exchange-traded funds (ETFs).
 
-<img src="../assets/images/spx.png" class="img-fluid" title="S&P 500">
+<div class="container-lg" style="height:400px">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize": true,
+  "symbol": "AMEX:SPY",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "range": "ALL",
+  "allow_symbol_change": true,
+  "calendar": false,
+  "hide_volume": true,
+  "support_host": "https://www.tradingview.com"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
 
 <table class="table">
   <thead>
@@ -170,7 +244,29 @@ The S&P 500 Index, or Standard & Poor's 500 Index, is a widely regarded stock ma
 ### NIFTY 50
 The NIFTY 50 Index is a key benchmark index for the Indian equity market, representing the weighted average of 50 of the largest and most liquid stocks listed on the National Stock Exchange of India (NSE). Introduced in 1990 by the NSE, it encompasses various sectors of the Indian economy, providing a comprehensive overview of the market's performance. The index is market-capitalization-weighted, ensuring that larger companies have a greater influence on its movements. By including major corporations such as Reliance Industries, Tata Consultancy Services (TCS), and HDFC Bank, the NIFTY 50 serves as a crucial barometer for investors and analysts assessing the economic health and trends of the Indian stock market.
 
-<img src="../assets/images/nifty50.png" class="img-fluid" title="NIFTY 50">
+<div class="container-lg" style="height:400px">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize": true,
+  "symbol": "NASDAQ:INDY",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "range": "ALL",
+  "allow_symbol_change": true,
+  "calendar": false,
+  "hide_volume": true,
+  "support_host": "https://www.tradingview.com"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
 
 <table class="table">
   <thead>
@@ -219,7 +315,29 @@ Super Micro Computer, Inc. engages in the distribution and manufacture of inform
 
 **Sector**: Electronic Technology
 
-<img src="../assets/images/smci.png" class="img-fluid" title="Super Micro Computer">
+<div class="container-lg" style="height:400px">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize": true,
+  "symbol": "NASDAQ:SMCI",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "range": "ALL",
+  "allow_symbol_change": true,
+  "calendar": false,
+  "hide_volume": true,
+  "support_host": "https://www.tradingview.com"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
 
 <table class="table">
   <thead>
@@ -249,7 +367,29 @@ NVIDIA Corp engages in the design and manufacture of computer graphics processor
 
 **Sector**: Electronic Technology
 
-<img src="../assets/images/nvda.png" class="img-fluid" title="NVIDIA">
+<div class="container-lg" style="height:400px">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize": true,
+  "symbol": "NASDAQ:NVDA",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "range": "ALL",
+  "allow_symbol_change": true,
+  "calendar": false,
+  "hide_volume": true,
+  "support_host": "https://www.tradingview.com"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
 
 <table class="table">
   <thead>
@@ -279,8 +419,29 @@ Vistra Corp. is a holding company, which engages in the provision of electricity
 
 **Sector**: Utilities
 
-<img src="../assets/images/vst.png" class="img-fluid" title="Vistra Corp">
-
+<div class="container-lg" style="height:400px">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize": true,
+  "symbol": "NYSE:VST",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "range": "ALL",
+  "allow_symbol_change": true,
+  "calendar": false,
+  "hide_volume": true,
+  "support_host": "https://www.tradingview.com"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
 <table class="table">
   <thead>
     <tr>
@@ -304,12 +465,35 @@ Vistra Corp. is a holding company, which engages in the provision of electricity
   </tbody>
 </table>
 
+
 ### Constellation Energy Corporation
 Constellation Energy Corp. engages in the generation, supply, and marketing of clean electricity, and renewable energy products and solutions. The firm also offers wholesale energy, retail products and services. It operates under the following geographical segments: Mid-Atlantic, Midwest, New York, Electric Reliability Council of Texas (ERCOT), and Other Power Regions Segment. The company was founded in 1960 and is headquartered in Baltimore, MD.
 
 **Sector**: Utilities
 
-<img src="../assets/images/ceg.png" class="img-fluid" title="Constellation Energy Corporation">
+<div class="container-lg" style="height:400px">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize": true,
+  "symbol": "NASDAQ:CEG",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "range": "ALL",
+  "allow_symbol_change": true,
+  "calendar": false,
+  "hide_volume": true,
+  "support_host": "https://www.tradingview.com"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
 
 <table class="table">
   <thead>
@@ -339,7 +523,29 @@ Micron Technology, Inc. engages in the provision of innovative memory and storag
 
 **Sector**: Electronic Technology
 
-<img src="../assets/images/mu.png" class="img-fluid" title="Micron Technology">
+<div class="container-lg" style="height:400px">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize": true,
+  "symbol": "NASDAQ:MU",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "range": "ALL",
+  "allow_symbol_change": true,
+  "calendar": false,
+  "hide_volume": true,
+  "support_host": "https://www.tradingview.com"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
 
 <table class="table">
   <thead>
@@ -369,7 +575,29 @@ NRG Energy, Inc. engages in the production, sale, and distribution of energy and
 
 **Sector**: Utilities
 
-<img src="../assets/images/nrg.png" class="img-fluid" title="NRG Energy, Inc.">
+<div class="container-lg" style="height:400px">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize": true,
+  "symbol": "NYSE:NRG",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "range": "ALL",
+  "allow_symbol_change": true,
+  "calendar": false,
+  "hide_volume": true,
+  "support_host": "https://www.tradingview.com"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
 
 <table class="table">
   <thead>
@@ -399,7 +627,29 @@ Eli Lilly & Co. engages in the discovery, development, manufacture, and sale of 
 
 **Sector**: Health Technology
 
-<img src="../assets/images/lly.png" class="img-fluid" title="Eli Lilly and Company">
+<div class="container-lg" style="height:400px">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize": true,
+  "symbol": "NYSE:LLY",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "range": "ALL",
+  "allow_symbol_change": true,
+  "calendar": false,
+  "hide_volume": true,
+  "support_host": "https://www.tradingview.com"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
 
 <table class="table">
   <thead>
@@ -429,7 +679,29 @@ CrowdStrike Holdings, Inc. provides cybersecurity products and services to stop 
 
 **Sector**: Technology Services
 
-<img src="../assets/images/crwd.png" class="img-fluid" title="CrowdStrike Holdings, Inc.">
+<div class="container-lg" style="height:400px">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize": true,
+  "symbol": "NASDAQ:CRWD",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "range": "ALL",
+  "allow_symbol_change": true,
+  "calendar": false,
+  "hide_volume": true,
+  "support_host": "https://www.tradingview.com"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
 
 <table class="table">
   <thead>
@@ -459,7 +731,29 @@ Arista Networks, Inc. engages in the business of developing, marketing, and sell
 
 **Sector**: Electronic Technology
 
-<img src="../assets/images/anet.png" class="img-fluid" title="Arista Networks">
+<div class="container-lg" style="height:400px">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize": true,
+  "symbol": "NYSE:ANET",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "range": "ALL",
+  "allow_symbol_change": true,
+  "calendar": false,
+  "hide_volume": true,
+  "support_host": "https://www.tradingview.com"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
 
 <table class="table">
   <thead>
@@ -489,7 +783,29 @@ NetApp, Inc. engages in the provision of software, systems, and services to mana
 
 **Sector**: Electronic Technology
 
-<img src="../assets/images/ntap.png" class="img-fluid" title="NetApp, Inc.">
+<div class="container-lg" style="height:400px">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize": true,
+  "symbol": "NASDAQ:NTAP",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "range": "ALL",
+  "allow_symbol_change": true,
+  "calendar": false,
+  "hide_volume": true,
+  "support_host": "https://www.tradingview.com"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
 
 <table class="table">
   <thead>
