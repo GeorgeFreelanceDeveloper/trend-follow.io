@@ -2,12 +2,13 @@ using System;
 
 using cAlgo.API;
 using cAlgo.API.Indicators;
+using cAlgo.API.Internals;
 
 
 namespace cAlgo.Robots
 {
     [Robot(TimeZone = TimeZones.UTC, AccessRights = AccessRights.None)]
-    public class TurtleTrendFollow_cBot : Robot
+    public class TurtleTrendFollowPro_cBot : Robot
     {
     
         // ********************************
@@ -24,12 +25,6 @@ namespace cAlgo.Robots
         [Parameter("Risk Percentage", Group ="Basic settings", DefaultValue =1)]
         public double RiskPercentage {get; set;}
         
-        [Parameter("Atr Multiplier", Group ="Basic settings", DefaultValue =2)]
-        public int AtrMultiplier {get; set;}
-        
-        [Parameter("Atr Length", Group ="Basic settings", DefaultValue =20)]
-        public int AtrLength {get;set;}
-        
         // Filter settings
         [Parameter("Enable Filter", Group ="Filter settings", DefaultValue =false)]
         public bool EnableFilter {get; set;} 
@@ -40,9 +35,10 @@ namespace cAlgo.Robots
         [Parameter("RSI > X", Group ="Filter settings", DefaultValue = 0)]
         public int RsiValue {get;set;}
         
+        
         protected override void OnStart()
         {
-
+            OnBarClosed();
         }
 
         protected override void OnBarClosed()
@@ -55,38 +51,65 @@ namespace cAlgo.Robots
             double upperChannel = Indicators.DonchianChannel(EntryLength).Top.LastValue;
             double lowerChannel = Indicators.DonchianChannel(ExitLength).Bottom.LastValue;
             double closePrice = Bars.ClosePrices.LastValue;
-            string label = $"TurtleTrendFollow_cBot-{Symbol.Name}";
+            string label = $"TurtleTrendFollow_cBot-{Symbol.Name}-L1";
+            Position position = Positions.Find(label);
             
             // Trade amount
-            double qty = ((RiskPercentage/100) * Account.Balance) / (AtrMultiplier * Indicators.AverageTrueRange(20,MovingAverageType.Simple).Result.LastValue);
-            double qtyInLots = ((int)(qty /Symbol.VolumeInUnitsStep)) * Symbol.VolumeInUnitsStep;
+            double qtyInLots = ComputeTradeAmount(upperChannel,lowerChannel);
             
             // Filter
             bool priceAboveSMA = closePrice > Indicators.SimpleMovingAverage(Bars.ClosePrices, SmaLength).Result.LastValue;
             bool rsiAboveValue = Indicators.RelativeStrengthIndex(Bars.ClosePrices, 14).Result.LastValue > RsiValue;
             bool filter = EnableFilter ? priceAboveSMA && rsiAboveValue : true;
-
-            Position position = Positions.Find(label);
-            bool isOpenPosition = position != null;
-            
-            bool buyCondition = closePrice > upperChannel && !isOpenPosition && filter;
-            bool sellCondition = closePrice < lowerChannel && isOpenPosition;
+       
             
             // ********************************
             // Manage trade
             // ********************************
             
-            // Entry
-            if(buyCondition)
+            if(position == null)
             {
-                ExecuteMarketOrder(TradeType.Buy, SymbolName, qtyInLots, label);
-            }
-            
-            // Exit
-            if(sellCondition)
-            {
-                position.Close();
+                if(filter)
+                {
+                
+                    // Cancel all pending orders for this symbol
+                    foreach(PendingOrder pendingOrder in PendingOrders){
+                        if(pendingOrder.Label == label)
+                        {
+                            CancelPendingOrder(pendingOrder);
+                        }
+                    }
+                
+                    // Place stop order or market order
+                    double stopLossPips = (Math.Abs(upperChannel - lowerChannel)/Symbol.PipSize);
+                    if(closePrice >= upperChannel)
+                    {
+                      ExecuteMarketOrder(TradeType.Buy, Symbol.Name, qtyInLots, label, stopLossPips, null);
+                    } else
+                    {
+                       PlaceStopOrder(TradeType.Buy,Symbol.Name,qtyInLots,upperChannel,label,stopLossPips,null);
+                    }
+                }
+
+            } else {
+               // Update stop loss
+               double stopLossPrice = lowerChannel < position.EntryPrice ? lowerChannel : position.EntryPrice;
+               ModifyPosition(position,stopLossPrice,position.TakeProfit);
+               
+               if(closePrice < lowerChannel){
+                    position.Close();
+               }
             }
          }
-    }
+        
+        private double ComputeTradeAmount(double entryPrice, double stopPrice)
+        {
+            double riskPerTrade = (RiskPercentage / 100) * Account.Balance;
+            double move = entryPrice - stopPrice;
+            double amountRaw = riskPerTrade / ((Math.Abs(move) / Symbol.PipSize) * Symbol.PipValue);
+            double amount = ((int)(amountRaw / Symbol.VolumeInUnitsStep)) * Symbol.VolumeInUnitsStep;
+            return amount;
+        }
+        
+    }   
 }
