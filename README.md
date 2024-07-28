@@ -12,6 +12,12 @@
 
 This open source project is about momentum base trend following systematic trading strategies inspired from top trend following traders (Richard Denis, Olivier Seban and Nick Radge) implemented for various trading platforms as TradingView, cTrader, Multicharts and TradeStation.
 
+* Our trading algorithms are designed to be understandable and usable by both novice and advanced technical traders. Basic knowledge of programming is an advantage for the full use of our strategies.
+
+* The strategies presented on our website are designed as long only, which means that they are suitable for trading in markets that have long-term growth potential, such as Bitcoin or Nasdaq.
+
+* Our strategies are optimized for medium-term trading and use daily charts, which allows effective management of trades with a longer time horizon.
+
 ## System Design Considerations
 Here is a flow chart diagram uses to explain fundamental ideas and thesis around system design.
 
