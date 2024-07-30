@@ -37,7 +37,7 @@ namespace cAlgo.Robots
         [Parameter("Price above SMA(X)", Group ="Filter settings", DefaultValue =200)]
         public int SmaLength {get;set;}
         
-        [Parameter("RSI > X", Group ="Filter settings", DefaultValue = 70)]
+        [Parameter("RSI > X", Group ="Filter settings", DefaultValue = 0)]
         public int RsiValue {get;set;}
         
         protected override void OnStart()
