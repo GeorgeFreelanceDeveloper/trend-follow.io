@@ -14,7 +14,7 @@ This open source project is about momentum base trend following systematic tradi
 
 * Our trading algorithms are designed to be understandable and usable by both novice and advanced technical traders. Basic knowledge of programming is an advantage for the full use of our strategies.
 
-* The strategies presented on our website are designed as long only, which means that they are suitable for trading in markets that have long-term growth potential, such as cryptocurrency Bitcoin or stock index Nasdaq 100.
+* The strategies presented on our website are designed as long only, which means that they are suitable for trading in markets that have long-term growth potential with strong momentum, such as cryptocurrency Bitcoin or stock index Nasdaq 100.
 
 * Our strategies are optimized for medium-term trading and use daily charts, which allows effective management of trades with a longer time horizon.
 
