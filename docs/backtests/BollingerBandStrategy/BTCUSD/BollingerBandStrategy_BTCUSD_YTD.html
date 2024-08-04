@@ -48,16 +48,16 @@
     "symbol": "BTCUSD",
     "brokerTitle": "Fusion Markets",
     "cBotName": "BollingerBandTrendFollow cBot",
-    "roi": 13.18,
-    "netProfit": 1318.05,
+    "roi": 12.53,
+    "netProfit": 1252.53,
     "startingCapital": 10000,
-    "endingEquity": 11318.05,
-    "endingBalance": 11318.05,
+    "endingEquity": 11252.53,
+    "endingBalance": 11252.53,
     "testingPeriod": {
-      "duration": "6m 4d",
+      "duration": "7m 3d",
       "startDate": 1704067200000,
-      "endDate": 1720137600000,
-      "formatted": "6m 4d (01/01/2024 - 05/07/2024)"
+      "endDate": 1722729600000,
+      "formatted": "7m 3d (01/01/2024 - 04/08/2024)"
     },
     "accountType": "hedging",
     "accountLeverage": 100,
@@ -90,71 +90,77 @@
         "timestamp": 1704067200000
       },
       {
-        "balance": 9935.27,
-        "minEquity": 9838.62,
-        "maxEquity": 10382.24,
+        "balance": 9935.13,
+        "minEquity": 9838.27,
+        "maxEquity": 10383.09,
         "timestamp": 1705183320000
       },
       {
-        "balance": 11603.96,
-        "minEquity": 9903.08,
-        "maxEquity": 12444.33,
+        "balance": 11607.48,
+        "minEquity": 9902.87,
+        "maxEquity": 12449.7,
         "timestamp": 1710882300000
       },
       {
-        "balance": 11460.09,
-        "minEquity": 11430.98,
-        "maxEquity": 11629.36,
+        "balance": 11463.29,
+        "minEquity": 11434.12,
+        "maxEquity": 11632.93,
         "timestamp": 1712091900000
       },
       {
-        "balance": 11274.68,
-        "minEquity": 11234.02,
-        "maxEquity": 11467.51,
+        "balance": 11277.44,
+        "minEquity": 11236.7,
+        "maxEquity": 11470.71,
         "timestamp": 1712955900000
       },
       {
-        "balance": 11318.05,
-        "minEquity": 11218.41,
-        "maxEquity": 11557.95,
+        "balance": 11320.93,
+        "minEquity": 11221.05,
+        "maxEquity": 11561.34,
         "timestamp": 1718139900000
       },
       {
-        "balance": 11318.05,
-        "minEquity": 11294.58,
-        "maxEquity": 11318.05,
-        "timestamp": 1720161060000
+        "balance": 11252.53,
+        "minEquity": 11234.69,
+        "maxEquity": 11598.55,
+        "timestamp": 1722632700000
+      },
+      {
+        "balance": 11252.53,
+        "minEquity": 11235.88,
+        "maxEquity": 11252.53,
+        "timestamp": 1722759900000
       }
     ],
-    "maxBalanceDrawdownPercent": 2.8376519739812864,
-    "maxEquityDrawdownPercent": 9.851233453307652,
-    "maxBalanceDrawdownAbsolute": 329.2799999,
-    "maxEquityDrawdownAbsolute": 1225.92
+    "maxBalanceDrawdownPercent": 3.057941947778492,
+    "maxEquityDrawdownPercent": 9.868912503915768,
+    "maxBalanceDrawdownAbsolute": 354.9499999,
+    "maxEquityDrawdownAbsolute": 1228.65
   },
   "tradeStatistics": {
     "netProfit": {
-      "all": 1318.05,
-      "long": 1318.05,
+      "all": 1252.53,
+      "long": 1252.53,
       "short": 0
     },
     "profitFactor": {
-      "all": 4.35,
-      "long": 4.35,
+      "all": 3.7,
+      "long": 3.7,
       "short": 0
     },
     "commissions": {
-      "all": -0.94,
-      "long": -0.94,
+      "all": -1.12,
+      "long": -1.12,
       "short": 0
     },
     "swaps": {
-      "all": -99.91,
-      "long": -99.91,
+      "all": -116.77,
+      "long": -116.77,
       "short": 0
     },
     "totalTrades": {
-      "all": 5,
-      "long": 5,
+      "all": 6,
+      "long": 6,
       "short": 0
     },
     "winningTrades": {
@@ -168,13 +174,13 @@
       "short": 0
     },
     "largestWinningTrade": {
-      "all": 1668.69,
-      "long": 1668.69,
+      "all": 1672.35,
+      "long": 1672.35,
       "short": 0
     },
     "losingTrades": {
-      "all": 3,
-      "long": 3,
+      "all": 4,
+      "long": 4,
       "short": 0
     },
     "maxConsecutiveLosingTrades": {
@@ -183,13 +189,13 @@
       "short": 0
     },
     "largestLosingTrade": {
-      "all": -185.41,
-      "long": -185.41,
+      "all": -185.85,
+      "long": -185.85,
       "short": 0
     },
     "averageTrade": {
-      "all": 263.61,
-      "long": 263.61,
+      "all": 208.76,
+      "long": 208.76,
       "short": 0
     }
   },
@@ -238,9 +244,15 @@
     },
     {
       "group": "Filter settings",
-      "displayName": "Benchmark Symbol",
-      "propertyName": "BenchmarkSymbol",
-      "value": "US500"
+      "displayName": "Price above SMA(X)",
+      "propertyName": "SmaLength",
+      "value": 200
+    },
+    {
+      "group": "Filter settings",
+      "displayName": "RSI \u003E X",
+      "propertyName": "RsiValue",
+      "value": 0
     }
   ],
   "usedSymbols": [
@@ -256,28 +268,6 @@
       },
       "swapLong": -10,
       "swapShort": -10,
-      "threeDaySwaps": "friday",
-      "weekendSwaps": false,
-      "swapPeriods": 24,
-      "gracePeriods": 0,
-      "digits": 2,
-      "lotSize": 1,
-      "stepVolume": 0.01,
-      "pipPosition": 1,
-      "swapCalculationType": "percent"
-    },
-    {
-      "symbol": "US500",
-      "period": "D1",
-      "swapTime": "21:00",
-      "baseAsset": "US500",
-      "quoteAsset": "USD",
-      "commissions": {
-        "type": "usdPerMillionUsdVolume",
-        "value": 30
-      },
-      "swapLong": -7.68,
-      "swapShort": 3.14,
       "threeDaySwaps": "friday",
       "weekendSwaps": false,
       "swapPeriods": 24,
@@ -311,7 +301,7 @@
     ],
     "items": [],
     "marginUsed": 0,
-    "freeMargin": 11318.05,
+    "freeMargin": 11252.53,
     "marginLevel": null,
     "unrealizedNet": 0,
     "unrealizedGross": 0
@@ -355,18 +345,18 @@
         "symbol": "BTCUSD",
         "direction": "buy",
         "id": 1,
-        "net": -64.73,
-        "gross": -52.69,
+        "net": -64.87,
+        "gross": -52.81,
         "entryTime": 1704146520000,
         "closeTime": 1705183320000,
         "entryPrice": 43653.1,
         "closePrice": 42941,
         "commissions": -0.26,
-        "swaps": -11.78,
+        "swaps": -11.8,
         "volume": 0.08,
         "label": "BollingerBandTrendFollow_cBot-BTCUSD",
         "comment": null,
-        "balance": 9935.27,
+        "balance": 9935.13,
         "quantity": 0.08,
         "pips": -7121
       },
@@ -374,18 +364,18 @@
         "symbol": "BTCUSD",
         "direction": "buy",
         "id": 2,
-        "net": 1668.69,
-        "gross": 1725.29,
+        "net": 1672.35,
+        "gross": 1729.08,
         "entryTime": 1707256920000,
         "closeTime": 1710882300000,
         "entryPrice": 43141.1,
         "closePrice": 63866.41,
         "commissions": -0.3,
-        "swaps": -56.3,
+        "swaps": -56.43,
         "volume": 0.09,
         "label": "BollingerBandTrendFollow_cBot-BTCUSD",
         "comment": null,
-        "balance": 11603.96,
+        "balance": 11607.48,
         "quantity": 0.09,
         "pips": 207253.1
       },
@@ -393,18 +383,18 @@
         "symbol": "BTCUSD",
         "direction": "buy",
         "id": 3,
-        "net": -143.87,
-        "gross": -139.56,
+        "net": -144.19,
+        "gross": -139.87,
         "entryTime": 1711400700000,
         "closeTime": 1712091900000,
         "entryPrice": 70781.21,
         "closePrice": 65751.61,
         "commissions": -0.1,
-        "swaps": -4.21,
+        "swaps": -4.22,
         "volume": 0.03,
         "label": "BollingerBandTrendFollow_cBot-BTCUSD",
         "comment": null,
-        "balance": 11460.09,
+        "balance": 11463.29,
         "quantity": 0.03,
         "pips": -50296
       },
@@ -412,18 +402,18 @@
         "symbol": "BTCUSD",
         "direction": "buy",
         "id": 4,
-        "net": -185.41,
-        "gross": -181.14,
+        "net": -185.85,
+        "gross": -181.54,
         "entryTime": 1712610300000,
         "closeTime": 1712955900000,
         "entryPrice": 71801.01,
         "closePrice": 66905.01,
-        "commissions": -0.12,
-        "swaps": -4.15,
+        "commissions": -0.14,
+        "swaps": -4.17,
         "volume": 0.04,
         "label": "BollingerBandTrendFollow_cBot-BTCUSD",
         "comment": null,
-        "balance": 11274.68,
+        "balance": 11277.44,
         "quantity": 0.04,
         "pips": -48960
       },
@@ -431,20 +421,39 @@
         "symbol": "BTCUSD",
         "direction": "buy",
         "id": 5,
-        "net": 43.37,
-        "gross": 67,
+        "net": 43.49,
+        "gross": 67.15,
         "entryTime": 1715807100000,
         "closeTime": 1718139900000,
         "entryPrice": 65811.54,
         "closePrice": 67260.34,
         "commissions": -0.16,
-        "swaps": -23.47,
+        "swaps": -23.5,
         "volume": 0.05,
         "label": "BollingerBandTrendFollow_cBot-BTCUSD",
         "comment": null,
-        "balance": 11318.05,
+        "balance": 11320.93,
         "quantity": 0.05,
         "pips": 14488
+      },
+      {
+        "symbol": "BTCUSD",
+        "direction": "buy",
+        "id": 6,
+        "net": -68.4,
+        "gross": -51.59,
+        "entryTime": 1721077500000,
+        "closeTime": 1722632700000,
+        "entryPrice": 63730.99,
+        "closePrice": 62617.85,
+        "commissions": -0.16,
+        "swaps": -16.65,
+        "volume": 0.05,
+        "label": "BollingerBandTrendFollow_cBot-BTCUSD",
+        "comment": null,
+        "balance": 11252.53,
+        "quantity": 0.05,
+        "pips": -11131.4
       }
     ]
   }

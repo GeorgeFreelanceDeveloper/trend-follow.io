@@ -49,15 +49,15 @@
     "brokerTitle": "Fusion Markets",
     "cBotName": "TurtleTrendFollow",
     "roi": 4.55,
-    "netProfit": 454.62,
+    "netProfit": 454.93,
     "startingCapital": 10000,
-    "endingEquity": 10454.62,
-    "endingBalance": 10454.62,
+    "endingEquity": 10454.93,
+    "endingBalance": 10454.93,
     "testingPeriod": {
-      "duration": "6m 4d",
+      "duration": "7m 3d",
       "startDate": 1704067200000,
-      "endDate": 1720137600000,
-      "formatted": "6m 4d (01/01/2024 - 05/07/2024)"
+      "endDate": 1722729600000,
+      "formatted": "7m 3d (01/01/2024 - 04/08/2024)"
     },
     "accountType": "hedging",
     "accountLeverage": 100,
@@ -72,7 +72,7 @@
     },
     "commissions": {
       "type": "usdPerMillionUsdVolume",
-      "value": 0
+      "value": 30
     },
     "theme": "dark",
     "titleKind": "backtesting",
@@ -90,45 +90,45 @@
         "timestamp": 1704067200000
       },
       {
-        "balance": 9779.3,
-        "minEquity": 9757.46,
-        "maxEquity": 10194.08,
+        "balance": 9778.62,
+        "minEquity": 9756.73,
+        "maxEquity": 10194.33,
         "timestamp": 1705960920000
       },
       {
-        "balance": 10805.13,
-        "minEquity": 9731.99,
-        "maxEquity": 11944.49,
+        "balance": 10806.46,
+        "minEquity": 9730.96,
+        "maxEquity": 11948.31,
         "timestamp": 1710882300000
       },
       {
-        "balance": 10311.31,
+        "balance": 10311.45,
         "minEquity": 10252.08,
-        "maxEquity": 10828.61,
+        "maxEquity": 10829.87,
         "timestamp": 1713042300000
       },
       {
-        "balance": 10454.62,
-        "minEquity": 10307.69,
-        "maxEquity": 10708.84,
+        "balance": 10454.93,
+        "minEquity": 10307.83,
+        "maxEquity": 10709.72,
         "timestamp": 1717794300000
       },
       {
-        "balance": 10454.62,
-        "minEquity": 10437.41,
-        "maxEquity": 10454.62,
-        "timestamp": 1720161420000
+        "balance": 10454.93,
+        "minEquity": 10437.68,
+        "maxEquity": 10454.93,
+        "timestamp": 1722760380000
       }
     ],
-    "maxBalanceDrawdownPercent": 4.570236545048507,
-    "maxEquityDrawdownPercent": 14.16895991373428,
-    "maxBalanceDrawdownAbsolute": 493.82,
-    "maxEquityDrawdownAbsolute": 1692.41
+    "maxBalanceDrawdownPercent": 4.58068599707951,
+    "maxEquityDrawdownPercent": 14.19640099729585,
+    "maxBalanceDrawdownAbsolute": 495.0099999,
+    "maxEquityDrawdownAbsolute": 1696.23
   },
   "tradeStatistics": {
     "netProfit": {
-      "all": 454.62,
-      "long": 454.62,
+      "all": 454.93,
+      "long": 454.93,
       "short": 0
     },
     "profitFactor": {
@@ -137,13 +137,13 @@
       "short": 0
     },
     "commissions": {
-      "all": 0,
-      "long": 0,
+      "all": -0.68,
+      "long": -0.68,
       "short": 0
     },
     "swaps": {
-      "all": -76.4,
-      "long": -76.4,
+      "all": -76.58,
+      "long": -76.58,
       "short": 0
     },
     "totalTrades": {
@@ -162,8 +162,8 @@
       "short": 0
     },
     "largestWinningTrade": {
-      "all": 1025.83,
-      "long": 1025.83,
+      "all": 1027.84,
+      "long": 1027.84,
       "short": 0
     },
     "losingTrades": {
@@ -177,13 +177,13 @@
       "short": 0
     },
     "largestLosingTrade": {
-      "all": -493.82,
-      "long": -493.82,
+      "all": -495.01,
+      "long": -495.01,
       "short": 0
     },
     "averageTrade": {
-      "all": 113.66,
-      "long": 113.66,
+      "all": 113.73,
+      "long": 113.73,
       "short": 0
     }
   },
@@ -226,9 +226,15 @@
     },
     {
       "group": "Filter settings",
-      "displayName": "Benchmark Symbol",
-      "propertyName": "BenchmarkSymbol",
-      "value": "US500"
+      "displayName": "Price above SMA(X)",
+      "propertyName": "SmaLength",
+      "value": 200
+    },
+    {
+      "group": "Filter settings",
+      "displayName": "RSI \u003E X",
+      "propertyName": "RsiValue",
+      "value": 70
     }
   ],
   "usedSymbols": [
@@ -240,32 +246,10 @@
       "quoteAsset": "USD",
       "commissions": {
         "type": "usdPerMillionUsdVolume",
-        "value": 0
+        "value": 30
       },
       "swapLong": -10,
       "swapShort": -10,
-      "threeDaySwaps": "friday",
-      "weekendSwaps": false,
-      "swapPeriods": 24,
-      "gracePeriods": 0,
-      "digits": 2,
-      "lotSize": 1,
-      "stepVolume": 0.01,
-      "pipPosition": 1,
-      "swapCalculationType": "percent"
-    },
-    {
-      "symbol": "US500",
-      "period": "D1",
-      "swapTime": "21:00",
-      "baseAsset": "US500",
-      "quoteAsset": "USD",
-      "commissions": {
-        "type": "usdPerMillionUsdVolume",
-        "value": 0
-      },
-      "swapLong": -7.68,
-      "swapShort": 3.14,
       "threeDaySwaps": "friday",
       "weekendSwaps": false,
       "swapPeriods": 24,
@@ -299,7 +283,7 @@
     ],
     "items": [],
     "marginUsed": 0,
-    "freeMargin": 10454.62,
+    "freeMargin": 10454.93,
     "marginLevel": null,
     "unrealizedNet": 0,
     "unrealizedGross": 0
@@ -343,18 +327,18 @@
         "symbol": "ETHUSD",
         "direction": "buy",
         "id": 1,
-        "net": -220.7,
-        "gross": -212.07,
+        "net": -221.38,
+        "gross": -212.54,
         "entryTime": 1704924120000,
         "closeTime": 1705960920000,
         "entryPrice": 2522.4,
         "closePrice": 2319.5,
-        "commissions": 0,
-        "swaps": -8.63,
+        "commissions": -0.18,
+        "swaps": -8.66,
         "volume": 1.13,
         "label": "TurtleTrendFollow_cBot-ETHUSD",
         "comment": null,
-        "balance": 9779.3,
+        "balance": 9778.62,
         "quantity": 1.13,
         "pips": -2029
       },
@@ -362,18 +346,18 @@
         "symbol": "ETHUSD",
         "direction": "buy",
         "id": 2,
-        "net": 1025.83,
-        "gross": 1072.77,
+        "net": 1027.84,
+        "gross": 1075.13,
         "entryTime": 1707516120000,
         "closeTime": 1710882300000,
         "entryPrice": 2506.3,
         "closePrice": 3279.51,
-        "commissions": 0,
-        "swaps": -46.94,
+        "commissions": -0.24,
+        "swaps": -47.05,
         "volume": 1.5,
         "label": "TurtleTrendFollow_cBot-ETHUSD",
         "comment": null,
-        "balance": 10805.13,
+        "balance": 10806.46,
         "quantity": 1.5,
         "pips": 7732.1
       },
@@ -381,18 +365,18 @@
         "symbol": "ETHUSD",
         "direction": "buy",
         "id": 3,
-        "net": -493.82,
-        "gross": -490.2,
+        "net": -495.01,
+        "gross": -491.27,
         "entryTime": 1712610300000,
         "closeTime": 1713042300000,
         "entryPrice": 3689.63,
         "closePrice": 2943.19,
-        "commissions": 0,
+        "commissions": -0.12,
         "swaps": -3.62,
         "volume": 0.71,
         "label": "TurtleTrendFollow_cBot-ETHUSD",
         "comment": null,
-        "balance": 10311.31,
+        "balance": 10311.45,
         "quantity": 0.71,
         "pips": -7464.4
       },
@@ -400,18 +384,18 @@
         "symbol": "ETHUSD",
         "direction": "buy",
         "id": 4,
-        "net": 143.31,
-        "gross": 160.52,
+        "net": 143.48,
+        "gross": 160.87,
         "entryTime": 1716239100000,
         "closeTime": 1717794300000,
         "entryPrice": 3492.95,
         "closePrice": 3685.78,
-        "commissions": 0,
-        "swaps": -17.21,
+        "commissions": -0.14,
+        "swaps": -17.25,
         "volume": 0.9,
         "label": "TurtleTrendFollow_cBot-ETHUSD",
         "comment": null,
-        "balance": 10454.62,
+        "balance": 10454.93,
         "quantity": 0.9,
         "pips": 1928.3
       }
