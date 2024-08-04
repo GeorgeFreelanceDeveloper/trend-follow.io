@@ -29,8 +29,11 @@ namespace cAlgo.Robots
         [Parameter("Enable Filter", Group ="Filter settings", DefaultValue =false)]
         public bool EnableFilter {get; set;} 
         
-        [Parameter("Benchmark Symbol", Group ="Filter settings", DefaultValue ="US500")]
-        public string BenchmarkSymbol {get;set;}
+        [Parameter("Price above SMA(X)", Group ="Filter settings", DefaultValue =200)]
+        public int SmaLength {get;set;}
+        
+        [Parameter("RSI > X", Group ="Filter settings", DefaultValue = 0)]
+        public int RsiValue {get;set;}
         
         
         protected override void OnStart()
@@ -55,9 +58,9 @@ namespace cAlgo.Robots
             double qtyInLots = ComputeTradeAmount(upperChannel,lowerChannel);
             
             // Filter
-            DataSeries benchmarkSymbolClosePrices = MarketData.GetBars(TimeFrame.Daily, BenchmarkSymbol).ClosePrices;
-            double benchmarkSymbolClose = MarketData.GetBars(TimeFrame.Daily, BenchmarkSymbol).ClosePrices.LastValue;
-            bool filter = EnableFilter ? benchmarkSymbolClose >= Indicators.SimpleMovingAverage(benchmarkSymbolClosePrices, 200).Result.LastValue: true;
+            bool priceAboveSMA = closePrice > Indicators.SimpleMovingAverage(Bars.ClosePrices, SmaLength).Result.LastValue;
+            bool rsiAboveValue = Indicators.RelativeStrengthIndex(Bars.ClosePrices, 14).Result.LastValue > RsiValue;
+            bool filter = EnableFilter ? priceAboveSMA && rsiAboveValue : true;
        
             
             // ********************************

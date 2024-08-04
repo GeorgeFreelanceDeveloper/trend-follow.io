@@ -40,8 +40,11 @@ namespace cAlgo.Robots
         [Parameter("Enable Filter", Group ="Filter settings", DefaultValue =false)]
         public bool EnableFilter {get; set;} 
         
-        [Parameter("Benchmark Symbol", Group ="Filter settings", DefaultValue ="US500")]
-        public string BenchmarkSymbol {get;set;}
+        [Parameter("Price above SMA(X)", Group ="Filter settings", DefaultValue =200)]
+        public int SmaLength {get;set;}
+        
+        [Parameter("RSI > X", Group ="Filter settings", DefaultValue = 0)]
+        public int RsiValue {get;set;}
         
         protected override void OnStart()
         {   
@@ -63,9 +66,10 @@ namespace cAlgo.Robots
             string label = $"BollingerBandTrendFollow_cBot-{Symbol.Name}";
              
             // Filter
-            DataSeries benchmarkSymbolClosePrices = MarketData.GetBars(TimeFrame.Daily, BenchmarkSymbol).ClosePrices;
-            double benchmarkSymbolClose =benchmarkSymbolClosePrices.LastValue;
-            bool filter = EnableFilter ? benchmarkSymbolClose >= Indicators.SimpleMovingAverage(benchmarkSymbolClosePrices, 200).Result.LastValue: true;
+            double lastClosePrice = Bars.ClosePrices.LastValue;
+            bool priceAboveSMA = lastClosePrice > Indicators.SimpleMovingAverage(Bars.ClosePrices, SmaLength).Result.LastValue;
+            bool rsiAboveValue = Indicators.RelativeStrengthIndex(Bars.ClosePrices, 14).Result.LastValue > RsiValue;
+            bool filter = EnableFilter ? priceAboveSMA && rsiAboveValue : true;
             
             // Check position
             Position position = Positions.Find(label);
@@ -75,10 +79,8 @@ namespace cAlgo.Robots
             double qty = ((RiskPercentage/100) * Account.Balance) / (AtrMultiplier * Indicators.AverageTrueRange(AtrLength, MovingAverageType.Simple).Result.LastValue);
             double qtyInLots = ((int)(qty /Symbol.VolumeInUnitsStep)) * Symbol.VolumeInUnitsStep;
             
-            double lastClose = Bars.ClosePrices.LastValue;
-            
-            bool buyCondition = lastClose > upperBand && !isOpenPosition && filter;
-            bool sellCondition = lastClose < lowerBand && isOpenPosition;
+            bool buyCondition = lastClosePrice > upperBand && !isOpenPosition && filter;
+            bool sellCondition = lastClosePrice < lowerBand && isOpenPosition;
            
             
             // ********************************
