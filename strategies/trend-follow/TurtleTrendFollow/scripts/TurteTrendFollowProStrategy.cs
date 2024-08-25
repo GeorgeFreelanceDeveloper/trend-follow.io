@@ -100,6 +100,8 @@ namespace cAlgo.Robots
                     position.Close();
                }
             }
+
+            Print("Sucessful call OnBarClosed() method.");
          }
         
         private double ComputeTradeAmount(double entryPrice, double stopPrice)

@@ -90,6 +90,8 @@ namespace cAlgo.Robots
             if(sellCondition) {
                 position.Close();
             }
+
+            Print("Sucessful call OnBarClosed() method.");
         }
     }
 }

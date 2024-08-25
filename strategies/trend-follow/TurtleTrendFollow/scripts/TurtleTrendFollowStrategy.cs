@@ -87,6 +87,8 @@ namespace cAlgo.Robots
             {
                 position.Close();
             }
+
+            Print("Sucessful call OnBarClosed() method.");
          }
     }
 }
