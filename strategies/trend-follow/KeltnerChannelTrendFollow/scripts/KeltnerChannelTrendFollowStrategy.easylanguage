@@ -1,0 +1,59 @@
+Inputs: 
+    EmaLength(20),
+    AtrBreakoutLength(10),
+    MultiplierUpper(1),
+    MultiplierLower(0.5),
+    RiskPercentage(1),
+    AtrMultiplier(2),
+    AtrLength(20),
+    EnableFilter(false),
+    BenchmarkSymbol("SPX")
+
+Vars:
+    Ema(0),
+    RangEma(0),
+    UpperChannel(0),
+    LowerChannel(0),
+    Qty(0),
+    BenchmarkClose(0),
+    Filter(false);
+    BuyCondition(false),      // Buy condition
+    SellCondition(false);     // Sell condition
+
+// **********************************
+// Functions
+// **********************************
+
+// **********************************
+// Perform calculations and analysis
+// **********************************
+
+// Basic
+Ema = XAverage(Close, EmaLength);
+RangEma = AvgTrueRange(AtrBreakoutLength);
+
+UpperChannel = Ema + RangEma * MultiplierUpper;
+LowerChannel = Ema - RangEma * MultiplierLower;
+
+// Filter
+if EnableFilter then
+    BenchmarkClose = Close of Data2;
+    Filter = BenchmarkClose[1] >= AverageFC(BenchmarkClose, 200);
+else
+    Filter = true;
+
+// Trade quantity
+Qty = ((RiskPercentage / 100) * NetProfit) / (AtrMultiplier * AvgTrueRange(AtrLength));
+
+// Entry and exit conditions
+BuyCondition = Close crosses over UpperBand and Filter;
+SellCondition = Close crosses under LowerBand;
+
+// **********************************
+// Manage trade
+// **********************************
+
+If BuyCondition then
+    Buy("Long") Qty shares next bar at market;
+If SellCondition then
+    Sell("Long") Qty shares next bar at market;
