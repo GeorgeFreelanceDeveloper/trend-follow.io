@@ -43,7 +43,7 @@ lowerChannel = ema - rangema * multiplierLower
 qty = ((riskPercentage/100)*strategy.equity) / (atrMultiplier * ta.atr(atrLength))
 
 // Filter
-benchmarkSymbolClose = request.security(benchmarkSymbol,"1D", close)
+benchmarkSymbolClose = request.security(benchmarkSymbol, "1D", close)
 filter = enableFilter ? benchmarkSymbolClose[1] >= ta.sma(source = benchmarkSymbolClose, length = 200) : true
 
 buyCondition =  ta.crossover(close, upperChannel) and filter and tradeDateIsAllowed()

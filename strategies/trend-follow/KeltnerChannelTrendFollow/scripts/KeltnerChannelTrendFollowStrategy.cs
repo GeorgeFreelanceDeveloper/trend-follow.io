@@ -38,7 +38,7 @@ namespace cAlgo.Robots
         [Parameter("Enable Filter", Group = "Filter settings", DefaultValue = false)]
         public bool EnableFilter { get; set; }
 
-        [Parameter("Price above SMA(X)", Group ="Filter settings", DefaultValue =200)]
+        [Parameter("Price above SMA(X)", Group ="Filter settings", DefaultValue = 200)]
         public int SmaLength { get; set; }
 
         [Parameter("RSI > X", Group ="Filter settings", DefaultValue = 0)]
@@ -56,11 +56,11 @@ namespace cAlgo.Robots
             // **********************************
 
             // Initialize indicators
-            ExponentialMovingAverage _ema = Indicators.ExponentialMovingAverage(Bars.ClosePrices, EmaLength);
-            AverageTrueRange _atr = Indicators.AverageTrueRange(AtrBreakoutLength, MovingAverageType.Simple);
+            ExponentialMovingAverage ema = Indicators.ExponentialMovingAverage(Bars.ClosePrices, EmaLength);
+            AverageTrueRange atr = Indicators.AverageTrueRange(AtrBreakoutLength, MovingAverageType.Simple);
 
-            double upperChannel = _ema.Result.LastValue + _atr.Result.LastValue * MultiplierUpper;
-            double lowerChannel = _ema.Result.LastValue - _atr.Result.LastValue * MultiplierLower;
+            double upperChannel = ema.Result.LastValue + atr.Result.LastValue * MultiplierUpper;
+            double lowerChannel = ema.Result.LastValue - atr.Result.LastValue * MultiplierLower;
 
             string label = $"KeltnerChannelTrendFollow_cBot-{Symbol.Name}";
 

@@ -1,4 +1,4 @@
-# BollingerBandTrendFollow backtest
+# KeltnerChannelTrendFollow backtest
 ## Markets
 * **SPX**: The S&P 500 Index, also known as the Standard & Poor’s 500 Index, is a market-capitalization-weighted index that tracks the performance of approximately 500 leading publicly traded companies in the United States. 
 
