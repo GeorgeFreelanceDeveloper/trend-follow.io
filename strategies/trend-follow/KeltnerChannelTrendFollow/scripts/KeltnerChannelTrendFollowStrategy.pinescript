@@ -1,0 +1,69 @@
+//@version=5
+//Author: @GeorgeFreelanceDeveloper, @LucyFreelanceDeveloper
+strategy("Keltner Trend Follow Strategy", initial_capital=1000000, overlay=true, pyramiding=0)
+
+// ********************************
+// User defined inputs
+// ********************************
+
+var G_BASIC_SETTINGS = "Basic settings"
+var G_FILTER_SETTINGS = "Filter settings"
+var G_TIME = "Time settings"
+
+emaLength = input.int(defval = 20, title = "EMA length",  group = G_BASIC_SETTINGS)
+atrBreakoutLength = input.int(defval = 10, title = "ATR breakout multiplier",  group = G_BASIC_SETTINGS)
+multiplierUpper = input.int(defval = 1, title = "Upper", step = 1, group = G_BASIC_SETTINGS)
+multiplierLower = input.float(defval = 0.5, title = "Lower", step = 1, group = G_BASIC_SETTINGS)
+riskPercentage = input.float(defval = 1, title = "Risk per trade", group = G_BASIC_SETTINGS, tooltip = "Values from 0.00 to 100")
+atrMultiplier = input.int(defval = 2, title = "ATR multiplier", group = G_BASIC_SETTINGS)
+atrLength = input.int(defval = 20, title = "ATR length", group = G_BASIC_SETTINGS)
+
+enableFilter = input.bool(defval = false, title = "Enable filter", tooltip = "Filter is close price is above 200 day simple moving average of benchmark",  group = G_FILTER_SETTINGS)
+benchmarkSymbol = input.symbol(defval = "SPX", title = "Benchmark", group = G_FILTER_SETTINGS)
+
+fromDateTime = input.time(defval = timestamp("2012-01-01T01:01+0000"), title = "From Date and time", group = G_TIME) 
+toDateTime = input.time(defval = timestamp("9999-01-01T01:01+0000"), title = "To Date and time", group = G_TIME)
+
+// ********************************
+// Functions
+// ********************************
+tradeDateIsAllowed() => time >= fromDateTime and time <= toDateTime
+
+// **********************************
+// Perform calculations and analysis
+// **********************************
+
+// Basic
+ema = ta.ema(source =  close, length = emaLength)
+rangema = ta.atr(atrBreakoutLength)
+upperChannel = ema + rangema * multiplierUpper
+lowerChannel = ema - rangema * multiplierLower
+
+// Trade amount
+qty = ((riskPercentage/100)*strategy.equity) / (atrMultiplier * ta.atr(atrLength))
+
+// Filter
+benchmarkSymbolClose = request.security(benchmarkSymbol, "1D", close)
+filter = enableFilter ? benchmarkSymbolClose[1] >= ta.sma(source = benchmarkSymbolClose, length = 200) : true
+
+buyCondition =  ta.crossover(close, upperChannel) and filter and tradeDateIsAllowed()
+sellCondition = ta.crossunder(close, lowerChannel) and tradeDateIsAllowed()
+
+// ********************************
+// Draw outputs
+// ********************************
+plot(upperChannel, color=color.green, title="Upper Channel")
+plot(ema, color=color.gray, title="EMA")
+plot(lowerChannel, color=color.red, title="Lower Channel")
+
+// ********************************
+// Manage trade
+// ********************************
+
+// Entry
+if (buyCondition)
+    strategy.entry("Long", strategy.long, qty = qty)
+
+// Exit
+if (sellCondition)
+    strategy.close("Long")
