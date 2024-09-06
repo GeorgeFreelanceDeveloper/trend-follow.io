@@ -1,7 +1,7 @@
 ---
 title: Strategies
 layout: page
-permalink: /strategies/strategies/
+permalink: /strategies/
 ---
 
 # Trend following strategies
