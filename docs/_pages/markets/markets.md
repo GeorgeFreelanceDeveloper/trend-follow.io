@@ -15,6 +15,7 @@ A benchmark is a standard that is used to measure the change in an asset's value
 ## Stocks
 **US stocks**
 * [NVIDIA](/markets/pages/nvda/)
+* [LLY](/markets/pages/lly)
 
 <!--
 ### India stocks
