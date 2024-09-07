@@ -37,8 +37,8 @@ trend = price above 200 daily MA + price above 200 weekly MA
 ## Control
 **Turtle strategy example**
 ```c#
-entry = Breakout 20 daily high
-exit = Breakout 20 daily low
+entry = breakout 20 daily high
+exit = breakout 10 daily low
 ```
 
 <img src="../../../assets/images/markets/nvda/nvda_control.png" class="img-fluid">
