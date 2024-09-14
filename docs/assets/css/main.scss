@@ -67,3 +67,8 @@ $on-laptop: 800px;
 @import "style", "custom";
 
 @import "code.css";
+
+:target {
+  scroll-margin-top: 50px; /* Change to height your menu navbar */
+}
+
