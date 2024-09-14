@@ -3,7 +3,7 @@ title: Bollinger band strategy
 layout: page
 permalink: /strategies/pages/bollinger-band-strategy/
 ---
-# BollingerBandTrendFollow
+# Bollinger band strategy
 The purpose of this strategy is to use the Bollinger Bands to generate trading signals designed to capture powerful breakout price moves and to capitalize on the resulting trends from these breakouts. Strategy developed Australian trader Nick Radge.
 
 **Table of Contents**

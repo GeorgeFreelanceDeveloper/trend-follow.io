@@ -10,10 +10,10 @@ Trend following is when you try to capture extended moves in the financial marke
 
 ## Strategies
 * [Turtle strategy](/strategies/pages/turtle-strategy/)
-* [Turtle Pro strategy](/strategies/pages/turtle-strategy-pro/)
+* [Turtle pro strategy](/strategies/pages/turtle-strategy-pro/)
 * [Supertrend strategy](/strategies/pages/supertrend-strategy/)
-* [Bollinger Band strategy](/strategies/pages/bollinger-band-strategy/)
-* [Keltner strategy](/strategies/pages/keltner-channel-strategy/)
+* [Bollinger band strategy](/strategies/pages/bollinger-band-strategy/)
+* [Keltner channel strategy](/strategies/pages/keltner-channel-strategy/)
 
 ## What is trend following trading?
 Trend followers are not trying to predict tops and bottoms. They are not trying to predict anything, really. The aim is, quite simply, to take advantage of moves in different asset classes in the anticipation that some of the positions go their way big time. There is zero forecasting involved.

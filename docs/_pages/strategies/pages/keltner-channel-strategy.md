@@ -3,7 +3,7 @@ title: Keltner Channel strategy
 layout: page
 permalink: /strategies/pages/keltner-channel-strategy/
 ---
-# KeltnerChannelTrendFollow
+# Keltner channel strategy
 The purpose of the Keltner Channel Strategy is to use the Keltner Channels to generate trading signals designed to capture significant breakout price moves and capitalize on the resulting trends from these breakouts. This strategy was originally developed by Chester Keltner in the 1960s and later refined by Linda Bradford Raschke in the 1980s
 
 **Table of Contents**
