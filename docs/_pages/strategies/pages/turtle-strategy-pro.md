@@ -3,7 +3,7 @@ title: Turle strategy pro
 layout: page
 permalink: /strategies/pages/turtle-strategy-pro/
 ---
-# Turtle strategy
+# Turtle strategy pro
 The modified Turtle Trading strategy for trading cryptocurrencies (BTCUSD and ETHUSD)  from famous trend-following approach developed by legendary commodity traders Richard Dennis and William Eckhardt in the early 1980s.
 The strategy involves buying a stock or contract during a breakout (when prices move above a trading range) and quickly selling on a retracement or price fall.
 
