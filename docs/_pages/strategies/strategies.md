@@ -12,7 +12,7 @@ Trend following is when you try to capture extended moves in the financial marke
 * [Turtle strategy](/strategies/pages/turtle-strategy/)
 * [Turtle Pro strategy]()
 * [Supertrend strategy]()
-* [Bollinger Band strategy]()
+* [Bollinger Band strategy](/strategies/pages/bollinger-band-strategy.md)
 * [Keltner strategy]()
 
 ## What is trend following trading?
