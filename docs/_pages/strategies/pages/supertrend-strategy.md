@@ -13,7 +13,7 @@ The Supertrend Strategy is a trend trading strategy developed by Olivier Seban t
 * [Entry and exit conditions for long side](#entry-and-exit-conditions-for-long-side)
 * [Filters](#filters)
 * [Position sizing](#position-sizing)
-* [Management position](#management-position)
+* [Management of position](#management-of-position)
 * [Code example](#code-example)
 * [Backtests](#backtests)
 * [Suitable markets for trading](#suitable-markets-for-trading)
@@ -74,7 +74,6 @@ private double ComputeTradeAmount(){
     double amount = (RiskPerTradeInPercentage * AccountSize) / AtrMultiplier * ATR(20, Days)
     return amount;
 }
-
 ```
 
 **Advance accurately determine the percentage risk**
@@ -91,7 +90,7 @@ private double ComputeTradeAmount(double entryPrice, double stopPrice)
 }
 ```
 
-## Management position
+## Management of position  
 - Only one position open for one market.
 
 ## Code example

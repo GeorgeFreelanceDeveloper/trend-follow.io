@@ -13,7 +13,7 @@ The strategy involves buying a stock or contract during a breakout (when prices 
 * [Entry and exit conditions for long side](#entry-and-exit-conditions-for-long-side)
 * [Filters](#filters)
 * [Position sizing](#position-sizing)
-* [Management position](#management-position)
+* [Management of position](#management-of-position)
 * [Code example](#code-example)
 * [Backtests](#backtests)
 * [Suitable markets for trading](#suitable-markets-for-trading)
@@ -84,7 +84,7 @@ private double ComputeTradeAmount(double entryPrice, double stopPrice)
 }
 ```
 
-## Management position
+## Management of position
 - Only one position open for one market.
 
 ## Code example
