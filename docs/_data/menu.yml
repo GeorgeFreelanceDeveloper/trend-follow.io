@@ -1,14 +1,17 @@
 - title: Home
   link: /
 
+- title: Algotrading Roadmap
+  link: /algotrading-roadmap/
+
+- title: Strategies
+  link: /strategies/
+
 - title: Podcasts
   link: /podcasts/
 
 - title: Books
   link: /books/
-
-- title: Strategies
-  link: /strategies/
 
 # Uncoment when you looking for work
 # - title: Hire us
