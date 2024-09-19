@@ -8,6 +8,7 @@ permalink: /algotrading-roadmap/
 Algorithmic trading, or algotrading, refers to the use of computer programs and algorithms to execute trades in financial markets. These algorithms follow predefined rules to decide on the timing, price, or quantity of trades without the need for human intervention. The primary goal is to execute orders faster and more efficiently than manual trading.
 
 **Table of Contents**
+* [Intro into algotrading](#intro-into-algotrading)
 * [Markets](#markets)
 * [Trading instruments](#trading-instruments)
 * [Market participants](#market-participants)
@@ -19,7 +20,7 @@ Algorithmic trading, or algotrading, refers to the use of computer programs and 
 * [Money management and psychology](#money-management-and-psychology)
 * [Trend follow algotrading strategies](#trend-follow-algotrading-strategies)
 
-## Intro into trading
+## Intro into algotrading
 Trading is the buying and selling of financial instruments in order to make a profit. These instruments range from a variety of assets that are assigned a financial value that can go up or down – and you can trade on the direction they’ll take.
 
 You may have heard about stocks, shares and funds. But there are thousands of financial markets you can trade, and a variety of products you can use to trade them.
@@ -194,7 +195,7 @@ Price action is the movement of a security's price plotted over time. Price acti
 * [Bollinger band](https://www.investopedia.com/terms/b/bollingerbands.asp)
 * [ATR](https://www.investopedia.com/terms/a/atr.asp)
 * [Correlations](https://www.investopedia.com/terms/c/correlation.asp)
-* [Wyckoff market structure - context (I used)](https://www.investopedia.com/articles/active-trading/070715/making-money-wyckoff-way.asp)
+* [Wyckoff market structure - context](https://www.investopedia.com/articles/active-trading/070715/making-money-wyckoff-way.asp)
 * [Dow theory - context](https://www.investopedia.com/terms/d/dowtheory.asp)
 * [Eliott waves - context](https://www.investopedia.com/articles/technical/111401.asp)
 
