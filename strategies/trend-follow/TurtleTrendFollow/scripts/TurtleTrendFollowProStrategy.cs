@@ -94,7 +94,12 @@ namespace cAlgo.Robots
             } else {
                // Update stop loss
                double stopLossPrice = lowerChannel < position.EntryPrice ? lowerChannel : position.EntryPrice;
-               ModifyPosition(position,stopLossPrice,position.TakeProfit);
+               
+               if(stopLossPrice != position.StopLoss){
+                    ModifyPosition(position,stopLossPrice,position.TakeProfit);
+               } else {
+                    Print($"New Stop loss price:{stopLossPrice} is same as previous Stop loss price:{position.StopLoss}. Skipping modify position.");
+               }
                
                if(closePrice < lowerChannel){
                     position.Close();
