@@ -73,6 +73,10 @@ namespace cAlgo.Robots
             double qty = ((RiskPercentage/100) * Account.Balance) / (AtrMultiplier * Indicators.AverageTrueRange(AtrLength, MovingAverageType.Simple).Result.LastValue);
             double qtyInLots = ((int)(qty /Symbol.VolumeInUnitsStep)) * Symbol.VolumeInUnitsStep;
             
+            double lowerChannel = Indicators.DonchianChannel(10).Bottom.LastValue;
+            double maxStopLoss = (lastClosePrice-lowerChannel) * 1.5;
+            double maxStopLossInPips = maxStopLoss / Symbol.PipValue;
+            
             bool buyCondition = isUpTrend && !isOpenPosition && filter;
             bool sellCondition = !isUpTrend && isOpenPosition;
             
@@ -83,7 +87,7 @@ namespace cAlgo.Robots
             // Entry
             if(buyCondition)
             {
-                ExecuteMarketOrder(TradeType.Buy, SymbolName, qtyInLots, label);
+                ExecuteMarketOrder(TradeType.Buy, SymbolName, qtyInLots, label, maxStopLossInPips, null);
             }
             
             // Exit
