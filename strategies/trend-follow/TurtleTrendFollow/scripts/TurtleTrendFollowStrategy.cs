@@ -61,6 +61,9 @@ namespace cAlgo.Robots
             double qty = ((RiskPercentage/100) * Account.Balance) / (AtrMultiplier * Indicators.AverageTrueRange(20,MovingAverageType.Simple).Result.LastValue);
             double qtyInLots = ((int)(qty /Symbol.VolumeInUnitsStep)) * Symbol.VolumeInUnitsStep;
             
+            double maxStopLoss = (upperChannel-lowerChannel) * 1.5;
+            double maxStopLossInPips = maxStopLoss / Symbol.PipValue;
+            
             // Filter
             bool priceAboveSMA = closePrice > Indicators.SimpleMovingAverage(Bars.ClosePrices, SmaLength).Result.LastValue;
             bool rsiAboveValue = Indicators.RelativeStrengthIndex(Bars.ClosePrices, 14).Result.LastValue > RsiValue;
@@ -79,7 +82,7 @@ namespace cAlgo.Robots
             // Entry
             if(buyCondition)
             {
-                ExecuteMarketOrder(TradeType.Buy, SymbolName, qtyInLots, label);
+                ExecuteMarketOrder(TradeType.Buy, SymbolName, qtyInLots, label, maxStopLossInPips, null);
             }
             
             // Exit
@@ -87,7 +90,7 @@ namespace cAlgo.Robots
             {
                 position.Close();
             }
-
+            
             Print("Sucessful call OnBarClosed() method.");
          }
     }

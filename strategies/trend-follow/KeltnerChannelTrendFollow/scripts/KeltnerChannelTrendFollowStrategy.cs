@@ -55,7 +55,7 @@ namespace cAlgo.Robots
             // Perform calculations and analysis
             // **********************************
 
-            // Initialize indicators
+            // Basic
             ExponentialMovingAverage ema = Indicators.ExponentialMovingAverage(Bars.ClosePrices, EmaLength);
             AverageTrueRange atr = Indicators.AverageTrueRange(AtrBreakoutLength, MovingAverageType.Simple);
 
@@ -64,8 +64,12 @@ namespace cAlgo.Robots
 
             string label = $"KeltnerChannelTrendFollow_cBot-{Symbol.Name}";
 
+            // Trade amount
             double qty = ((RiskPercentage / 100) * Account.Balance) / (AtrMultiplier * Indicators.AverageTrueRange(AtrLength, MovingAverageType.Simple).Result.LastValue);
             double qtyInLots = ((int)(qty / Symbol.VolumeInUnitsStep)) * Symbol.VolumeInUnitsStep;
+            
+            double maxStopLoss = (upperChannel-lowerChannel) * 1.5;
+            double maxStopLossInPips = maxStopLoss / Symbol.PipValue;
 
             // Filter
             double lastClosePrice = Bars.ClosePrices.LastValue;
@@ -87,7 +91,7 @@ namespace cAlgo.Robots
             // ********************************
             if (buyCondition)
             {
-                ExecuteMarketOrder(TradeType.Buy, SymbolName, qtyInLots, label);
+                ExecuteMarketOrder(TradeType.Buy, SymbolName, qtyInLots, label, maxStopLossInPips, null);
             }
 
             if (sellCondition)
