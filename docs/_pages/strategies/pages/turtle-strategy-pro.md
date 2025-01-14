@@ -1,6 +1,6 @@
 ---
 title: Turle strategy pro
-layout: page
+layout: default
 permalink: /strategies/pages/turtle-strategy-pro/
 ---
 # Turtle strategy pro

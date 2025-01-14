@@ -1,6 +1,6 @@
 ---
 title: Supertrend strategy
-layout: page
+layout: default
 permalink: /strategies/pages/supertrend-strategy/
 ---
 

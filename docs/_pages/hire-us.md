@@ -1,6 +1,6 @@
 ---
 title: Hire us
-layout: page
+layout: default
 permalink: /hire-us/
 ---
 

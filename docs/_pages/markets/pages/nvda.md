@@ -1,6 +1,6 @@
 ---
 title: Nvidia
-layout: page
+layout: default
 permalink: /markets/pages/nvda/
 ---
 

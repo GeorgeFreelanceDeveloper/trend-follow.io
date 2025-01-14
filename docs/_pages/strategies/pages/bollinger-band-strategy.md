@@ -1,6 +1,6 @@
 ---
 title: Bollinger band strategy
-layout: page
+layout: default
 permalink: /strategies/pages/bollinger-band-strategy/
 ---
 # Bollinger band strategy
