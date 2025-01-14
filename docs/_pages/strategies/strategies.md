@@ -10,7 +10,8 @@ Trend following is when you try to capture extended moves in the financial marke
 
 ## Strategies
 * [Turtle strategy](/strategies/pages/turtle-strategy/)
-* [Turtle pro strategy](/strategies/pages/turtle-strategy-pro/)
+<!-- Deprecated strategy (poor performance compare with base Turtle strategy) -->
+<!-- * [Turtle pro strategy](/strategies/pages/turtle-strategy-pro/) -->
 * [Supertrend strategy](/strategies/pages/supertrend-strategy/)
 * [Bollinger band strategy](/strategies/pages/bollinger-band-strategy/)
 * [Keltner channel strategy](/strategies/pages/keltner-channel-strategy/)
