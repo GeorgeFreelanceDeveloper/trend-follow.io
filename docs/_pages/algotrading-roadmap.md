@@ -1,6 +1,6 @@
 ---
 title: Algotrading roadmap
-layout: page
+layout: default
 permalink: /algotrading-roadmap/
 ---
 
