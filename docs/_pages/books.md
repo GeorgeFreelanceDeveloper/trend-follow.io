@@ -1,6 +1,6 @@
 ---
 title: Books
-layout: page
+layout: default
 permalink: /books/
 ---
 

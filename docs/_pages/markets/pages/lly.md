@@ -1,6 +1,6 @@
 ---
 title: Eli Lilly & Co.
-layout: page
+layout: default
 permalink: /markets/pages/lly/
 ---
 

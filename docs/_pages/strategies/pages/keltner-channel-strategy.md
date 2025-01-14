@@ -1,6 +1,6 @@
 ---
 title: Keltner Channel strategy
-layout: page
+layout: default
 permalink: /strategies/pages/keltner-channel-strategy/
 ---
 # Keltner channel strategy
