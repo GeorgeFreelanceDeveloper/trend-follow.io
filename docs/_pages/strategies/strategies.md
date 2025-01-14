@@ -1,6 +1,6 @@
 ---
 title: Strategies
-layout: page
+layout: default
 permalink: /strategies/
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Podcasts
-layout: page
+layout: default
 permalink: /podcasts/
 ---
 

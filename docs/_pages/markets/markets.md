@@ -1,6 +1,6 @@
 ---
 title: Markets
-layout: page
+layout: default
 permalink: /markets/
 ---
 
