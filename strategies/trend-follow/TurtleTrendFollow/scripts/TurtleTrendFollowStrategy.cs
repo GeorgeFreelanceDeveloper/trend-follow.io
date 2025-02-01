@@ -7,9 +7,9 @@ using cAlgo.API.Indicators;
 namespace cAlgo.Robots
 {
     [Robot(TimeZone = TimeZones.UTC, AccessRights = AccessRights.None)]
-    public class TurtleTrendFollow_cBot : Robot
+    public class TurtleTrendFollowV2_cBot : Robot
     {
-    
+        
         // ********************************
         // User defined inputs
         // ********************************
@@ -29,6 +29,9 @@ namespace cAlgo.Robots
         
         [Parameter("Atr Length", Group ="Basic settings", DefaultValue =20)]
         public int AtrLength {get;set;}
+        
+        [Parameter("Name", Group ="Basic settings", DefaultValue ="DefaultName")]
+        public String Name {get;set;}
         
         // Filter settings
         [Parameter("Enable Filter", Group ="Filter settings", DefaultValue =false)]
@@ -55,7 +58,7 @@ namespace cAlgo.Robots
             double upperChannel = Indicators.DonchianChannel(EntryLength).Top.LastValue;
             double lowerChannel = Indicators.DonchianChannel(ExitLength).Bottom.LastValue;
             double closePrice = Bars.ClosePrices.LastValue;
-            string label = $"TurtleTrendFollow_cBot-{Symbol.Name}";
+            string label = $"TurtleTrendFollow_cBot-{Symbol.Name}-{Name}";
             
             // Trade amount
             double qty = ((RiskPercentage/100) * Account.Balance) / (AtrMultiplier * Indicators.AverageTrueRange(20,MovingAverageType.Simple).Result.LastValue);

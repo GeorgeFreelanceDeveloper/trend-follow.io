@@ -11,7 +11,7 @@ using cAlgo.API.Internals;
 namespace cAlgo.Robots
 {
     [Robot(TimeZone = TimeZones.UTC, AccessRights = AccessRights.None)]
-    public class SuperTrendFollow_cBot : Robot
+    public class SuperTrendFollowV2_cBot : Robot
     {
         // ********************************
         // User defined inputs
@@ -32,6 +32,9 @@ namespace cAlgo.Robots
         
         [Parameter("Atr Length", Group ="Basic settings", DefaultValue = 20)]
         public int AtrLength { get; set; }
+
+        [Parameter("Name", Group ="Basic settings", DefaultValue ="DefaultName")]
+        public String Name {get;set;}
         
         // Filter settings
         [Parameter("Enable Filter", Group ="Filter settings", DefaultValue =false)]
@@ -57,7 +60,7 @@ namespace cAlgo.Robots
             Supertrend supertrend = Indicators.Supertrend(AtrPeriod, Factor);
             bool isUpTrend = !Double.IsNaN(supertrend.UpTrend.Last());
             
-            string label = $"SuperTrendFolow_cBot-{Symbol.Name}";
+            string label = $"SuperTrendFolow_cBot-{Symbol.Name}-{Name}";
              
             // Filter
             double lastClosePrice = Bars.ClosePrices.LastValue;

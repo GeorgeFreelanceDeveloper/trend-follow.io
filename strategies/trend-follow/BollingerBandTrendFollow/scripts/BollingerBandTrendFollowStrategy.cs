@@ -11,7 +11,7 @@ using cAlgo.API.Internals;
 namespace cAlgo.Robots
 {
     [Robot(TimeZone = TimeZones.UTC, AccessRights = AccessRights.None)]
-    public class BollingerBandTrendFollow_cBot : Robot
+    public class BollingerBandTrendFollowV2_cBot : Robot
     {
         // ********************************
         // User defined inputs
@@ -35,6 +35,9 @@ namespace cAlgo.Robots
         
         [Parameter("Atr Length", Group ="Basic settings", DefaultValue = 20)]
         public int AtrLength { get; set; }
+
+        [Parameter("Name", Group ="Basic settings", DefaultValue ="DefaultName")]
+        public String Name {get;set;}
         
         // Filter settings
         [Parameter("Enable Filter", Group ="Filter settings", DefaultValue =false)]
@@ -63,7 +66,7 @@ namespace cAlgo.Robots
             double upperBand = smaLastValue + (MultiplierUpper * stdLastValue);
             double lowerBand = smaLastValue - (MultiplierLower * stdLastValue);  
             
-            string label = $"BollingerBandTrendFollow_cBot-{Symbol.Name}";
+            string label = $"BollingerBandTrendFollow_cBot-{Symbol.Name}-{Name}";
              
             // Filter
             double lastClosePrice = Bars.ClosePrices.LastValue;
