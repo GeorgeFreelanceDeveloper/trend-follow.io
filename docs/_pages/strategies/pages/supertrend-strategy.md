@@ -111,7 +111,7 @@ using cAlgo.API.Internals;
 namespace cAlgo.Robots
 {
     [Robot(TimeZone = TimeZones.UTC, AccessRights = AccessRights.None)]
-    public class SuperTrendFollow_cBot : Robot
+    public class SuperTrendFollowV2_cBot : Robot
     {
         // ********************************
         // User defined inputs
@@ -132,6 +132,9 @@ namespace cAlgo.Robots
         
         [Parameter("Atr Length", Group ="Basic settings", DefaultValue = 20)]
         public int AtrLength { get; set; }
+
+        [Parameter("Name", Group ="Basic settings", DefaultValue ="DefaultName")]
+        public String Name {get;set;}
         
         // Filter settings
         [Parameter("Enable Filter", Group ="Filter settings", DefaultValue =false)]
@@ -157,7 +160,7 @@ namespace cAlgo.Robots
             Supertrend supertrend = Indicators.Supertrend(AtrPeriod, Factor);
             bool isUpTrend = !Double.IsNaN(supertrend.UpTrend.Last());
             
-            string label = $"SuperTrendFolow_cBot-{Symbol.Name}";
+            string label = $"SuperTrendFolow_cBot-{Symbol.Name}-{Name}";
              
             // Filter
             double lastClosePrice = Bars.ClosePrices.LastValue;
@@ -173,6 +176,10 @@ namespace cAlgo.Robots
             double qty = ((RiskPercentage/100) * Account.Balance) / (AtrMultiplier * Indicators.AverageTrueRange(AtrLength, MovingAverageType.Simple).Result.LastValue);
             double qtyInLots = ((int)(qty /Symbol.VolumeInUnitsStep)) * Symbol.VolumeInUnitsStep;
             
+            double lowerChannel = Indicators.DonchianChannel(10).Bottom.LastValue;
+            double maxStopLoss = (lastClosePrice-lowerChannel) * 1.5;
+            double maxStopLossInPips = maxStopLoss / Symbol.PipValue;
+            
             bool buyCondition = isUpTrend && !isOpenPosition && filter;
             bool sellCondition = !isUpTrend && isOpenPosition;
             
@@ -183,7 +190,7 @@ namespace cAlgo.Robots
             // Entry
             if(buyCondition)
             {
-                ExecuteMarketOrder(TradeType.Buy, SymbolName, qtyInLots, label);
+                ExecuteMarketOrder(TradeType.Buy, SymbolName, qtyInLots, label, maxStopLossInPips, null);
             }
             
             // Exit

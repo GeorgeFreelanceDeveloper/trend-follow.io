@@ -6,7 +6,7 @@ using cAlgo.API.Internals;
 namespace cAlgo.Robots
 {
     [Robot(TimeZone = TimeZones.UTC, AccessRights = AccessRights.None)]
-    public class KeltnerChannelTrendFollow_cBot : Robot
+    public class KeltnerChannelTrendFollowV2_cBot : Robot
     {
         // ********************************
         // User defined inputs
@@ -33,6 +33,9 @@ namespace cAlgo.Robots
 
         [Parameter("ATR Length", Group = "Basic settings", DefaultValue = 20)]
         public int AtrLength { get; set; }
+
+        [Parameter("Name", Group ="Basic settings", DefaultValue ="DefaultName")]
+        public String Name {get;set;}
 
         // Filter settings
         [Parameter("Enable Filter", Group = "Filter settings", DefaultValue = false)]
@@ -62,7 +65,7 @@ namespace cAlgo.Robots
             double upperChannel = ema.Result.LastValue + atr.Result.LastValue * MultiplierUpper;
             double lowerChannel = ema.Result.LastValue - atr.Result.LastValue * MultiplierLower;
 
-            string label = $"KeltnerChannelTrendFollow_cBot-{Symbol.Name}";
+            string label = $"KeltnerChannelTrendFollow_cBot-{Symbol.Name}-{Name}";
 
             // Trade amount
             double qty = ((RiskPercentage / 100) * Account.Balance) / (AtrMultiplier * Indicators.AverageTrueRange(AtrLength, MovingAverageType.Simple).Result.LastValue);
