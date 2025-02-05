@@ -26,7 +26,7 @@ Our expertise extends to refining and enhancing existing codes, optimizing for b
 
 **Multivendor expertise**
 
-We have experience with development for various algotrading platforms such as TradingView, cTrader, MultiCharts and TradeStation.
+We have experience with development for various algotrading platforms such as TradingView, cTrader and QuantConnect.
 
 ## Why Choose Us?
 **Expertise and Experience**
