@@ -220,10 +220,11 @@ Systematic technical analysis is a method of evaluating and trading financial as
 A market analytic platform is a software tool or system that provides users with comprehensive data, tools, and insights for analyzing financial markets.
 
 * [TradingView](https://www.tradingview.com/about/)
-* [Multicharts - support automation](https://www.multicharts.com/)
 * [cTrader - support automation](https://www.spotware.com/products/traders/ctrader-desktop)
+* [QuantConnect - support automation](https://www.quantconnect.com/)
 * [NinjaTrader - support automation](https://ninjatrader.com/)
 * [MetaTrader - support automation](https://www.metatrader5.com/)
+* [Multicharts - support automation](https://www.multicharts.com/)
 
 ## Brokers and exchanges
 A broker is a financial intermediary who facilitates the buying and selling of financial assets, such as stocks, bonds, commodities, or currencies, on request of clients. Brokers execute trades, provide investment advice, and often offer additional services like market research, portfolio management, and financial planning. They earn revenue through commissions, fees, or a combination of both, depending on the services provided and the type of brokerage model (e.g., full-service broker or discount broker).

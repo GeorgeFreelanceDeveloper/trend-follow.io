@@ -2,15 +2,14 @@
 
 [![Build Status](https://img.shields.io/badge/TradingView-blue)](https://www.tradingview.com/)
 [![Build Status](https://img.shields.io/badge/cTrader-blue)](https://ctrader.com/)
-[![Build Status](https://img.shields.io/badge/MultiCharts-blue)](https://www.multicharts.com/)
-[![Build Status](https://img.shields.io/badge/TradeStation-blue)](https://www.tradestation.com/)
+[![Build Status](https://img.shields.io/badge/QuantConnect-blue)](https://www.tradestation.com/)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <!-- [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-) -->
 <!-- ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) -->
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-This open source project is about momentum base trend following systematic trading strategies inspired from top trend following traders (Richard Denis, Olivier Seban and Nick Radge) implemented for various trading platforms as TradingView, cTrader, Multicharts and TradeStation.
+This open source project is about momentum base trend following systematic trading strategies inspired from top trend following traders (Richard Denis, Olivier Seban and Nick Radge) implemented for various trading platforms as TradingView, cTrader and QuantConnect.
 
 * Our trading algorithms are designed to be understandable and usable by both novice and advanced technical traders. Basic knowledge of programming is an advantage for the full use of our strategies.
 
