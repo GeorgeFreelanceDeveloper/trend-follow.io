@@ -6,7 +6,7 @@ relates that Richard Dennis, a successful commodity trader, believed that tradin
 
 The basic principle of the Turtle Trading strategy is to follow the trend. The goal is to identify and trade strong trends on financial markets. Turtles learned to buy and hold futures contracts for markets that were in a strong uptrend and sell short and hold contracts for markets in a strong downtrend. Personally, I think it's better focus on markets in a long-term up-trend and trade only on the long side.
 
-> "Turtle trading trading system is simple to learn but to work properly
+> "Turtle trading system is simple to learn but to work properly
 it requires a trending market, confidence in the system, consistency and discipline." Richard Dennis
 
 **Prerequisites**
