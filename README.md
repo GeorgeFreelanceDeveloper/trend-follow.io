@@ -70,7 +70,7 @@ Author: Richard Denis
 
 - [Documentation](strategies/trend-follow/TurtleTrendFollow/README.md)
 - [Backtest](strategies/trend-follow/TurtleTrendFollow/backtest/backtest.md)
-- **SourceCode**: [TradingView](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.pinescript), [cTrader](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.cs), [QuantConnect](strategies/trend-follow/TurtleTrendFollow/scripts/turtle.py))
+- **SourceCode**: [TradingView](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.pinescript), [cTrader](strategies/trend-follow/TurtleTrendFollow/scripts/TurtleTrendFollowStrategy.cs), [QuantConnect](strategies/trend-follow/TurtleTrendFollow/scripts/turtle.py)
 
 ### Super trend follow
 The Supertrend Strategy is a trend trading strategy that uses the Supertrend indicator to identify and trade trends in the financial markets. This strategy focuses on entering the market in line with the main trend and exiting the market when the trend begins to reverse.
@@ -81,7 +81,7 @@ Author: Olivier Seban
 
 - [Documentation](strategies/trend-follow/SuperTrendFollow/README.md)
 - [Backtest](strategies/trend-follow/SuperTrendFollow/backtest/backtest.md)
-- **SourceCode**: [TradingView](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.pinescript), [cTrader](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.cs), [QuantConnect](strategies/trend-follow/SuperTrendFollow/scripts/super_trend.py))
+- **SourceCode**: [TradingView](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.pinescript), [cTrader](strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.cs), [QuantConnect](strategies/trend-follow/SuperTrendFollow/scripts/super_trend.py)
 
 ### Bollinger band trend follow
 The purpose of this strategy is to use the Bollinger Bands to generate trading signals designed to capture powerful breakout price moves and to capitalize on the resulting trends from these breakouts.
@@ -91,7 +91,7 @@ The Bollinger Bands are often used for the purpose of generating signals to dete
 Author: Nick Radge
 - [Documentation](strategies/trend-follow/BollingerBandTrendFollow/README.md)
 - [Backtest](strategies/trend-follow/BollingerBandTrendFollow/backtest/backtest.md)
-- **SourceCode**: [TradingView](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.pinescript), [cTrader](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.cs), [QuantConnect](strategies/trend-follow/BollingerBandTrendFollow/scripts/bollinger_band.py))
+- **SourceCode**: [TradingView](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.pinescript), [cTrader](strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.cs), [QuantConnect](strategies/trend-follow/BollingerBandTrendFollow/scripts/bollinger_band.py)
 
 ## Top trend follow traders
 ### Richard Dennis
