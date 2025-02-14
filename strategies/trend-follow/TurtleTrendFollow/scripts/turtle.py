@@ -50,9 +50,7 @@ class TurtleV1(QCAlgorithm):
 
         # Init indicators
         self.dchs = {symbol: self.dch(symbol, self.entry_length, self.exit_length) for symbol in self.symbols}
-
         self.atrs = {symbol: self.atr(symbol, self.atr_length) for symbol in self.symbols}
-
         self.benchmark_sma200 = self.sma(self.benchmark_symbol, 200)
 
     def on_data(self, data: Slice):
