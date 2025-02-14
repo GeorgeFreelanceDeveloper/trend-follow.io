@@ -207,7 +207,7 @@ namespace cAlgo.Robots
 **All platform source code**
 * [TradingView](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.pinescript)
 * [cTrader](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/SuperTrendFollow/scripts/SuperTrendFollowStrategy.cs)
-* [QuantConnect ](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/SuperTrendFollow/scripts/super_trend.py)
+* [QuantConnect](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/SuperTrendFollow/scripts/super_trend.py)
 
 ## Backtests
 **Nasdaq 100 index**
