@@ -213,6 +213,11 @@ namespace cAlgo.Robots
 }
 ```
 
+**All platform source code**
+* [TradingView](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.pinescript)
+* [cTrader](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/BollingerBandTrendFollow/scripts/BollingerBandTrendFollowStrategy.cs)
+* [QuantConnect](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/BollingerBandTrendFollow/scripts/bollinger_band.py)
+
 ## Backtests
 **Nasdaq 100 index**
 Period: 5 years (2019-2024)

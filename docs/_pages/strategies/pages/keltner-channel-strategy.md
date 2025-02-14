@@ -211,6 +211,11 @@ namespace cAlgo.Robots
 }
 ```
 
+**All platform source code**
+* [TradingView](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/KeltnerChannelTrendFollow/scripts/KeltnerChannelTrendFollowStrategy.pinescript)
+* [cTrader](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/KeltnerChannelTrendFollow/scripts/KeltnerChannelTrendFollowStrategy.cs)
+* [QuantConnect](https://github.com/GeorgeFreelanceDeveloper/trend-follow.io/blob/master/strategies/trend-follow/KeltnerChannelTrendFollow/scripts/keltner.py)
+
 ## Backtests
 **Nasdaq 100 index**
 Period: 5 years (2019-2024)
