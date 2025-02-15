@@ -79,18 +79,7 @@ class TurtleV1(QCAlgorithm):
         filter = bar_benchmark.close > self.benchmark_sma200[1].value if self.enable_filter else True
 
         buy_condition = bar.close > dch.upper_band[1].value and filter and not self.portfolio[symbol].is_long
-        sell_condition = bar.close < dch.lower_band[1].value
-
-        # ********************************
-        # Draw outputs
-        # ********************************
-
-        # Plot indicator and prices
-        # self.Plot("Custom", "Donchian Channel High", self.dch.upper_band[1].value)
-        # self.Plot("Custom", "High Price", bar.high)
-        # self.Plot("Custom", "Close Price", bar.close)
-        # self.Plot("Custom", "Low Price", bar.low)
-        # self.Plot("Custom", "Donchian Channel Low", self.dch.lower_band[1].value)
+        sell_condition = bar.close < dch.lower_band[1].value and self.portfolio[symbol].is_long
 
         # ********************************
         # Manage trade
