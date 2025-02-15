@@ -35,10 +35,19 @@ Strategies are traded on the top 10 markets in the Russell 1000 index by market 
 
 ## BollingerBand
 ### Portfolio
-* Coming soon
+* [US stocks portfolio 2015-2025 (10Y)](https://www.quantconnect.com/reports/b243ae712a34c64a0cc7fc55f13373fb)
 
 ### Portfolio items
-* Coming soon
+* [AAPL](https://www.quantconnect.com/reports/fb878bf10f019242ba48b91afe198d40)
+* [NVDA](https://www.quantconnect.com/reports/9352c3a517897d87b128d5c379fdf053)
+* [TSLA](https://www.quantconnect.com/reports/32fdffa795421110e026dee47621aca2)
+* [LLY](https://www.quantconnect.com/reports/7a1fdcc4d23ec026b156817537a1b1bc)
+* [COST](https://www.quantconnect.com/reports/b4554b4fccf9fa2bfc55d4ec7a4c8acc)
+* [NFLX](https://www.quantconnect.com/reports/14d4e5b74cba945735fb07c70f11482f)
+* [BX](https://www.quantconnect.com/reports/3adb7401985e6dc493a9aba38a6855b7)
+* [APP](https://www.quantconnect.com/reports/09e26574106c436f986d1ad415dbbe06)
+* [BLK](https://www.quantconnect.com/reports/57806dee26426eac6a23a0841a5fc212)
+* [ANET](https://www.quantconnect.com/reports/8cc8cbb9b3079b43990fef07fa98963b)
 
 ## KeltnerChannel
 ### Portfolio
