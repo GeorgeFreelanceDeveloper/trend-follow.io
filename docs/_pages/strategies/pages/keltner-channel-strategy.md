@@ -100,115 +100,97 @@ private double ComputeTradeAmount(double entryPrice, double stopPrice)
 - Only one position open for one market.
 
 ## Code Example
-```c#
-using System;
-using cAlgo.API;
-using cAlgo.API.Indicators;
-using cAlgo.API.Internals;
+Example strategy implementation in Python programming language for trading platform QuantConnect.
 
-namespace cAlgo.Robots
-{
-    [Robot(TimeZone = TimeZones.UTC, AccessRights = AccessRights.None)]
-    public class KeltnerChannelTrendFollowV2_cBot : Robot
-    {
-        // ********************************
-        // User defined inputs
-        // ********************************
+```python
+# region imports
+from AlgorithmImports import *
+# endregion
 
-        // Basic settings
-        [Parameter("EMA Length", Group = "Basic settings", DefaultValue = 20)]
-        public int EmaLength { get; set; }
+class KeltnerChannelV1(QCAlgorithm):
 
-        [Parameter("ATR Breakout Multiplier", Group = "Basic settings", DefaultValue = 10)]
-        public int AtrBreakoutLength { get; set; }
+    def initialize(self):
 
-        [Parameter("Upper Multiplier", Group = "Basic settings", DefaultValue = 1)]
-        public double MultiplierUpper { get; set; }
+        self.ema_length = self.get_parameter("ema_length", 20)
+        self.multiplier_upper = self.get_parameter("multiplier_upper", 1)
+        self.multiplier_lower = self.get_parameter("multiplier_lower", 0.5)
+        self.risk_percentage = self.get_parameter("risk_percentage", 2)
+        self.atr_multiplier = self.get_parameter("atr_multiplier", 2)
+        self.atr_length = self.get_parameter("atr_length", 20)
 
-        [Parameter("Lower Multiplier", Group = "Basic settings", DefaultValue = 0.5)]
-        public double MultiplierLower { get; set; }
+        self.symbols = self.get_parameter("symbols", "AAPL,MSFT,NVDA").split(",")
+        self.market_type = self.get_parameter("market_type", "equity")  # equity, crypto
 
-        [Parameter("Risk Percentage", Group = "Basic settings", DefaultValue = 1)]
-        public double RiskPercentage { get; set; }
+        # Filter settings
+        self.enable_filter = True if (self.get_parameter("enable_filter", "False") == "True") else False
 
-        [Parameter("ATR Multiplier", Group = "Basic settings", DefaultValue = 2)]
-        public int AtrMultiplier { get; set; }
+        if self.market_type == "equity":
+            self.benchmark_symbol = self.get_parameter("benchmark_symbol", "SPY")
+        elif self.market_type == "crypto":
+            self.benchmark_symbol = self.get_parameter("benchmark_symbol", "BTCUSD")
+            self.set_benchmark(lambda x: self.securities[self.benchmark_symbol].Price)
 
-        [Parameter("ATR Length", Group = "Basic settings", DefaultValue = 20)]
-        public int AtrLength { get; set; }
+        # ********************************
+        # Algorithm settings
+        # ********************************
 
-        [Parameter("Name", Group ="Basic settings", DefaultValue ="DefaultName")]
-        public String Name {get;set;}
+        # Basic
+        self.set_start_date(2015, 1, 1)
+        self.set_cash(10000)
+        self.enable_automatic_indicator_warm_up = True
 
-        // Filter settings
-        [Parameter("Enable Filter", Group = "Filter settings", DefaultValue = false)]
-        public bool EnableFilter { get; set; }
+        if self.market_type == "equity":
+            self.markets = {symbol: self.add_equity(symbol, Resolution.DAILY, leverage=10) for symbol in self.symbols}
+            self.add_equity(self.benchmark_symbol, Resolution.DAILY)
+        elif self.market_type == "crypto":
+            self.markets = {symbol: self.add_crypto(symbol, Resolution.DAILY, leverage=10) for symbol in self.symbols}
+            self.add_crypto(self.benchmark_symbol, Resolution.DAILY)
 
-        [Parameter("Price above SMA(X)", Group ="Filter settings", DefaultValue = 200)]
-        public int SmaLength { get; set; }
+        # Init indicators
+        self.kchs_longer = {symbol: self.kch(symbol, self.ema_length, self.multiplier_upper) for symbol in
+                            self.symbols}
+        self.kchs_shorter = {symbol: self.kch(symbol, self.ema_length, self.multiplier_lower) for symbol in
+                             self.symbols}
+        self.atrs = {symbol: self.atr(symbol, self.atr_length) for symbol in self.symbols}
+        self.benchmark_sma200 = self.sma(self.benchmark_symbol, 200)
 
-        [Parameter("RSI > X", Group ="Filter settings", DefaultValue = 0)]
-        public int RsiValue { get; set; }
+    def on_data(self, data: Slice):
+        for symbol in self.symbols:
+            kch_longer = self.kchs_longer[symbol]
+            kch_shorter = self.kchs_shorter[symbol]
+            atr = self.atrs[symbol]
+            self.strategy(data, symbol, kch_longer, kch_shorter, atr)
 
-        protected override void OnStart()
-        {
+    def strategy(self, data, symbol, kch_longer, kch_shorter, atr):
+        # **********************************
+        # Perform calculations and analysis
+        # **********************************
 
-        }
+        # Basic
+        if symbol not in data.Bars:
+            return
 
-        protected override void OnBarClosed()
-        {
-            // **********************************
-            // Perform calculations and analysis
-            // **********************************
+        bar = data.Bars[symbol]
+        bar_benchmark = data.Bars[self.benchmark_symbol]
 
-            // Basic
-            ExponentialMovingAverage ema = Indicators.ExponentialMovingAverage(Bars.ClosePrices, EmaLength);
-            AverageTrueRange atr = Indicators.AverageTrueRange(AtrBreakoutLength, MovingAverageType.Simple);
+        # Trade amount
+        quantity = int(((self.risk_percentage / 100) * self.portfolio.cash_book["USD"].amount) / (
+                self.atr_multiplier * atr.current.value))
 
-            double upperChannel = ema.Result.LastValue + atr.Result.LastValue * MultiplierUpper;
-            double lowerChannel = ema.Result.LastValue - atr.Result.LastValue * MultiplierLower;
+        # Filter
+        filter = bar_benchmark.close > self.benchmark_sma200[1].value if self.enable_filter else True
 
-            string label = $"KeltnerChannelTrendFollow_cBot-{Symbol.Name}-{Name}";
+        buy_condition = bar.close > kch_longer.upper_band[1].value and filter and not self.portfolio[symbol].is_long
+        sell_condition = bar.close < kch_shorter.lower_band[1].value and self.portfolio[symbol].is_long
 
-            // Trade amount
-            double qty = ((RiskPercentage / 100) * Account.Balance) / (AtrMultiplier * Indicators.AverageTrueRange(AtrLength, MovingAverageType.Simple).Result.LastValue);
-            double qtyInLots = ((int)(qty / Symbol.VolumeInUnitsStep)) * Symbol.VolumeInUnitsStep;
-            
-            double maxStopLoss = (upperChannel-lowerChannel) * 1.5;
-            double maxStopLossInPips = maxStopLoss / Symbol.PipValue;
+        # ********************************
+        # Manage trade
+        # ********************************
+        if buy_condition:
+            self.market_order(symbol, quantity)
 
-            // Filter
-            double lastClosePrice = Bars.ClosePrices.LastValue;
-            bool priceAboveSMA = lastClosePrice > Indicators.SimpleMovingAverage(Bars.ClosePrices, SmaLength).Result.LastValue;
-            bool rsiAboveValue = Indicators.RelativeStrengthIndex(Bars.ClosePrices, 14).Result.LastValue > RsiValue;
-            bool filter = EnableFilter ? priceAboveSMA && rsiAboveValue : true;
-
-            // Check position
-            Position position = Positions.Find(label);
-            bool isOpenPosition = position != null;
-
-            // Conditions
-            bool buyCondition = lastClosePrice > upperChannel && !isOpenPosition && filter;
-            bool sellCondition = lastClosePrice < lowerChannel && isOpenPosition;
-
-
-            // ********************************
-            // Manage trade
-            // ********************************
-            if (buyCondition)
-            {
-                ExecuteMarketOrder(TradeType.Buy, SymbolName, qtyInLots, label, maxStopLossInPips, null);
-            }
-
-            if (sellCondition)
-            {
-                ClosePosition(position);
-            }
-
-            Print("Sucessful call OnBarClosed() method.");
-        }
-    }
-}
+        if sell_condition:
+            self.liquidate(symbol)
 ```
 
 **All platform source code**
