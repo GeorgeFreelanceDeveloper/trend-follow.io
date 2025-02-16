@@ -71,7 +71,7 @@ class SupertrendV1(QCAlgorithm):
         # Filter
         filter = bar_benchmark.close > self.benchmark_sma200[1].value if self.enable_filter else True
 
-        is_uptrend = bar.close > _str.current_trailing_lower_band
+        is_uptrend = bar.close > _str[1].value
         buy_condition = is_uptrend and filter and not self.portfolio[symbol].is_long
         sell_condition = not is_uptrend and self.portfolio[symbol].is_long
 
