@@ -7,9 +7,19 @@ permalink: /backtests/
 # Backtests
 _Updated January 13, 2025 (yearly update)_
 
-Strategies are traded on the top 10 markets in the Russell 1000 index by market cap that meet a profit factor > 2 over the last 5 and 10 years rebalance yearly.
+
+## Msci World Momentum
+Strategy traded on the top 10 markets in index [MSCI World Momentum](https://www.msci.com/indexes/index/703755) rebalance yearly.
+
+* [Without trailing-stop](https://www.quantconnect.com/reports/3af342d6d886fd0c68562b19970d1778)
+* [With 50% trailing-stop](https://www.quantconnect.com/reports/60b0165d5ca4c6f9a05bbf863f20436c)
+* [With 30% trailing-stop](https://www.quantconnect.com/reports/07ea7beac886cef1e3b826303eee59eb)
+* [With 20% trailing-stop](https://www.quantconnect.com/reports/90f1d3ae4de628be8d82670ac4740fa9)
+* [With 10% trailing-stop](https://www.quantconnect.com/reports/d91d1a370d36391a9997a4ca4b5d5a9d)
 
 ## Turtle
+Strategy traded on the top 10 markets in the Russell 1000 index by market cap that meet a profit factor > 2 over the last 5 and 10 years rebalance yearly.
+
 ### Portfolio
 * [US stocks portfolio 2015-2025 (10Y)](https://www.quantconnect.com/reports/b8b89391c78d272d77e2b14f2d193082)
 
@@ -27,6 +37,8 @@ Strategies are traded on the top 10 markets in the Russell 1000 index by market 
 
 
 ## SuperTrend
+Strategy traded on the top 10 markets in the Russell 1000 index by market cap that meet a profit factor > 2 over the last 5 and 10 years rebalance yearly.
+
 ### Portfolio
 * [US stocks portfolio 2015-2025 (10Y)](https://www.quantconnect.com/reports/390450abe06606b5a6f62dca92ad95f3)
 
@@ -43,6 +55,8 @@ Strategies are traded on the top 10 markets in the Russell 1000 index by market 
 * [PLTR](https://www.quantconnect.com/reports/7cbb91061731565a47a946cf87593000)
 
 ## BollingerBand
+Strategy traded on the top 10 markets in the Russell 1000 index by market cap that meet a profit factor > 2 over the last 5 and 10 years rebalance yearly.
+
 ### Portfolio
 * [US stocks portfolio 2015-2025 (10Y)](https://www.quantconnect.com/reports/b243ae712a34c64a0cc7fc55f13373fb)
 
@@ -59,6 +73,8 @@ Strategies are traded on the top 10 markets in the Russell 1000 index by market 
 * [ANET](https://www.quantconnect.com/reports/8cc8cbb9b3079b43990fef07fa98963b)
 
 ## KeltnerChannel
+Strategy traded on the top 10 markets in the Russell 1000 index by market cap that meet a profit factor > 2 over the last 5 and 10 years rebalance yearly.
+
 ### Portfolio
 * [US stocks portfolio 2015-2025 (10Y)](https://www.quantconnect.com/reports/218f349166f83c4e11892eb3af01a2bf)
 

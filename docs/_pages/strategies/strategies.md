@@ -9,6 +9,7 @@ permalink: /strategies/
 Trend following is when you try to capture extended moves in the financial markets, either up or down, mostly for long-term gains. Once in a while prices tend to keep on going (enduring) and these are the moves trend followers like. The aim is to capture most of such moves, not all, but the majority of them.
 
 ## Strategies
+* [Msci World Momentum](/strategies/pages/msci-world-momentum-strategy/)
 * [Turtle strategy](/strategies/pages/turtle-strategy/)
 <!-- Deprecated strategy (poor performance compare with base Turtle strategy) -->
 <!-- * [Turtle pro strategy](/strategies/pages/turtle-strategy-pro/) -->
